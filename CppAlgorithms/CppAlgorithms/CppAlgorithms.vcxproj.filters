@@ -21,5 +21,8 @@
     <ClCompile Include="CollectionErase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StringOperations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

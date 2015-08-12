@@ -9,8 +9,7 @@ using std::vector;
 using std::string; 
 using std::find; 
 
-int main()
-//int collectionErase()
+int collectionErase()
 {
 	string str_arr[] = {"a", "b", "c", "d"}; 
 	vector<string> svec(str_arr, str_arr + sizeof str_arr / sizeof *str_arr); 
