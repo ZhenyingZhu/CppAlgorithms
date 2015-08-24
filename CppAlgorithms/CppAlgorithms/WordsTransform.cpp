@@ -6,6 +6,7 @@
 
 using namespace std; 
 
+/*
 ifstream& open_file(ifstream &in, char *file) {
 	in.close(); 
 	in.clear(); 
@@ -13,7 +14,7 @@ ifstream& open_file(ifstream &in, char *file) {
 	return in; 
 }
 
-int main(int argc, char **argv)
+int wordsTransform(int argc, char **argv)
 {
 	if (argc != 4)
 		throw runtime_error("wrong number of arguments"); 
@@ -54,3 +55,4 @@ int main(int argc, char **argv)
 	
 	return 0; 
 }
+*/

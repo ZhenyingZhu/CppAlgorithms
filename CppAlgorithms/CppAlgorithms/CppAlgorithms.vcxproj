@@ -151,7 +151,11 @@
     <ClCompile Include="MapOperations.cpp" />
     <ClCompile Include="QueueOperations.cpp" />
     <ClCompile Include="StringOperations.cpp" />
+    <ClCompile Include="TextQueryExample.cpp" />
     <ClCompile Include="WordsTransform.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TextQuery.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
