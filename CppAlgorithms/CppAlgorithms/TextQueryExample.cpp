@@ -6,6 +6,9 @@
 
 using namespace std; 
 
+ifstream& open_file(ifstream &in, char *file); 
+string make_plural(size_t ctr, const string &word, const string &ending); 
+
 void TextQuery::store_file(ifstream &is) {
 	string textline; 
 	while (getline(is, textline)) {
@@ -37,17 +40,6 @@ string TextQuery::text_line(line_no line) const {
 	throw std::out_of_range("line number out of range"); 
 }
 
-ifstream& open_file(ifstream &in, char *file) {
-	in.close();
-	in.clear();
-	in.open(file);
-	return in;
-}
-
-string make_plural(size_t ctr, const string &word, const string &ending) {
-	return (ctr == 1) ? word : word + ending; 
-}
-
 void print_results(const set<TextQuery::line_no>& locs, const string& sought, const TextQuery &file) {
 	typedef set<TextQuery::line_no> line_nums; 
 	line_nums::size_type size = locs.size(); 
@@ -58,7 +50,7 @@ void print_results(const set<TextQuery::line_no>& locs, const string& sought, co
 	}
 }
 
-int main(int argc, char **argv)
+int textQuery(int argc, char **argv)
 {
 	ifstream infile; 
 	cout << argc << endl;

@@ -36,6 +36,9 @@
     <ClCompile Include="TextQueryExample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="my_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TextQuery.h">

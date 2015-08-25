@@ -6,13 +6,7 @@
 
 using namespace std; 
 
-/*
-ifstream& open_file(ifstream &in, char *file) {
-	in.close(); 
-	in.clear(); 
-	in.open(file); 
-	return in; 
-}
+ifstream& open_file(ifstream &in, char *file); 
 
 int wordsTransform(int argc, char **argv)
 {
@@ -55,4 +49,3 @@ int wordsTransform(int argc, char **argv)
 	
 	return 0; 
 }
-*/

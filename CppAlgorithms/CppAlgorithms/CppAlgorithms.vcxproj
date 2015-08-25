@@ -149,6 +149,7 @@
     <ClCompile Include="CollectionErase.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
     <ClCompile Include="MapOperations.cpp" />
+    <ClCompile Include="my_utils.cpp" />
     <ClCompile Include="QueueOperations.cpp" />
     <ClCompile Include="StringOperations.cpp" />
     <ClCompile Include="TextQueryExample.cpp" />

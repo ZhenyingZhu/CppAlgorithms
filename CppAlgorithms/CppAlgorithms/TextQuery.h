@@ -1,9 +1,10 @@
-#pragma once
-
 #include <vector>
 #include <set>
 #include <map>
 #include <string>
+
+#ifndef TEXTQUERY_H
+#define TEXTQUERY_H
 
 class TextQuery {
 public: 
@@ -20,3 +21,5 @@ private:
 	std::vector<std::string> lines_of_text; 
 	std::map< std::string, std::set<line_no> > word_map; 
 };
+
+#endif
