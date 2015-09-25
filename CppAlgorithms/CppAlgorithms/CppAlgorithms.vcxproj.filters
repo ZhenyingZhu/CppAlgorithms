@@ -33,13 +33,16 @@
     <ClCompile Include="WordsTransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextQueryExample.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="my_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Query.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestQuery.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

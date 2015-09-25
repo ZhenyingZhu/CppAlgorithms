@@ -57,7 +57,8 @@ class NotQuery : public Query_base {
 	NotQuery(Query q): query(q) { }
 	std::set<line_no> eval(const TextQuery &t) const; 
 	std::ostream& display(std::ostream &os) const {
-		return os << "~(" << query << ")"; 
+		//return os << "~(" << query << ")"; 
+		return os; 
 	}
 	const Query query; 
 };
@@ -67,7 +68,8 @@ protected:
 	BinaryQuery(Query left, Query right, std::string op): 
 		lhs(left), rhs(right), oper(op) { }
 	std::ostream& display(std::ostream &os) const {
-		return os << "(" << lhs << " " << oper << " " << rhs << ")"; 
+		//return os << "(" << lhs << " " << oper << " " << rhs << ")"; 
+		return os; 
 	}
 	const Query lhs, rhs; 
 	const std::string oper; 
