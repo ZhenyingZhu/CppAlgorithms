@@ -8,8 +8,8 @@ using namespace std;
 ifstream& open_file(ifstream &in, char *file);
 void print_results(const set<TextQuery::line_no>&, const string&, const TextQuery&); 
 
-//int textQuery(int argc, char **argv)
-int main(int argc, char **argv)
+int textQuery(int argc, char **argv)
+//int main(int argc, char **argv)
 {
 	ifstream infile;
 	cout << argc << endl;

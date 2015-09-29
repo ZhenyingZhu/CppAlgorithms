@@ -146,8 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryParity.cpp" />
     <ClCompile Include="CollectionErase.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="MapOperations.cpp" />
     <ClCompile Include="my_utils.cpp" />
     <ClCompile Include="Query.cpp" />
@@ -159,7 +161,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Query.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="TextQuery.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CppAlgorithms.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

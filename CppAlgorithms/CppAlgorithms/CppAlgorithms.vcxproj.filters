@@ -13,45 +13,65 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\CppPrimer">
+      <UniqueIdentifier>{4cdc4479-f59b-42d2-be85-e4a599209f88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EPI">
+      <UniqueIdentifier>{f1223641-8ed8-4c63-84c0-fd541e2d82f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HelloWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CollectionErase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StringOperations.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="QueueOperations.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CppPrimer</Filter>
     </ClCompile>
     <ClCompile Include="MapOperations.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WordsTransform.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CppPrimer</Filter>
     </ClCompile>
     <ClCompile Include="my_utils.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CppPrimer</Filter>
     </ClCompile>
     <ClCompile Include="Query.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CppPrimer</Filter>
     </ClCompile>
-    <ClCompile Include="TextQuery.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="QueueOperations.cpp">
+      <Filter>Source Files\CppPrimer</Filter>
+    </ClCompile>
+    <ClCompile Include="StringOperations.cpp">
+      <Filter>Source Files\CppPrimer</Filter>
     </ClCompile>
     <ClCompile Include="TestQuery.cpp">
+      <Filter>Source Files\CppPrimer</Filter>
+    </ClCompile>
+    <ClCompile Include="TextQuery.cpp">
+      <Filter>Source Files\CppPrimer</Filter>
+    </ClCompile>
+    <ClCompile Include="WordsTransform.cpp">
+      <Filter>Source Files\CppPrimer</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryParity.cpp">
+      <Filter>Source Files\EPI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TextQuery.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Query.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CppPrimer</Filter>
     </ClInclude>
+    <ClInclude Include="TextQuery.h">
+      <Filter>Source Files\CppPrimer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CppAlgorithms.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

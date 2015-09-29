@@ -3,7 +3,7 @@
 using std::cout; 
 using std::endl; 
 
-int printHello()
+extern int printHello()
 {
 	cout << "Hello World! " << endl;
 
