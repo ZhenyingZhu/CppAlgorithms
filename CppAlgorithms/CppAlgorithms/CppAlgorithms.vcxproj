@@ -146,7 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryParity.cpp" />
+    <ClCompile Include="Parity.cpp" />
     <ClCompile Include="CollectionErase.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
     <ClCompile Include="main.cpp" />

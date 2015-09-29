@@ -5,7 +5,7 @@ using namespace std;
  * If there are odd 1 in the number, return 1, 
  * Else return 0. 
  */
-short Parity(unsigned long x) {
+short ParityBruteForce(unsigned long x) {
 	short res = 0; 
 	while (x) {
 		res += x & 1; 
@@ -13,6 +13,16 @@ short Parity(unsigned long x) {
 	}
 
 	return res % 2; 
+}
+
+short Parity(unsigned long x) {
+	short res = 0; 
+	while (x) {
+		res ^= 1; 
+		x &= x - 1; 
+	}
+
+	return res; 
 }
 
 int test_parity() {
