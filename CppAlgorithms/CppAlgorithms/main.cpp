@@ -12,5 +12,4 @@ int main()
 	cout << "Chpater 5.1" << endl; 
 	cout << "Compute Parity: " << endl;
 	test_parity(); 
-
 }

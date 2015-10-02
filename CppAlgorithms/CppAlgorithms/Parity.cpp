@@ -15,7 +15,7 @@ short ParityBruteForce(unsigned long x) {
 	return res % 2; 
 }
 
-short Parity(unsigned long x) {
+short ParityEliminateLastOne(unsigned long x) {
 	short res = 0; 
 	while (x) {
 		res ^= 1; 
@@ -23,6 +23,17 @@ short Parity(unsigned long x) {
 	}
 
 	return res; 
+}
+
+short Parity(unsigned long x) {
+/* unsigned long here is 32 bits. 
+ * So that if shift 32 at the first time, 
+ * (x >> 32) == x cause (x ^= x) == 0
+ */
+	for (int i = 16; i != 0; i /= 2) {
+		x ^= (x >> i); 
+	}
+	return x & 0x1; 
 }
 
 int test_parity() {
