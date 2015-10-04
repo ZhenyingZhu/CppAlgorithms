@@ -57,6 +57,9 @@
     <ClCompile Include="Parity.cpp">
       <Filter>Source Files\EPI</Filter>
     </ClCompile>
+    <ClCompile Include="SwapBits.cpp">
+      <Filter>Source Files\EPI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

@@ -155,6 +155,7 @@
     <ClCompile Include="Query.cpp" />
     <ClCompile Include="QueueOperations.cpp" />
     <ClCompile Include="StringOperations.cpp" />
+    <ClCompile Include="SwapBits.cpp" />
     <ClCompile Include="TestQuery.cpp" />
     <ClCompile Include="TextQuery.cpp" />
     <ClCompile Include="WordsTransform.cpp" />
