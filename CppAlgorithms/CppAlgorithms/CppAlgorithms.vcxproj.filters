@@ -60,6 +60,9 @@
     <ClCompile Include="SwapBits.cpp">
       <Filter>Source Files\EPI</Filter>
     </ClCompile>
+    <ClCompile Include="ClosestIntSameBitCount.cpp">
+      <Filter>Source Files\EPI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
