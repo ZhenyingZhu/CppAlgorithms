@@ -9,6 +9,8 @@ void test_parity();
 void test_swap_bits(); 
 // Chapter 5.4
 void test_cloest_int_same_bit_count(); 
+// Chapter 5.5
+void test_multiply(); 
 
 int main()
 {
@@ -18,9 +20,10 @@ int main()
 	test_parity(); 
 	cout << "Swap Bits: " << endl; 
 	test_swap_bits(); 
-	*/
 	cout << "Cloest Int Same Bit Count: " << endl; 
 	test_cloest_int_same_bit_count(); 
-
+	*/
+	cout << "Multiply without arithmetical operators: " << endl; 
+	test_multiply(); 
 	return 0; 
 }

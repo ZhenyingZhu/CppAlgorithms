@@ -63,6 +63,9 @@
     <ClCompile Include="ClosestIntSameBitCount.cpp">
       <Filter>Source Files\EPI</Filter>
     </ClCompile>
+    <ClCompile Include="Multiply.cpp">
+      <Filter>Source Files\EPI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

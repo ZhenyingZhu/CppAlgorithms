@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClosestIntSameBitCount.cpp" />
+    <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Parity.cpp" />
     <ClCompile Include="CollectionErase.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
