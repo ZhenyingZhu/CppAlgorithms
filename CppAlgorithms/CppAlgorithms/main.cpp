@@ -11,6 +11,8 @@ void test_swap_bits();
 void test_cloest_int_same_bit_count(); 
 // Chapter 5.5
 void test_multiply(); 
+// Chapter 5.6
+void test_divide(); 
 
 int main()
 {
@@ -22,8 +24,11 @@ int main()
 	test_swap_bits(); 
 	cout << "Cloest Int Same Bit Count: " << endl; 
 	test_cloest_int_same_bit_count(); 
-	*/
 	cout << "Multiply without arithmetical operators: " << endl; 
 	test_multiply(); 
-	return 0; 
+	*/
+	cout << "Divide x / y: " << endl; 
+	test_divide(); 
+
+	return 0;
 }
