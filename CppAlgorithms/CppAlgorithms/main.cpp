@@ -13,6 +13,8 @@ void test_cloest_int_same_bit_count();
 void test_multiply(); 
 // Chapter 5.6
 void test_divide(); 
+// Chapter 5.7
+void test_power(); 
 
 int main()
 {
@@ -26,9 +28,11 @@ int main()
 	test_cloest_int_same_bit_count(); 
 	cout << "Multiply without arithmetical operators: " << endl; 
 	test_multiply(); 
-	*/
 	cout << "Divide x / y: " << endl; 
 	test_divide(); 
+	*/
+	cout << "Power x ^ y: " << endl; 
+	test_power(); 
 
 	return 0;
 }

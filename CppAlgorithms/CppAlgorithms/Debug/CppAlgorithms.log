@@ -1,9 +1,10 @@
-﻿Build started 10/7/2015 1:59:02 AM.
+﻿Build started 10/8/2015 12:49:10 AM.
      1>Project "E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\CppAlgorithms\CppAlgorithms.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Divide.cpp
-         Divide.cpp
-     1>e:\documents\github\cppalgorithms\cppalgorithms\cppalgorithms\divide.cpp(21): warning C4244: '-=': conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+         D:\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp Power.cpp
+         Power.cpp
+         main.cpp
+         Generating Code...
        Link:
          D:\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\Debug\CppAlgorithms.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\Debug\CppAlgorithms.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\Debug\CppAlgorithms.lib" /MACHINE:X86 Debug\CppAlgorithms.res
          Debug\ClosestIntSameBitCount.obj
@@ -15,6 +16,7 @@
          Debug\main.obj
          Debug\MapOperations.obj
          Debug\my_utils.obj
+         Debug\Power.obj
          Debug\Query.obj
          Debug\QueueOperations.obj
          Debug\StringOperations.obj
@@ -27,4 +29,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.98
+Time Elapsed 00:00:03.46
