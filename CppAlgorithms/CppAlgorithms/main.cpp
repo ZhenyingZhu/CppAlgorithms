@@ -15,6 +15,8 @@ void test_multiply();
 void test_divide(); 
 // Chapter 5.7
 void test_power(); 
+// Chapter 5.8
+void test_reverse(); 
 
 int main()
 {
@@ -30,9 +32,11 @@ int main()
 	test_multiply(); 
 	cout << "Divide x / y: " << endl; 
 	test_divide(); 
-	*/
 	cout << "Power x ^ y: " << endl; 
 	test_power(); 
+	*/
+	cout << "Reverse x: " << endl;
+	test_reverse(); 
 
 	return 0;
 }

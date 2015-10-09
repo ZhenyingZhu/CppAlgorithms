@@ -158,6 +158,7 @@
     <ClCompile Include="Power.cpp" />
     <ClCompile Include="Query.cpp" />
     <ClCompile Include="QueueOperations.cpp" />
+    <ClCompile Include="Reverse.cpp" />
     <ClCompile Include="StringOperations.cpp" />
     <ClCompile Include="SwapBits.cpp" />
     <ClCompile Include="TestQuery.cpp" />
