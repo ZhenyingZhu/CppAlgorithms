@@ -17,6 +17,8 @@ void test_divide();
 void test_power(); 
 // Chapter 5.8
 void test_reverse(); 
+// Chapter 5.9
+void test_is_palindrome(); 
 
 int main()
 {
@@ -34,9 +36,11 @@ int main()
 	test_divide(); 
 	cout << "Power x ^ y: " << endl; 
 	test_power(); 
-	*/
 	cout << "Reverse x: " << endl;
 	test_reverse(); 
+	*/
+	cout << "Check if x is Palindrome: " << endl;
+	test_is_palindrome(); 
 
 	return 0;
 }
