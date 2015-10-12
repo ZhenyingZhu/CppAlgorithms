@@ -19,6 +19,8 @@ void test_power();
 void test_reverse(); 
 // Chapter 5.9
 void test_is_palindrome(); 
+// Chapter 5.11
+void test_intersect_rectangle(); 
 
 int main()
 {
@@ -38,9 +40,9 @@ int main()
 	test_power(); 
 	cout << "Reverse x: " << endl;
 	test_reverse(); 
-	*/
 	cout << "Check if x is Palindrome: " << endl;
 	test_is_palindrome(); 
-
+	*/
+	test_intersect_rectangle();
 	return 0;
 }
