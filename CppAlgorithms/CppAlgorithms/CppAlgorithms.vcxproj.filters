@@ -81,6 +81,9 @@
     <ClCompile Include="IntersectRectangle.cpp">
       <Filter>Source Files\EPI</Filter>
     </ClCompile>
+    <ClCompile Include="PlusOne.cpp">
+      <Filter>Source Files\EPI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

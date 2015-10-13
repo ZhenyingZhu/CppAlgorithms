@@ -21,6 +21,8 @@ void test_reverse();
 void test_is_palindrome(); 
 // Chapter 5.11
 void test_intersect_rectangle(); 
+// Chapter 6.2
+void test_plus_one(); 
 
 int main()
 {
@@ -42,7 +44,11 @@ int main()
 	test_reverse(); 
 	cout << "Check if x is Palindrome: " << endl;
 	test_is_palindrome(); 
-	*/
+	cout << "Find intersect of rectangles: " << endl;
 	test_intersect_rectangle();
+	*/
+	cout << "Increment an arbitrary-precision integer: " << endl; 
+	test_plus_one(); 
+
 	return 0;
 }
