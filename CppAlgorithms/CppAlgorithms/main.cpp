@@ -21,6 +21,8 @@ void test_reverse();
 void test_is_palindrome(); 
 // Chapter 5.11
 void test_intersect_rectangle(); 
+// Chapter 6.1
+void test_dutch_flag_partition(); 
 // Chapter 6.2
 void test_plus_one(); 
 
@@ -46,9 +48,11 @@ int main()
 	test_is_palindrome(); 
 	cout << "Find intersect of rectangles: " << endl;
 	test_intersect_rectangle();
-	*/
 	cout << "Increment an arbitrary-precision integer: " << endl; 
 	test_plus_one(); 
-
+	*/
+	cout << "Dutch Flag Partition: " << endl;
+	test_dutch_flag_partition(); 
+	
 	return 0;
 }

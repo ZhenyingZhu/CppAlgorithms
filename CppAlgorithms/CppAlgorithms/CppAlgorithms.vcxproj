@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="ClosestIntSameBitCount.cpp" />
     <ClCompile Include="Divide.cpp" />
+    <ClCompile Include="DutchFlagPartition.cpp" />
     <ClCompile Include="IntersectRectangle.cpp" />
     <ClCompile Include="IsPalindrome.cpp" />
     <ClCompile Include="Multiply.cpp" />
