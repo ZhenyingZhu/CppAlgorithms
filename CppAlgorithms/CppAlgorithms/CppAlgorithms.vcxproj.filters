@@ -87,6 +87,9 @@
     <ClCompile Include="DutchFlagPartition.cpp">
       <Filter>Source Files\EPI</Filter>
     </ClCompile>
+    <ClCompile Include="MultiplyArray.cpp">
+      <Filter>Source Files\EPI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

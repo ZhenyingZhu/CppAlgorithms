@@ -1,8 +1,8 @@
-﻿Build started 10/17/2015 10:22:35 PM.
+﻿Build started 10/20/2015 1:39:12 AM.
      1>Project "E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\CppAlgorithms\CppAlgorithms.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt DutchFlagPartition.cpp
-         DutchFlagPartition.cpp
+         D:\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt MultiplyArray.cpp
+         MultiplyArray.cpp
        Link:
          D:\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\Debug\CppAlgorithms.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\Debug\CppAlgorithms.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Documents\GitHub\CppAlgorithms\CppAlgorithms\Debug\CppAlgorithms.lib" /MACHINE:X86 Debug\CppAlgorithms.res
          Debug\ClosestIntSameBitCount.obj
@@ -11,6 +11,7 @@
          Debug\IntersectRectangle.obj
          Debug\IsPalindrome.obj
          Debug\Multiply.obj
+         Debug\MultiplyArray.obj
          Debug\Parity.obj
          Debug\CollectionErase.obj
          Debug\HelloWorld.obj
@@ -32,4 +33,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.46
+Time Elapsed 00:00:00.90

@@ -152,6 +152,7 @@
     <ClCompile Include="IntersectRectangle.cpp" />
     <ClCompile Include="IsPalindrome.cpp" />
     <ClCompile Include="Multiply.cpp" />
+    <ClCompile Include="MultiplyArray.cpp" />
     <ClCompile Include="Parity.cpp" />
     <ClCompile Include="CollectionErase.cpp" />
     <ClCompile Include="HelloWorld.cpp" />

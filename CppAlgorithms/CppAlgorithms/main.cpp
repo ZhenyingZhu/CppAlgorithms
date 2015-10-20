@@ -25,6 +25,8 @@ void test_intersect_rectangle();
 void test_dutch_flag_partition(); 
 // Chapter 6.2
 void test_plus_one(); 
+// Chapter 6.3
+void test_multiply_array(); 
 
 int main()
 {
@@ -50,9 +52,11 @@ int main()
 	test_intersect_rectangle();
 	cout << "Increment an arbitrary-precision integer: " << endl; 
 	test_plus_one(); 
-	*/
 	cout << "Dutch Flag Partition: " << endl;
 	test_dutch_flag_partition(); 
+	*/
+	cout << "Multiply two arbitary precision integers: " << endl; 
+	test_multiply_array();
 
 	return 0;
 }
