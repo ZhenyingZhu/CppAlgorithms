@@ -27,6 +27,8 @@ void test_dutch_flag_partition();
 void test_plus_one(); 
 // Chapter 6.3
 void test_multiply_array(); 
+// Chapter 6.4
+void test_can_reach_end(); 
 
 int main()
 {
@@ -54,9 +56,11 @@ int main()
 	test_plus_one(); 
 	cout << "Dutch Flag Partition: " << endl;
 	test_dutch_flag_partition(); 
-	*/
 	cout << "Multiply two arbitary precision integers: " << endl; 
 	test_multiply_array();
+	*/
+	cout << "Advancing through an array: " << endl; 
+	test_can_reach_end();
 
 	return 0;
 }

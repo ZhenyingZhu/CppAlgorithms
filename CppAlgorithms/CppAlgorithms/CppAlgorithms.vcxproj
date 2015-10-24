@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CanReachEnd.cpp" />
     <ClCompile Include="ClosestIntSameBitCount.cpp" />
     <ClCompile Include="Divide.cpp" />
     <ClCompile Include="DutchFlagPartition.cpp" />
