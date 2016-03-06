@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <stdint.h>
 
 using std::vector; 
 using std::cout; 
