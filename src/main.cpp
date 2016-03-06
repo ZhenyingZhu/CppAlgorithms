@@ -4,8 +4,9 @@
 using std::cout;
 using std::endl;
 
-// Chapter 5.1
-// void test_parity();
+using namespace eip;
+using namespace chapter5;
+
 //// Chapter 5.2
 //void test_swap_bits();
 //// Chapter 5.4
@@ -33,9 +34,9 @@ using std::endl;
 
 int main()
 {
-    cout << "Chapter 5" << endl;
+    cout << "Chapter 5.1" << endl;
     cout << "Compute Parity: " << endl;
-    eip::chapter5::Parity().test_parity();
+    Parity().test_parity();
     /*
     cout << "Swap Bits: " << endl;
     test_swap_bits();

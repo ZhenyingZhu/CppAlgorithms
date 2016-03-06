@@ -1,4 +1,7 @@
 #include <iostream>
+
+#include "Parity.hpp"
+
 using namespace std; 
 
 namespace eip {
