@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -10,7 +11,7 @@ using std::endl;
 namespace chapter6 {
     /* Chapter 6.4
      * Each non-negative interger in an array indicate how far it can go from this cell.
-     */
+     *
 
     // define in PlusOne
     void print_vec(vector<int> A);
@@ -47,3 +48,4 @@ namespace chapter6 {
     }
 
 }
+*/

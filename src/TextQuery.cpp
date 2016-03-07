@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <stdexcept>
 
 #include "TextQuery.h"
 
@@ -37,7 +38,7 @@ set<TextQuery::line_no> TextQuery::run_query(const string &query_word) const {
 string TextQuery::text_line(line_no line) const {
 	if (line < lines_of_text.size())
 		return lines_of_text[line]; 
-	throw std::out_of_range("line number out of range"); 
+	throw std::out_of_range("line number out of range");
 }
 
 void print_results(const set<TextQuery::line_no>& locs, const string& sought, const TextQuery &file) {

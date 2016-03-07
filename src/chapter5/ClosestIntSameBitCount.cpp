@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <stdexcept>
 
@@ -7,7 +8,7 @@ namespace chapter5 {
     /* EPI Chapter 5.4
      * Find the cloest integer that has same weight as the given number.
      * Weight is count as number of set bits.
-     */
+     *
 
     unsigned long ClosestIntSameBitCount(unsigned long x) {
         for (int i = 0; i != 31; ++i) {
@@ -26,3 +27,4 @@ namespace chapter5 {
         // cout << "0: " << ClosestIntSameBitCount(0) << endl;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 using namespace std; 
@@ -5,7 +6,7 @@ using namespace std;
 namespace chapter5 {
     /* EPI Chapter 5.7
      * Compute x ^ y. x is double and y is integer.
-     */
+     *
 
     double Power(double x, int y) {
         double res = 1.0;
@@ -32,3 +33,4 @@ namespace chapter5 {
         }
     }
 }
+*/

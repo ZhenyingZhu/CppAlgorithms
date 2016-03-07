@@ -1,3 +1,4 @@
+/*
 #include <vector>
 #include <iostream>
 
@@ -8,7 +9,7 @@ using std::endl;
 namespace chapter6 {
     /* Chapter 6.3
      * Multiple two arbitary-precision array presented integers
-     */
+     *
 
     // PlusOne
     void print_vec(vector<int> A);
@@ -47,4 +48,4 @@ namespace chapter6 {
         cout << endl;
     }
 }
-
+*/

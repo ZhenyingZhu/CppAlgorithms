@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <cmath>
 
@@ -7,7 +8,7 @@ namespace chapter5 {
     /* EPI Chapter 5.9
      * Check if a decimal interger is palindrome.
      * Negative integer cannot be palindrome.
-     */
+     *
 
     bool IsPalindrome(int x) {
         if (x < 0)
@@ -37,3 +38,4 @@ namespace chapter5 {
             cout << arr[ix] << " is " << (IsPalindrome(arr[ix]) ? "" : "not ") << "palindrome. " << endl;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <algorithm>
 
@@ -7,7 +8,7 @@ namespace chapter5 {
     /* EPI Chapter 5.11
      * Find intersect rectangle of two rectangles.
      * Boundaries touch also count as intersect.
-     */
+     *
 
     struct Rectangle {
         int x, y, width, height;
@@ -38,3 +39,4 @@ namespace chapter5 {
         cout << IntersectRectangle(r1, r2) << endl;
     }
 }
+*/

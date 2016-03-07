@@ -5,10 +5,11 @@ namespace eip {
   namespace chapter5 {
     class Parity {
         public:
+            void test_parity();
             short parityBruteForce(unsigned long);
             short parityEliminateLastOne(unsigned long);
             short parity(unsigned long);
-            void test_parity();
+        //private:
     };
   }
 }

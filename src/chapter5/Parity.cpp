@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 
 #include "Parity.hpp"
 
@@ -32,12 +33,13 @@ namespace eip {
     }
 
     short Parity::parity(unsigned long x) {
-    /* unsigned long here is 32 bits, which is same as int.
+    /* idea: parity of x = parity(first half of x XOR last half of x)
+     * unsigned long here is 32 bits, which is same as int.
      * sizeof(long) = sizeof(int) = 4 * sizeof(char)
      * So that if shift 32 at the first time,
      * (x >> 32) == x cause (x ^= x) == 0
      */
-        for (size_t i = 16; i != 0; i /= 2) {
+        for (size_t i = sizeof(x) * CHAR_BIT / 2; i != 0; i /= 2) {
             x ^= (x >> i);
         }
         return x & 0x1;

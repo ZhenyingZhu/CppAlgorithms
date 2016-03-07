@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 using namespace std;
@@ -5,7 +6,7 @@ using namespace std;
 namespace chapter5 {
     /* EPI Chapter 5.6
      * Compute x / y with addition, substraction or/and shifting.
-     */
+     *
 
     unsigned Divide(unsigned x, unsigned y) {
         unsigned res = 0;
@@ -35,3 +36,4 @@ namespace chapter5 {
         }
     }
 }
+*/

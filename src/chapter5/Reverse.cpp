@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <cmath>
 #include <climits>
@@ -7,7 +8,7 @@ using namespace std;
 namespace chapter5 {
     /* EPI Chapter 5.8
      * Reverse digits of an integer. Leave sign unchanged.
-     */
+     *
 
     long long Reverse(int x) {
         bool is_negative = x < 0;
@@ -26,3 +27,4 @@ namespace chapter5 {
         cout << "Reverse " << INT_MAX << ": " << Reverse(INT_MAX) << endl;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 #include <vector>
 #include <iostream>
 
@@ -8,7 +9,7 @@ using std::endl;
 namespace chapter6 {
     /* EPI Chapter 6.2
      * Increase a number that record in a vector.
-     */
+     *
 
     vector<int> PlusOne(vector<int> A) {
         ++A.back();
@@ -42,3 +43,4 @@ namespace chapter6 {
     }
 }
 
+*/
