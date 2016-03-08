@@ -1,9 +1,11 @@
 #include <iostream>
-#include "chapter5/Parity.hpp"
+#include "cppprimer/cppprimer.h"
+#include "eip/chapter5/Parity.hpp"
 
 using std::cout;
 using std::endl;
 
+using namespace cppprimer;
 using namespace eip;
 using namespace chapter5;
 
