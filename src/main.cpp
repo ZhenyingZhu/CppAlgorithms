@@ -34,7 +34,7 @@ using namespace chapter5;
 //// Chapter 6.4
 //void test_can_reach_end();
 
-int main()
+int main(int argc, char** argv)
 {
     cout << "Chapter 5.1" << endl;
     cout << "Compute Parity: " << endl;
