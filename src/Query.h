@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "TextQuery.h"
+#include "cppprimer/TextQuery.h"
 
 //class Query_base {
 //	friend class Query;

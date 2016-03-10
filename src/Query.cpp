@@ -1,4 +1,4 @@
-#include "TextQuery.h"
+#include "cppprimer/TextQuery.h"
 #include "Query.h"
 #include <set>
 #include <algorithm>

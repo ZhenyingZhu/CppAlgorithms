@@ -8,8 +8,7 @@ using namespace std;
 namespace myutils {
 
 extern ifstream& open_file(ifstream &in, char *file) {
-    /* Open a file by name and bind it to a stream.
-     */
+    // Open a file by name and bind it to a stream.
     in.close();
     in.clear();
     in.open(file);
@@ -17,6 +16,7 @@ extern ifstream& open_file(ifstream &in, char *file) {
 }
 
 extern string make_plural(size_t ctr, const string &word, const string &ending) {
+    // Return a the plural form of a word
     return (ctr == 1) ? word : word + ending;
 }
 
