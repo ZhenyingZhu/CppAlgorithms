@@ -25,6 +25,10 @@ public:
 private:
     std::string isbn;
 protected:
+    void setIsbn(std::string book) {
+        isbn = book;
+    }
+
     double price;
 };
 

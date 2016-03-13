@@ -8,9 +8,12 @@ using std::endl;
 
 namespace cppprimer {
 
-BulkItem::BulkItem(string book, double p, double disc, int m):
+BulkItem::BulkItem(std::string book, double p, double disc, int m):
     minQty(m), discount(disc) {
-    this->book() = book;
+    /* Source: Chapter 15.2.4
+     * Description: Call parent method.
+     */
+    ItemBase::setIsbn(book);
     price = p;
 }
 
@@ -30,8 +33,16 @@ void BulkItem::memfcn(const BulkItem &d, const ItemBase &b) const {
      * But BulkItem entities can access other BulkItems' price.
      */
     cout << "Self price: " << price << endl;
+    // Cannot access self isbn because this is private in parent class
+    //cout << "Self book: " << isbn << endl;
+    cout << "Self discount: " << discount << endl;
+    cout << "Self minQty: " << minQty << endl;
+    // Protected
     cout << "Other's price: " << d.price << endl;
-    // cout << "Base's price: " << b.price << endl;
+    // Private
+    cout << "Other's discount: " << d.discount << endl;
+    // Cannot access parent entity's price because it is protected
+    //cout << "Base's price: " << b.price << endl;
 }
 
 } // cppprimer

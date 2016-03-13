@@ -11,7 +11,7 @@ class BulkItem: public ItemBase {
      * Description: derive class
      */
 public:
-    BulkItem(std::string book = "", double p = 0.0, double disc = 0.0, int m = 1);
+    BulkItem(std::string book, double p = 0.0, double disc = 0.0, int m = 1);
     double net_price(std::size_t) const;
     void memfcn(const BulkItem&, const ItemBase&) const;
 
