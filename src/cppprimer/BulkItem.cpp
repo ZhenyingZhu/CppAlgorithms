@@ -9,12 +9,14 @@ using std::endl;
 namespace cppprimer {
 
 BulkItem::BulkItem(std::string book, double p, double disc, int m):
-    minQty(m), discount(disc) {
+        /* Source: Chapter 15.4.2
+         * Description: Use parent constructor.
+         */
+                 ItemBase(book, p), minQty(m), discount(disc) {
     /* Source: Chapter 15.2.4
      * Description: Call parent method.
      */
-    ItemBase::setIsbn(book);
-    price = p;
+    // ItemBase::setIsbn(book);
 }
 
 double BulkItem::net_price(size_t cnt) const {
