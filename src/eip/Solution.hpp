@@ -11,6 +11,8 @@ namespace eip {
 
       bool test();
 
+      ~Solution() {}
+
   private:
       std::string questionSource_;
       std::string questionDescription_;

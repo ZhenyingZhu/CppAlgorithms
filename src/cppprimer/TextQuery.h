@@ -21,6 +21,7 @@ public:
     }
     std::set<line_no> run_query(const std::string&) const;
     std::string text_line(line_no) const;
+    line_no size() const;
 private:
     void store_file(std::ifstream&);
     void build_map();

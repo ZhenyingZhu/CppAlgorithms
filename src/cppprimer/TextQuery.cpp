@@ -2,8 +2,8 @@
 #include <fstream>
 #include <sstream>
 #include <stdexcept>
-#include "../MyUtils.h"
 
+#include "../MyUtils.h"
 #include "TextQuery.h"
 
 using namespace std; 
@@ -46,6 +46,10 @@ string TextQuery::text_line(line_no line) const {
     throw std::out_of_range("line number out of range");
 }
 
+TextQuery::line_no TextQuery::size() const {
+    return lines_of_text.size();
+}
+
 void print_results(const set<TextQuery::line_no>& locs, const string& sought, const TextQuery &file) {
     // Print how many times a word shows, and all lines it in.
     typedef set<TextQuery::line_no> line_nums;
@@ -57,5 +61,5 @@ void print_results(const set<TextQuery::line_no>& locs, const string& sought, co
     }
 }
 
-} // TextQuery
+} // cppprimer
 
