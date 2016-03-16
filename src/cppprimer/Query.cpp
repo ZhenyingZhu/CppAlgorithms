@@ -10,19 +10,19 @@ using std::string;
 
 namespace cppprimer {
 
-inline Query operator&(const Query &lhs, const Query &rhs) {
+Query operator&(const Query &lhs, const Query &rhs) {
     return new AndQuery(lhs, rhs);
 }
 
-inline Query operator|(const Query &lhs, const Query &rhs) {
+Query operator|(const Query &lhs, const Query &rhs) {
     return new OrQuery(lhs, rhs);
 }
 
-inline Query operator~(const Query &oper) {
+Query operator~(const Query &oper) {
     return new NotQuery(oper);
 }
 
-inline std::ostream& operator<<(std::ostream &os, const Query& q) {
+std::ostream& operator<<(std::ostream &os, const Query& q) {
     return q.display(os);
 }
 

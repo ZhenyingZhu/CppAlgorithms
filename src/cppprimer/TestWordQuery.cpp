@@ -39,21 +39,34 @@ int testWordQuery(int argc, char **argv) {
         cin >> s;
         if (!cin || s == "n") break;
 
-        Query q = Query(s);
+        Query q = ~Query(s);
         set<TextQuery::line_no> locs = q.eval(tq);
-        print_results(locs, s, tq);
+        print_results(locs, "no " + s, tq);
     }
 
-//    while (true) {
-//        cout << "Enter two words to look for, or n to continue: " << endl;
-//        string s1, s2;
-//        cin >> s1 >> s2;
-//        if (!cin || s1 == "n") break;
-//
-//        Query q = Query(s1) & Query(s2);
-//        set<TextQuery::line_no> locs = q.eval(tq);
-//        print_results(locs, s1 + " and " + s2, tq);
-//    }
+    while (true) {
+        cout << "Enter two words to look for both, or n to continue: " << endl;
+        string s1, s2;
+        cin >> s1;
+        if (!cin || s1 == "n") break;
+        cin >> s2;
+
+        Query q = Query(s1) & Query(s2);
+        set<TextQuery::line_no> locs = q.eval(tq);
+        print_results(locs, s1 + " and " + s2, tq);
+    }
+
+    while (true) {
+        cout << "Enter two words to look for either, or n to continue: " << endl;
+        string s1, s2;
+        cin >> s1;
+        if (!cin || s1 == "n") break;
+        cin >> s2;
+
+        Query q = Query(s1) | Query(s2);
+        set<TextQuery::line_no> locs = q.eval(tq);
+        print_results(locs, s1 + " or " + s2, tq);
+    }
 
     return 0;
 }

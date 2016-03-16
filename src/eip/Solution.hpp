@@ -5,19 +5,20 @@
 
 namespace eip {
 
-  class Solution {
-  public:
-      Solution(std::string questionSource, std::string questionDescription);
+class Solution {
+protected:
+    Solution(std::string questionSource, std::string questionDescription):
+        questionSource_(questionSource),
+        questionDescription_(questionDescription) { }
 
-      bool test();
+    virtual bool test();
 
-      ~Solution() {}
+    virtual ~Solution() { }
 
-  private:
-      std::string questionSource_;
-      std::string questionDescription_;
-  };
-}
+    std::string questionSource_;
+    std::string questionDescription_;
+};
 
+} // eip
 
 #endif /* SRC_EIP_SOLUTION_HPP_ */
