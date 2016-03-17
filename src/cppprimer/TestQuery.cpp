@@ -32,6 +32,8 @@ int testQuery(int argc, char **argv)
         print_results(locs, s, tq);
     }
 
+    cout << "All queries done. Exiting..." << endl;
+
     return 0;
 }
 

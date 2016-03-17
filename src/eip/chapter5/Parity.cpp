@@ -7,10 +7,6 @@ using namespace std;
 
 namespace eip {
   namespace chapter5 {
-    /* EPI Chapter 5.1.
-     * If there are odd 1 in the number, return 1,
-     * Else return 0.
-     */
 
     short Parity::parityBruteForce(unsigned long x) {
         short res = 0;
@@ -45,9 +41,11 @@ namespace eip {
         return x & 0x1;
     }
 
-    void Parity::test_parity() {
+    bool Parity::test() {
         cout << "5: " << parity(5) << endl;
         cout << "7: " << parity(7) << endl;
+
+        return true;
     }
   }
 }

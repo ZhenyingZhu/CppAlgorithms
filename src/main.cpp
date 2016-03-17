@@ -36,11 +36,9 @@ using namespace chapter5;
 
 int main(int argc, char** argv)
 {
-    testWordQuery(argc, argv);
-
     cout << "Chapter 5.1" << endl;
     cout << "Compute Parity: " << endl;
-    Parity().test_parity();
+    Parity().test();
     /*
     cout << "Swap Bits: " << endl;
     test_swap_bits();

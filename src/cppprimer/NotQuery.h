@@ -19,9 +19,7 @@ class NotQuery : public QueryBase {
     std::set<line_no> eval(const TextQuery &t) const;
 
     std::ostream& display(std::ostream &os) const {
-        // TODO
-        //return os << "~(" << query.display() << ")";
-        return os;
+        return os << "~(" << query << ")";
     }
 
     const Query query;

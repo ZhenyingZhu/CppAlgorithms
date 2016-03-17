@@ -18,9 +18,7 @@ protected:
 
     // Abstract class
     std::ostream& display(std::ostream &os) const {
-        // TODO
-        //return os << "(" << lhs.display() << " " << oper << " " << rhs.display() << ")";
-        return os;
+        return os << "(" << lhs; // << " " << oper << " " << rhs << ")";
     }
 
     const Query lhs, rhs;

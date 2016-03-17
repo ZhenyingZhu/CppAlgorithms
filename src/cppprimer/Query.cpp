@@ -22,10 +22,6 @@ Query operator~(const Query &oper) {
     return new NotQuery(oper);
 }
 
-std::ostream& operator<<(std::ostream &os, const Query& q) {
-    return q.display(os);
-}
-
 Query::Query(const string & queryWord):
         q(new WordQuery(queryWord)),
         use(new std::size_t(1)) { }

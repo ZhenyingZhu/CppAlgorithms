@@ -51,7 +51,11 @@ private:
         }
     }
 
-};
+}; // Query
+
+inline std::ostream& operator<<(std::ostream &os, const Query& q) {
+    return q.display(os);
+}
 
 } // cppprimer
 #endif

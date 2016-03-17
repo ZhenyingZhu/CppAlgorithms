@@ -30,6 +30,7 @@ int testWordQuery(int argc, char **argv) {
 
         Query q(s);
         set<TextQuery::line_no> locs = q.eval(tq);
+        cout << "Query is: " << q << endl;
         print_results(locs, s, tq);
     }
 
@@ -41,6 +42,7 @@ int testWordQuery(int argc, char **argv) {
 
         Query q = ~Query(s);
         set<TextQuery::line_no> locs = q.eval(tq);
+        cout << "Query is: " << q << endl;
         print_results(locs, "no " + s, tq);
     }
 
@@ -53,6 +55,7 @@ int testWordQuery(int argc, char **argv) {
 
         Query q = Query(s1) & Query(s2);
         set<TextQuery::line_no> locs = q.eval(tq);
+        cout << "Query is: " << q << endl;
         print_results(locs, s1 + " and " + s2, tq);
     }
 
@@ -65,6 +68,7 @@ int testWordQuery(int argc, char **argv) {
 
         Query q = Query(s1) | Query(s2);
         set<TextQuery::line_no> locs = q.eval(tq);
+        cout << "Query is: " << q << endl;
         print_results(locs, s1 + " or " + s2, tq);
     }
 
