@@ -1,17 +1,21 @@
 #ifndef SRC_CHAPTER5_PARITY_HPP_
 #define SRC_CHAPTER5_PARITY_HPP_
 
+#include "../../Solution.h"
+#include "../../SmartPtr.h"
+
 namespace eip {
 namespace chapter5 {
 
 class Parity : public Solution {
+    friend class SmartPtr;
+
 public:
-    Parity() {
+    Parity():
         Solution("EPI Chapter 5.1",
-                "If there are odd 1 in the number," +
-                " return 1, else return 0."
-                );
-    }
+                "If there are odd 1 in the number, "
+                "return 1, else return 0.") { }
+
     bool test();
 private:
     short parityBruteForce(unsigned long);

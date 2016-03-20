@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 {
     cout << "Chapter 5.1" << endl;
     cout << "Compute Parity: " << endl;
-    Parity().test();
+    //Parity().test();
     /*
     cout << "Swap Bits: " << endl;
     test_swap_bits();
