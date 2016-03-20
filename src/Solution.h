@@ -13,6 +13,9 @@ class Solution {
 
     friend class SmartPtr;
 
+public:
+    virtual bool test() const = 0; // verify solution is right
+
 protected:
     Solution(std::string questionSource, std::string questionDescription):
         questionSource_(questionSource),
@@ -30,9 +33,6 @@ protected:
 
     std::string questionSource_;
     std::string questionDescription_;
-
-private:
-    virtual bool test() const = 0; // verify solution is right
 };
 
 #endif /* SRC_EIP_SOLUTION_HPP_ */

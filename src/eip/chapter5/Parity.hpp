@@ -16,11 +16,14 @@ public:
                 "If there are odd 1 in the number, "
                 "return 1, else return 0.") { }
 
-    bool test();
+    bool test() const;
+
+    ~Parity() { }
+
 private:
-    short parityBruteForce(unsigned long);
-    short parityEliminateLastOne(unsigned long);
-    short parity(unsigned long);
+    short parityBruteForce(unsigned long) const;
+    short parityEliminateLastOne(unsigned long) const;
+    short parity(unsigned long) const;
 };
 
 } // chapter5

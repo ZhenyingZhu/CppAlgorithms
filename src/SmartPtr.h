@@ -7,7 +7,7 @@
 
 class SmartPtr {
 public:
-    SmartPtr(const Solution &solution);
+    SmartPtr(const Solution *solution);
 
     SmartPtr(const SmartPtr &copy);
 
@@ -17,7 +17,11 @@ public:
         descUse();
     }
 
-    std::string display();
+    std::string displaySource();
+
+    std::string displayDescription();
+
+    bool runTest();
 
 private:
     void descUse();

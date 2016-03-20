@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Solution.h"
+#include "SmartPtr.h"
 #include "cppprimer/cppprimer.h"
 #include "eip/chapter5/Parity.hpp"
 
@@ -36,10 +38,12 @@ using namespace chapter5;
 
 int main(int argc, char** argv)
 {
+    SmartPtr s51(new Parity());
+    cout << s51.runTest() << endl;
+    /*
     cout << "Chapter 5.1" << endl;
     cout << "Compute Parity: " << endl;
-    //Parity().test();
-    /*
+    Parity().test();
     cout << "Swap Bits: " << endl;
     test_swap_bits();
     cout << "Cloest Int Same Bit Count: " << endl;

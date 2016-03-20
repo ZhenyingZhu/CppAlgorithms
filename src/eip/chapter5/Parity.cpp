@@ -8,7 +8,7 @@ using namespace std;
 namespace eip {
   namespace chapter5 {
 
-    short Parity::parityBruteForce(unsigned long x) {
+    short Parity::parityBruteForce(unsigned long x) const {
         short res = 0;
         while (x) {
             res += x & 1;
@@ -18,7 +18,7 @@ namespace eip {
         return res % 2;
     }
 
-    short Parity::parityEliminateLastOne(unsigned long x) {
+    short Parity::parityEliminateLastOne(unsigned long x) const {
         short res = 0;
         while (x) {
             res ^= 1;
@@ -28,7 +28,7 @@ namespace eip {
         return res;
     }
 
-    short Parity::parity(unsigned long x) {
+    short Parity::parity(unsigned long x) const {
     /* idea: parity of x = parity(first half of x XOR last half of x)
      * unsigned long here is 32 bits, which is same as int.
      * sizeof(long) = sizeof(int) = 4 * sizeof(char)
@@ -41,7 +41,7 @@ namespace eip {
         return x & 0x1;
     }
 
-    bool Parity::test() {
+    bool Parity::test() const {
         cout << "5: " << parity(5) << endl;
         cout << "7: " << parity(7) << endl;
 

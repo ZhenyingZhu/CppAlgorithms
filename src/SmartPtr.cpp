@@ -5,8 +5,8 @@
 
 using std::string;
 
-SmartPtr::SmartPtr(const Solution & solution):
-        solPtr(&solution), use(new std::size_t(1)) { }
+SmartPtr::SmartPtr(const Solution *solution):
+        solPtr(solution), use(new std::size_t(1)) { }
 
 
 SmartPtr::SmartPtr(const SmartPtr &copy):
@@ -31,6 +31,14 @@ void SmartPtr::descUse() {
     }
 }
 
-string SmartPtr::display() {
+string SmartPtr::displaySource() {
     return solPtr->getSource();
+}
+
+string SmartPtr::displayDescription() {
+    return solPtr->getDescription();
+}
+
+bool SmartPtr::runTest() {
+    return solPtr->test();
 }
