@@ -41,21 +41,11 @@ using namespace chapter5;
 int main(int argc, char** argv)
 {
 
-    const Solution *parity = new Parity();
-    myutils::SmartPtr ptr(parity);
+    SolutionCollection::getInstance()->insertSolution(new Parity());
 
-    SolutionCollection::getInstance()->insertSolution(ptr);
-    if ( !SolutionCollection::getInstance()->checkSolutions() ) {
-        cout << "Error occurred." << endl;
-    }
+    SolutionCollection::getInstance()->checkSolutions();
 
-//    SmartPtr s51(new Parity());
-//    s51.runTest();
-//
     /*
-    cout << "Chapter 5.1" << endl;
-    cout << "Compute Parity: " << endl;
-    Parity().test();
     cout << "Swap Bits: " << endl;
     test_swap_bits();
     cout << "Cloest Int Same Bit Count: " << endl;

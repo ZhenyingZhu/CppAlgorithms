@@ -19,8 +19,11 @@ public:
     virtual bool test() const = 0; // verify solution is right
 
 protected:
-    Solution(std::string questionSource, std::string questionDescription):
+    Solution(std::string questionSource,
+            std::string questionTitle_,
+            std::string questionDescription):
         questionSource_(questionSource),
+        questionTitle_(questionTitle_),
         questionDescription_(questionDescription) { }
 
     virtual ~Solution() { }
@@ -29,11 +32,16 @@ protected:
         return questionSource_;
     }
 
+    inline std::string getTitle() const {
+        return questionTitle_;
+    }
+
     inline std::string getDescription() const {
         return questionDescription_;
     }
 
     std::string questionSource_;
+    std::string questionTitle_;
     std::string questionDescription_;
 };
 

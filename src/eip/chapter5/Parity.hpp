@@ -8,11 +8,12 @@ namespace eip {
 namespace chapter5 {
 
 class Parity : public myutils::Solution {
-    friend class SmartPtr;
+    friend class myutils::SmartPtr;
 
 public:
     Parity():
         Solution("EPI Chapter 5.1",
+                "Compute Parity",
                 "If there are odd 1 in the number, "
                 "return 1, else return 0.") { }
 

@@ -21,6 +21,8 @@ public:
 
     std::string displaySource();
 
+    std::string displayTitle();
+
     std::string displayDescription();
 
     bool runTest();

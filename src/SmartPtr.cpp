@@ -37,6 +37,10 @@ string SmartPtr::displaySource() {
     return solPtr->getSource();
 }
 
+string SmartPtr::displayTitle() {
+    return solPtr->getTitle();
+}
+
 string SmartPtr::displayDescription() {
     return solPtr->getDescription();
 }
