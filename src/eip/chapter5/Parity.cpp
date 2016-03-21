@@ -2,8 +2,12 @@
 #include <climits>
 
 #include "Parity.hpp"
+#include "../../SmartPtr.h"
+#include "../../SolutionCollection.h"
 
 using namespace std; 
+using myutils::SmartPtr;
+using myutils::SolutionCollection;
 
 namespace eip {
   namespace chapter5 {
@@ -47,5 +51,8 @@ namespace eip {
 
         return true;
     }
-  }
-}
+  } // chapter5
+} // eip
+
+
+

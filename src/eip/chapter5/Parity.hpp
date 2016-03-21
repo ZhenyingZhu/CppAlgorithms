@@ -7,7 +7,7 @@
 namespace eip {
 namespace chapter5 {
 
-class Parity : public Solution {
+class Parity : public myutils::Solution {
     friend class SmartPtr;
 
 public:

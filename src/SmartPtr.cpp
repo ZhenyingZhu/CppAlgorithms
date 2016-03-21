@@ -5,6 +5,8 @@
 
 using std::string;
 
+namespace myutils {
+
 SmartPtr::SmartPtr(const Solution *solution):
         solPtr(solution), use(new std::size_t(1)) { }
 
@@ -42,3 +44,5 @@ string SmartPtr::displayDescription() {
 bool SmartPtr::runTest() {
     return solPtr->test();
 }
+
+} // myutils

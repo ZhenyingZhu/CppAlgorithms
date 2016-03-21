@@ -1,4 +1,5 @@
 #include <iostream>
+#include "SolutionCollection.h"
 #include "Solution.h"
 #include "SmartPtr.h"
 #include "cppprimer/cppprimer.h"
@@ -7,6 +8,7 @@
 using std::cout;
 using std::endl;
 
+using namespace myutils;
 using namespace cppprimer;
 using namespace eip;
 using namespace chapter5;
@@ -38,8 +40,19 @@ using namespace chapter5;
 
 int main(int argc, char** argv)
 {
-    SmartPtr s51(new Parity());
-    cout << s51.runTest() << endl;
+
+    Parity *parity = new Parity();
+    SmartPtr ptr(parity);
+    SolutionCollection *p = SolutionCollection::getInstance();
+    (&p).insertSolution(ptr);
+
+    if ( !SolutionCollection::getInstance()->checkSolutions() ) {
+        cout << "Error occurred." << endl;
+    }
+
+//    SmartPtr s51(new Parity());
+//    s51.runTest();
+//
     /*
     cout << "Chapter 5.1" << endl;
     cout << "Compute Parity: " << endl;

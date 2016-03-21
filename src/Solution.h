@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace myutils {
+
 class SmartPtr;
 
 class Solution {
@@ -34,5 +36,7 @@ protected:
     std::string questionSource_;
     std::string questionDescription_;
 };
+
+} // myutils
 
 #endif /* SRC_EIP_SOLUTION_HPP_ */

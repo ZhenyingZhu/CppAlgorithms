@@ -5,6 +5,8 @@
 
 #include "Solution.h"
 
+namespace myutils {
+
 class SmartPtr {
 public:
     SmartPtr(const Solution *solution);
@@ -29,5 +31,7 @@ private:
     const Solution *solPtr;
     std::size_t *use;
 };
+
+} // myutils
 
 #endif /* SRC_SMARTPTR_H_ */
