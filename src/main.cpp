@@ -41,11 +41,10 @@ using namespace chapter5;
 int main(int argc, char** argv)
 {
 
-    Parity *parity = new Parity();
-    SmartPtr ptr(parity);
-    SolutionCollection *p = SolutionCollection::getInstance();
-    (&p).insertSolution(ptr);
+    const Solution *parity = new Parity();
+    myutils::SmartPtr ptr(parity);
 
+    SolutionCollection::getInstance()->insertSolution(ptr);
     if ( !SolutionCollection::getInstance()->checkSolutions() ) {
         cout << "Error occurred." << endl;
     }
