@@ -13,6 +13,11 @@ using namespace cppprimer;
 using namespace eip;
 using namespace chapter5;
 
+void prepareSolutions() {
+    // Chapter 5.1
+    SolutionCollection::getInstance()->insertSolution(new Parity());
+    // Chapter 5.2
+}
 //// Chapter 5.2
 //void test_swap_bits();
 //// Chapter 5.4
@@ -40,9 +45,7 @@ using namespace chapter5;
 
 int main(int argc, char** argv)
 {
-
-    SolutionCollection::getInstance()->insertSolution(new Parity());
-
+    prepareSolutions();
     SolutionCollection::getInstance()->checkSolutions();
 
     /*
