@@ -42,38 +42,37 @@ void prepareSolutions() {
 //void test_multiply_array();
 //// Chapter 6.4
 //void test_can_reach_end();
+/*
+cout << "Swap Bits: " << endl;
+test_swap_bits();
+cout << "Cloest Int Same Bit Count: " << endl;
+test_cloest_int_same_bit_count();
+cout << "Multiply without arithmetical operators: " << endl;
+test_multiply();
+cout << "Divide x / y: " << endl;
+test_divide();
+cout << "Power x ^ y: " << endl;
+test_power();
+cout << "Reverse x: " << endl;
+test_reverse();
+cout << "Check if x is Palindrome: " << endl;
+test_is_palindrome();
+cout << "Find intersect of rectangles: " << endl;
+test_intersect_rectangle();
+cout << "Increment an arbitrary-precision integer: " << endl;
+test_plus_one();
+cout << "Dutch Flag Partition: " << endl;
+test_dutch_flag_partition();
+cout << "Multiply two arbitary precision integers: " << endl;
+test_multiply_array();
+cout << "Advancing through an array: " << endl;
+test_can_reach_end();
+*/
 
 int main(int argc, char** argv)
 {
     prepareSolutions();
     SolutionCollection::getInstance()->checkSolutions();
-
-    /*
-    cout << "Swap Bits: " << endl;
-    test_swap_bits();
-    cout << "Cloest Int Same Bit Count: " << endl;
-    test_cloest_int_same_bit_count();
-    cout << "Multiply without arithmetical operators: " << endl;
-    test_multiply();
-    cout << "Divide x / y: " << endl;
-    test_divide();
-    cout << "Power x ^ y: " << endl;
-    test_power();
-    cout << "Reverse x: " << endl;
-    test_reverse();
-    cout << "Check if x is Palindrome: " << endl;
-    test_is_palindrome();
-    cout << "Find intersect of rectangles: " << endl;
-    test_intersect_rectangle();
-    cout << "Increment an arbitrary-precision integer: " << endl;
-    test_plus_one();
-    cout << "Dutch Flag Partition: " << endl;
-    test_dutch_flag_partition();
-    cout << "Multiply two arbitary precision integers: " << endl;
-    test_multiply_array();
-    cout << "Advancing through an array: " << endl;
-    test_can_reach_end();
-    */
 
     return 0;
 }
