@@ -16,7 +16,7 @@ class Solution {
     friend class SmartPtr;
 
 public:
-    virtual bool test() const = 0; // verify solution is right
+    virtual bool test() = 0; // verify solution is right
 
 protected:
     Solution(std::string questionSource,

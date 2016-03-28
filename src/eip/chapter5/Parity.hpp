@@ -4,6 +4,8 @@
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 
+#include <unordered_map>
+
 namespace eip {
 namespace chapter5 {
 
@@ -17,14 +19,20 @@ public:
                 "If there are odd 1 in the number, "
                 "return 1, else return 0.") { }
 
-    bool test() const;
+    bool test();
 
     ~Parity() { }
 
+    short parityBruteForce(unsigned long);
+    short parityEliminateLastOne(unsigned long);
+    short parityUseCache(unsigned long, const int);
+    short parity(unsigned long);
+
 private:
-    short parityBruteForce(unsigned long) const;
-    short parityEliminateLastOne(unsigned long) const;
-    short parity(unsigned long) const;
+    std::unordered_map<unsigned short, short> precomputedParity;
+
+    void computeParity(int);
+
 };
 
 } // chapter5

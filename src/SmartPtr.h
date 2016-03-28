@@ -9,7 +9,7 @@ namespace myutils {
 
 class SmartPtr {
 public:
-    SmartPtr(const Solution *solution);
+    SmartPtr(Solution *solution);
 
     SmartPtr(const SmartPtr &copy);
 
@@ -30,7 +30,7 @@ public:
 private:
     void descUse();
 
-    const Solution *solPtr;
+    Solution *solPtr;
     std::size_t *use;
 };
 

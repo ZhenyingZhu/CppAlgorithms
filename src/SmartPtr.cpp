@@ -7,7 +7,7 @@ using std::string;
 
 namespace myutils {
 
-SmartPtr::SmartPtr(const Solution *solution):
+SmartPtr::SmartPtr(Solution *solution):
         solPtr(solution), use(new std::size_t(1)) { }
 
 

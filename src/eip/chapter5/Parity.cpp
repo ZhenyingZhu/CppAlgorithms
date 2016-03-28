@@ -1,18 +1,25 @@
 #include <iostream>
 #include <climits>
+#include <unordered_map>
+#include <stdexcept>
 
 #include "Parity.hpp"
 #include "../../SmartPtr.h"
 #include "../../SolutionCollection.h"
 
-using namespace std; 
+using std::cout;
+using std::endl;
+using std::unordered_map;
+using std::make_pair;
+using std::runtime_error;
+
 using myutils::SmartPtr;
 using myutils::SolutionCollection;
 
 namespace eip {
 namespace chapter5 {
 
-short Parity::parityBruteForce(unsigned long x) const {
+short Parity::parityBruteForce(unsigned long x) {
     short res = 0;
     while (x) {
         res += x & 1;
@@ -22,7 +29,7 @@ short Parity::parityBruteForce(unsigned long x) const {
     return res % 2;
 }
 
-short Parity::parityEliminateLastOne(unsigned long x) const {
+short Parity::parityEliminateLastOne(unsigned long x) {
     short res = 0;
     while (x) {
         res ^= 1;
@@ -32,7 +39,32 @@ short Parity::parityEliminateLastOne(unsigned long x) const {
     return res;
 }
 
-short Parity::parity(unsigned long x) const {
+void Parity::computeParity(int length) {
+    if (length >= 32 || length <= 0) {
+        throw runtime_error("Key length should be between 1 to 31");
+    }
+
+    unsigned short maxValue(1U << length);
+    for (unsigned short i = 0; i != maxValue; ++i) {
+        short parity = parityBruteForce(long(i));
+        precomputedParity.insert(make_pair<unsigned short, short>(short(i), short(parity)));
+    }
+}
+
+short Parity::parityUseCache(unsigned long x, const int length) {
+    const unsigned short mask( (1U << length) - 1);
+
+    unsigned short firstPart = x & mask;
+    unsigned short secondPart = (x >> length) & mask;
+    unsigned short thirdPart = (x >> (2 * length)) & mask;
+    unsigned short forthPart = (x >> (3 * length)) & mask;
+    return short(precomputedParity[firstPart] ^
+            precomputedParity[secondPart] ^
+            precomputedParity[thirdPart] ^
+            precomputedParity[forthPart]);
+}
+
+short Parity::parity(unsigned long x) {
     /* idea: parity of x = parity(first half of x XOR last half of x)
      * unsigned long here is 32 bits, which is same as int.
      * sizeof(long) = sizeof(int) = 4 * sizeof(char)
@@ -45,9 +77,14 @@ short Parity::parity(unsigned long x) const {
     return x & 0x1;
 }
 
-bool Parity::test() const {
-    cout << "5: " << parity(5) << endl;
-    cout << "7: " << parity(7) << endl;
+bool Parity::test() {
+    const int length = sizeof(int) * CHAR_BIT / 4;
+    computeParity(length);
+
+    for (int x = 0; x != 256; ++x) {
+        if ( parityUseCache(x, length) != parityBruteForce(x) )
+            return false;
+    }
 
     return true;
 }
