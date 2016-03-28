@@ -13,9 +13,6 @@ using namespace cppprimer;
 using namespace eip;
 using namespace chapter5;
 
-#include <unordered_map>
-using std::unordered_map;
-
 void prepareSolutions() {
     // Chapter 5.1
     SolutionCollection::getInstance()->insertSolution(new Parity());
