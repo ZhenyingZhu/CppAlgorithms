@@ -3,9 +3,10 @@
 
 #include <string>
 
-namespace myutils {
+#include "SolutionCollection.h"
+#include "SmartPtr.h"
 
-class SmartPtr;
+namespace myutils {
 
 class Solution {
     /* Abstract class
@@ -24,7 +25,10 @@ protected:
             std::string questionDescription):
         questionSource_(questionSource),
         questionTitle_(questionTitle_),
-        questionDescription_(questionDescription) { }
+        questionDescription_(questionDescription) {
+        SmartPtr sp(this);
+        myutils::SolutionCollection::getInstance()->insertSolution(sp);
+    }
 
     virtual ~Solution() { }
 

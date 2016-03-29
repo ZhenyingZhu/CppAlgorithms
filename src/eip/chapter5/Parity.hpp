@@ -3,6 +3,7 @@
 
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
+#include "../../SolutionCollection.h"
 
 #include <unordered_map>
 

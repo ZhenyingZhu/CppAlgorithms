@@ -2,6 +2,7 @@
 #include <string>
 
 #include "SmartPtr.h"
+#include "Solution.h"
 
 using std::string;
 

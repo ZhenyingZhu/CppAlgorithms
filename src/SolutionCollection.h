@@ -3,9 +3,9 @@
 
 #include <vector>
 
-#include "SmartPtr.h"
-
 namespace myutils {
+
+class SmartPtr;
 
 class SolutionCollection {
     /* A singleton class

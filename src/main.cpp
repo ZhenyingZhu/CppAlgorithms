@@ -14,8 +14,7 @@ using namespace eip;
 using namespace chapter5;
 
 void prepareSolutions() {
-    // Chapter 5.1
-    SolutionCollection::getInstance()->insertSolution(new Parity());
+    new Parity(); // Chapter 5.1
     //// Chapter 5.2
     //void test_swap_bits();
     //// Chapter 5.4

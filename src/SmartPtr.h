@@ -3,9 +3,9 @@
 
 #include <string>
 
-#include "Solution.h"
-
 namespace myutils {
+
+class Solution;
 
 class SmartPtr {
 public:
