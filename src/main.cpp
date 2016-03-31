@@ -4,6 +4,7 @@
 #include "SmartPtr.h"
 #include "cppprimer/cppprimer.h"
 #include "eip/chapter5/Parity.hpp"
+#include "eip/chapter5/SwapBits.hpp"
 
 using std::cout;
 using std::endl;
@@ -15,8 +16,7 @@ using namespace chapter5;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
-    //// Chapter 5.2
-    //void test_swap_bits();
+    new SwapBits(); // Chapter 5.2
     //// Chapter 5.4
     //void test_cloest_int_same_bit_count();
     //// Chapter 5.5
@@ -72,5 +72,6 @@ int main(int argc, char** argv)
     prepareSolutions();
     SolutionCollection::getInstance()->checkSolutions();
 
+    cout << "**********\n" << "All done." << endl;
     return 0;
 }
