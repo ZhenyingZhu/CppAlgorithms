@@ -1,10 +1,3 @@
-/*
- * ClosestIntSameBitCount.hpp
- *
- *  Created on: Mar 31, 2016
- *      Author: zhu91
- */
-
 #ifndef SRC_EIP_CHAPTER5_CLOSESTINTSAMEBITCOUNT_HPP_
 #define SRC_EIP_CHAPTER5_CLOSESTINTSAMEBITCOUNT_HPP_
 
