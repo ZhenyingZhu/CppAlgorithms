@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "SwapBits.hpp"
 #include "../../SmartPtr.h"
 #include "../../SolutionCollection.h"

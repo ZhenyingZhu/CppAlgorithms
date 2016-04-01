@@ -5,6 +5,7 @@
 #include "cppprimer/cppprimer.h"
 #include "eip/chapter5/Parity.hpp"
 #include "eip/chapter5/SwapBits.hpp"
+#include "eip/chapter5/ClosestIntSameBitCount.hpp"
 
 using std::cout;
 using std::endl;
@@ -17,8 +18,7 @@ using namespace chapter5;
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
     new SwapBits(); // Chapter 5.2
-    //// Chapter 5.4
-    //void test_cloest_int_same_bit_count();
+    new ClosestIntSameBitCount(); // Chapter 5.4
     //// Chapter 5.5
     //void test_multiply();
     //// Chapter 5.6

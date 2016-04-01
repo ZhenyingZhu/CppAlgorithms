@@ -1,16 +1,15 @@
-/*
 #include <iostream>
 #include <stdexcept>
 
-using namespace std;
+#include "ClosestIntSameBitCount.hpp"
+#include "../../SmartPtr.h"
+#include "../../SolutionCollection.h"
 
+using std::invalid_argument;
+
+namespace eip {
 namespace chapter5 {
-    /* EPI Chapter 5.4
-     * Find the cloest integer that has same weight as the given number.
-     * Weight is count as number of set bits.
-     *
-
-    unsigned long ClosestIntSameBitCount(unsigned long x) {
+    unsigned long ClosestIntSameBitCount::closestIntSameBitCount(unsigned long x) {
         for (int i = 0; i != 31; ++i) {
             if (((x >> i) & 1) != ((x >> (i + 1)) & 1)) {
                 unsigned long bit_mask = (1UL << i) | (1UL << (i + 1));
@@ -21,10 +20,12 @@ namespace chapter5 {
         throw invalid_argument("All bits are 0 or 1.");
     }
 
-    void test_cloest_int_same_bit_count() {
-        cout << "11: " << ClosestIntSameBitCount(11) << endl;
-        cout << "8: " << ClosestIntSameBitCount(8) << endl;
-        // cout << "0: " << ClosestIntSameBitCount(0) << endl;
+    bool ClosestIntSameBitCount::test() {
+        std::cout << "11: " << closestIntSameBitCount(11) << std::endl;
+        std::cout << "8: " << closestIntSameBitCount(8) << std::endl;
+        //std::cout << "0: " << closestIntSameBitCount(0) << std::endl;
+        return true;
     }
-}
-*/
+
+} // chapter5
+} // eip
