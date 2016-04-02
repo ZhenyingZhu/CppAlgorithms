@@ -1,10 +1,3 @@
-/*
- * SwapBits.hpp
- *
- *  Created on: Mar 30, 2016
- *      Author: zhu91
- */
-
 #ifndef SRC_EIP_CHAPTER5_SWAPBITS_HPP_
 #define SRC_EIP_CHAPTER5_SWAPBITS_HPP_
 
