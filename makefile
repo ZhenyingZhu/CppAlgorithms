@@ -31,6 +31,7 @@ SOURCES =			\
 	src/eip/chapter5/Power.cpp			\
 	src/eip/chapter5/Parity.cpp			\
 	src/eip/chapter5/ClosestIntSameBitCount.cpp			\
+	src/eip/chapter5/ReverseBits.cpp			\
 	src/eip/chapter6/PlusOne.cpp			\
 	src/eip/chapter6/MultiplyArray.cpp			\
 	src/eip/chapter6/CanReachEnd.cpp			\

@@ -6,6 +6,7 @@
 #include "eip/chapter5/Parity.hpp"
 #include "eip/chapter5/SwapBits.hpp"
 #include "eip/chapter5/ClosestIntSameBitCount.hpp"
+#include "eip/chapter5/ReverseBits.hpp"
 
 using std::cout;
 using std::endl;
@@ -18,6 +19,7 @@ using namespace chapter5;
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
     new SwapBits(); // Chapter 5.2
+    new ReverseBits(); // Chapter 5.3
     new ClosestIntSameBitCount(); // Chapter 5.4
     //// Chapter 5.5
     //void test_multiply();

@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <stdexcept>
 
 #include "SolutionCollection.h"
 #include "SmartPtr.h"
@@ -10,6 +11,7 @@ using std::string;
 using std::vector;
 using std::cout;
 using std::endl;
+using std::exception;
 
 namespace myutils {
 static const string SEPARATE(10, '=');
@@ -33,11 +35,15 @@ bool SolutionCollection::checkSolutions() {
         cout << SEPARATE << endl;
         cout << iter->displaySource() << endl;
         cout << iter->displayTitle() << endl;
-        if ( !iter->runTest() ) {
-            cout << "Failed" << endl;
-            return false;
-        } else {
-            cout << "Passed" << endl;
+        try {
+            if ( !iter->runTest() ) {
+                cout << "Failed" << endl;
+                return false;
+            } else {
+                cout << "Passed" << endl;
+            }
+        } catch (exception &ex) {
+            cout << ex.what() << endl;
         }
     }
 
