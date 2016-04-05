@@ -22,14 +22,14 @@ public:
 
     ~ReverseBits() { }
 
-    long reverseBitsBruteForce(long x);
+    long reverseBitsBruteForce(long x, int length);
     long reverseBits(long x);
 
 private:
     std::unordered_map<long, long> precomputedReverse_;
 
     void swapTwoBits(long &x, int i, int j);
-    void swapTwoBits(long &x, int i, int j);
+    void computeReverseTable(int length);
 };
 
 } // chapter5
