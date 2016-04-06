@@ -23,8 +23,14 @@ public:
 
     ~ClosestIntSameBitCount() { }
 
+    unsigned long closestIntBruteForce(unsigned long x);
+
+    unsigned long closestIntLinearSearch(unsigned long x);
+
     unsigned long closestIntSameBitCount(unsigned long x);
 
+private:
+    size_t countBit(unsigned long x);
 };
 
 } // chapter5

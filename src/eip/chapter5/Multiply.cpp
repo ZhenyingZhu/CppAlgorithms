@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 
 using namespace std; 
@@ -6,7 +5,7 @@ using namespace std;
 namespace chapter5 {
     /* EPI Chapter 5.5
      * Multiply x and y without arithmetical operations.
-     *
+     */
 
     unsigned Add(unsigned a, unsigned b) {
         unsigned tmpa = a, tmpb = b, k = 1, c = 0, res = 0;
@@ -38,4 +37,3 @@ namespace chapter5 {
         }
     }
 }
-*/
