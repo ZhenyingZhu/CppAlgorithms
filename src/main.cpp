@@ -7,6 +7,7 @@
 #include "eip/chapter5/SwapBits.hpp"
 #include "eip/chapter5/ClosestIntSameBitCount.hpp"
 #include "eip/chapter5/ReverseBits.hpp"
+#include "eip/chapter5/Multiply.hpp"
 
 using std::cout;
 using std::endl;
@@ -21,8 +22,7 @@ void prepareSolutions() {
     new SwapBits(); // Chapter 5.2
     new ReverseBits(); // Chapter 5.3
     new ClosestIntSameBitCount(); // Chapter 5.4
-    //// Chapter 5.5
-    //void test_multiply();
+    new Multiply(); // Chapter 5.5
     //// Chapter 5.6
     //void test_divide();
     //// Chapter 5.7

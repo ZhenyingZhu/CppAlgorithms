@@ -1,16 +1,14 @@
+#include "Multiply.hpp"
+
 #include <iostream>
 
-using namespace std; 
-
+namespace eip {
 namespace chapter5 {
-    /* EPI Chapter 5.5
-     * Multiply x and y without arithmetical operations.
-     */
 
-    unsigned Add(unsigned a, unsigned b) {
+    unsigned Multiply::add(unsigned a, unsigned b) {
         unsigned tmpa = a, tmpb = b, k = 1, c = 0, res = 0;
-        while (tmpa || tmpb) {
-            unsigned ak = a & k, bk = b & k;
+        while (tmpa || tmpb) { // indicate if can stop
+            unsigned ak = a & k, bk = b & k; // get current bit
             unsigned tmpc = (ak & bk) | (ak & c) | (bk & c);
             res |= ak ^ bk ^ c;
             c = tmpc << 1;  k <<= 1; tmpa >>= 1; tmpb >>= 1;
@@ -18,22 +16,29 @@ namespace chapter5 {
         return (res | c);
     }
 
-    unsigned Multiply(unsigned x, unsigned y) {
+    unsigned Multiply::multiply(unsigned x, unsigned y) {
         unsigned res = 0;
         while (x) {
             if (x & 1) {
-                res = Add(res, y);
+                res = add(res, y);
             }
             x >>= 1; y <<= 1;
         }
         return res;
     }
 
-    void test_multiply() {
+    bool Multiply::test() {
         for (unsigned i = 0; i != 10; ++i) {
             for (unsigned j = i; j != 10; ++j) {
-                cout << i << " * " << j << " = " << Multiply(i, j) << endl;
+                if ( multiply(i, j) != i * j ) {
+                    std::cout << i << "*" << j << "!=" << multiply(i, j) << std::endl;
+                    return false;
+                }
             }
         }
+
+        return true;
     }
-}
+
+} // chapter 5
+} // eip
