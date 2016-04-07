@@ -1,16 +1,16 @@
-/*
+#include "Divide.hpp"
+
 #include <iostream>
 
-using namespace std;
+namespace {
+int SIZE = 32;
+}
 
+namespace eip {
 namespace chapter5 {
-    /* EPI Chapter 5.6
-     * Compute x / y with addition, substraction or/and shifting.
-     *
-
-    unsigned Divide(unsigned x, unsigned y) {
-        unsigned res = 0;
-        int power = 32;
+    unsigned Divide::divide(unsigned x, unsigned y) {
+        unsigned res(0);
+        int power = SIZE;
         unsigned long long y_power = static_cast<unsigned long long>(y) << power;
 
         while (x >= y) {
@@ -26,14 +26,17 @@ namespace chapter5 {
         return res;
     }
 
-    void test_divide() {
-        for (int i = 1; i != 10; i += 3) {
-            cout << "Divide " << i << " / 3 = " << Divide(i, 3) << endl;
+    bool Divide::test() {
+        for (unsigned i = 10; i != 0; --i) {
+            for (unsigned j = i; j != 0; --j) {
+                if ( (i / j) != divide(i, j) ) {
+                    std::cout << i << "/" << j << "=" << divide(i, j) << std::endl;
+                    return false;
+                }
+            }
         }
 
-        for (int i = 0; i != 16; i += 4) {
-            cout << "Divide " << i << " / 4 = " << Divide(i, 4) << endl;
-        }
+        return true;
     }
-}
-*/
+} // chapter5
+} // eip

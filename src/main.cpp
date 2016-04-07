@@ -8,6 +8,7 @@
 #include "eip/chapter5/ClosestIntSameBitCount.hpp"
 #include "eip/chapter5/ReverseBits.hpp"
 #include "eip/chapter5/Multiply.hpp"
+#include "eip/chapter5/Divide.hpp"
 
 using std::cout;
 using std::endl;
@@ -23,8 +24,7 @@ void prepareSolutions() {
     new ReverseBits(); // Chapter 5.3
     new ClosestIntSameBitCount(); // Chapter 5.4
     new Multiply(); // Chapter 5.5
-    //// Chapter 5.6
-    //void test_divide();
+    new Divide(); // Chapter 5.6
     //// Chapter 5.7
     //void test_power();
     //// Chapter 5.8
