@@ -9,6 +9,7 @@
 #include "eip/chapter5/ReverseBits.hpp"
 #include "eip/chapter5/Multiply.hpp"
 #include "eip/chapter5/Divide.hpp"
+#include "eip/chapter5/Power.hpp"
 
 using std::cout;
 using std::endl;
@@ -25,8 +26,7 @@ void prepareSolutions() {
     new ClosestIntSameBitCount(); // Chapter 5.4
     new Multiply(); // Chapter 5.5
     new Divide(); // Chapter 5.6
-    //// Chapter 5.7
-    //void test_power();
+    new Power(); // Chapter 5.7
     //// Chapter 5.8
     //void test_reverse();
     //// Chapter 5.9

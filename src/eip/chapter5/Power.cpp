@@ -1,14 +1,20 @@
-/*
+#include "Power.hpp"
+
+#include <cmath>
+#include <stdexcept>
 #include <iostream>
 
-using namespace std; 
+using std::invalid_argument;
+using std::cout;
+using std::endl;
 
+namespace eip {
 namespace chapter5 {
-    /* EPI Chapter 5.7
-     * Compute x ^ y. x is double and y is integer.
-     *
+    double Power::power(double x, int y) {
+        if (x == 0.0 && y < 0) {
+            throw invalid_argument("0 cannot power with negative.");
+        }
 
-    double Power(double x, int y) {
         double res = 1.0;
         long long power = y;
         if (y < 0) {
@@ -27,10 +33,24 @@ namespace chapter5 {
         return res;
     }
 
-    void test_power() {
+    bool Power::test() {
         for (int i = -3; i != 4; ++i) {
-            cout << "3 ^ (" << i << ") = " << Power(3.0, i) << endl;
+            double j = 0.0;
+            while (j <= 3.0) {
+                try {
+                    if ( abs(power(j, i) - pow(j, i)) > 0.01 ) {
+                        cout << j << "^" << i << "=" << power(j, i) << endl;
+                        return false;
+                    }
+                } catch (invalid_argument &ex) {
+                    cout << ex.what() << endl;
+                }
+
+                j += 0.5;
+            }
         }
+
+        return true;
     }
-}
-*/
+} // chapter5
+} // eip
