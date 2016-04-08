@@ -10,6 +10,7 @@
 #include "eip/chapter5/Multiply.hpp"
 #include "eip/chapter5/Divide.hpp"
 #include "eip/chapter5/Power.hpp"
+#include "eip/chapter5/Reverse.hpp"
 
 using std::cout;
 using std::endl;
@@ -27,8 +28,7 @@ void prepareSolutions() {
     new Multiply(); // Chapter 5.5
     new Divide(); // Chapter 5.6
     new Power(); // Chapter 5.7
-    //// Chapter 5.8
-    //void test_reverse();
+    new Reverse(); // Chapter 5.8
     //// Chapter 5.9
     //void test_is_palindrome();
     //// Chapter 5.11

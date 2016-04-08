@@ -1,16 +1,27 @@
-/*
+#include "Reverse.hpp"
+
 #include <iostream>
 #include <cmath>
 #include <climits>
+#include <string>
+#include <cstdlib>
+#include <algorithm>
 
-using namespace std; 
+using std::cout;
+using std::endl;
+using std::string;
+using std::to_string;
 
+namespace eip {
 namespace chapter5 {
-    /* EPI Chapter 5.8
-     * Reverse digits of an integer. Leave sign unchanged.
-     *
+    long long Reverse::reverseBruteForce(int x) {
+        int sig = (x < 0) ? -1 : 1;
+        string res(to_string(x));
+        std::reverse(res.begin(), res.end());
+        return atoi(res.c_str()) * sig;
+    }
 
-    long long Reverse(int x) {
+    long long Reverse::reverse(int x) {
         bool is_negative = x < 0;
         long long res = 0, x_remaining = abs(x);
 
@@ -22,9 +33,19 @@ namespace chapter5 {
         return is_negative ? -res : res;
     }
 
-    void test_reverse() {
-        cout << "Reverse -123: " << Reverse(-123) << endl;
-        cout << "Reverse " << INT_MAX << ": " << Reverse(INT_MAX) << endl;
+    bool Reverse::test() {
+        for (int i = -100; i != 101; ++i) {
+            if (reverse(i) != reverseBruteForce(i) ) {
+                cout << i << " to " << reverse(i) << endl;
+                return false;
+            }
+        }
+
+        if ( reverse(INT_MAX) != 7463847412 ) {
+            cout << INT_MAX << " to " << reverse(INT_MAX) << endl;
+        }
+
+        return true;
     }
-}
-*/
+} // chapter5
+} // eip
