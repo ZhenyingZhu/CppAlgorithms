@@ -11,6 +11,7 @@
 #include "epi/chapter5/Parity.hpp"
 #include "epi/chapter5/Power.hpp"
 #include "epi/chapter5/Reverse.hpp"
+#include "epi/chapter5/IsPalindrome.hpp"
 
 using std::cout;
 using std::endl;
@@ -29,8 +30,7 @@ void prepareSolutions() {
     new Divide(); // Chapter 5.6
     new Power(); // Chapter 5.7
     new Reverse(); // Chapter 5.8
-    //// Chapter 5.9
-    //void test_is_palindrome();
+    new IsPalindrome(); // Chapter 5.9
     //// Chapter 5.11
     //void test_intersect_rectangle();
     //// Chapter 6.1
