@@ -1,9 +1,10 @@
+#include "../../epi/chapter5/Parity.hpp"
+
 #include <iostream>
 #include <climits>
 #include <unordered_map>
 #include <stdexcept>
 
-#include "Parity.hpp"
 #include "../../SmartPtr.h"
 #include "../../SolutionCollection.h"
 
@@ -16,7 +17,7 @@ using std::runtime_error;
 using myutils::SmartPtr;
 using myutils::SolutionCollection;
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 short Parity::parityBruteForce(unsigned long x) {

@@ -1,10 +1,10 @@
-#ifndef SRC_EIP_CHAPTER5_DIVIDE_HPP_
-#define SRC_EIP_CHAPTER5_DIVIDE_HPP_
+#ifndef SRC_EPI_CHAPTER5_DIVIDE_HPP_
+#define SRC_EPI_CHAPTER5_DIVIDE_HPP_
 
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 class Divide : public myutils::Solution {
@@ -12,7 +12,7 @@ class Divide : public myutils::Solution {
 
 public:
     Divide():
-        Solution("Chapter 5.6",
+        Solution("EPI Chapter 5.6",
                  "Divide",
                  "Divide x and y using only addition,"
                  " subtraction, and shifting.") { }
@@ -28,4 +28,4 @@ public:
 } // chapter5
 } // eip
 
-#endif /* SRC_EIP_CHAPTER5_DIVIDE_HPP_ */
+#endif /* SRC_EPI_CHAPTER5_DIVIDE_HPP_ */

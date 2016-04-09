@@ -1,4 +1,4 @@
-#include "Reverse.hpp"
+#include "../../epi/chapter5/Reverse.hpp"
 
 #include <iostream>
 #include <cmath>
@@ -12,7 +12,7 @@ using std::endl;
 using std::string;
 using std::to_string;
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
     long long Reverse::reverseBruteForce(int x) {
         int sig = (x < 0) ? -1 : 1;

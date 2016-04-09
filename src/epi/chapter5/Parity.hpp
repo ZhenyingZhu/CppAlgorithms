@@ -7,7 +7,7 @@
 
 #include <unordered_map>
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 class Parity : public myutils::Solution {

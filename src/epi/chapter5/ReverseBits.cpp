@@ -1,11 +1,10 @@
-#include "ReverseBits.hpp"
+#include "../../epi/chapter5/ReverseBits.hpp"
 
 #include <climits>
 #include <unordered_map>
 
 #include "../../SmartPtr.h"
 #include "../../SolutionCollection.h"
-#include "SwapBits.hpp"
 
 using std::make_pair;
 
@@ -13,7 +12,7 @@ namespace {
 const int SIZE = sizeof(long) * CHAR_BIT / 4; // shorten it to 16 bits
 }
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
     void ReverseBits::swapTwoBits(long &x, int i, int j) {
         // This solution comes from chapter 5.2

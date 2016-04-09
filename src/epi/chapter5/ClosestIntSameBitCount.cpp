@@ -1,13 +1,14 @@
+#include "../../epi/chapter5/ClosestIntSameBitCount.hpp"
+
 #include <iostream>
 #include <stdexcept>
 
-#include "ClosestIntSameBitCount.hpp"
 #include "../../SmartPtr.h"
 #include "../../SolutionCollection.h"
 
 using std::invalid_argument;
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
     size_t ClosestIntSameBitCount::countBit(unsigned long x) {
         size_t res(0);

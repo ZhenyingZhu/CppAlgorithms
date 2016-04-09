@@ -1,4 +1,4 @@
-#include "Power.hpp"
+#include "../../epi/chapter5/Power.hpp"
 
 #include <cmath>
 #include <stdexcept>
@@ -8,7 +8,7 @@ using std::invalid_argument;
 using std::cout;
 using std::endl;
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
     double Power::power(double x, int y) {
         if (x == 0.0 && y < 0) {

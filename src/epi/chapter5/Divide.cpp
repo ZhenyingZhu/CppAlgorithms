@@ -1,4 +1,4 @@
-#include "Divide.hpp"
+#include "../../epi/chapter5/Divide.hpp"
 
 #include <iostream>
 
@@ -6,7 +6,7 @@ namespace {
 int SIZE = 32;
 }
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
     unsigned Divide::divide(unsigned x, unsigned y) {
         unsigned res(0);

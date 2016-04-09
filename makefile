@@ -22,19 +22,19 @@ SOURCES =			\
 	src/cppprimer/Query.cpp			\
 	src/cppprimer/OrQuery.cpp			\
 	src/cppprimer/WordsTransform.cpp			\
-	src/eip/chapter5/Reverse.cpp			\
-	src/eip/chapter5/SwapBits.cpp			\
-	src/eip/chapter5/Divide.cpp			\
-	src/eip/chapter5/Multiply.cpp			\
-	src/eip/chapter5/IsPalindrome.cpp			\
-	src/eip/chapter5/IntersectRectangle.cpp			\
-	src/eip/chapter5/Power.cpp			\
-	src/eip/chapter5/Parity.cpp			\
-	src/eip/chapter5/ClosestIntSameBitCount.cpp			\
-	src/eip/chapter5/ReverseBits.cpp			\
-	src/eip/chapter6/PlusOne.cpp			\
-	src/eip/chapter6/MultiplyArray.cpp			\
-	src/eip/chapter6/CanReachEnd.cpp			\
+	src/epi/chapter5/Reverse.cpp			\
+	src/epi/chapter5/SwapBits.cpp			\
+	src/epi/chapter5/Divide.cpp			\
+	src/epi/chapter5/Multiply.cpp			\
+	src/epi/chapter5/IsPalindrome.cpp			\
+	src/epi/chapter5/IntersectRectangle.cpp			\
+	src/epi/chapter5/Power.cpp			\
+	src/epi/chapter5/Parity.cpp			\
+	src/epi/chapter5/ClosestIntSameBitCount.cpp			\
+	src/epi/chapter5/ReverseBits.cpp			\
+	src/epi/chapter6/PlusOne.cpp			\
+	src/epi/chapter6/MultiplyArray.cpp			\
+	src/epi/chapter6/CanReachEnd.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

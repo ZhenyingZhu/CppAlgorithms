@@ -1,10 +1,10 @@
-#ifndef SRC_EIP_CHAPTER5_POWER_HPP_
-#define SRC_EIP_CHAPTER5_POWER_HPP_
+#ifndef SRC_EPI_CHAPTER5_POWER_HPP_
+#define SRC_EPI_CHAPTER5_POWER_HPP_
 
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 class Power : public myutils::Solution {
@@ -12,7 +12,7 @@ class Power : public myutils::Solution {
 
 public:
     Power():
-        Solution("Chapter 5.7",
+        Solution("EPI Chapter 5.7",
                  "Compute x ^ y",
                  "x is double and y is integer") { }
 
@@ -26,4 +26,4 @@ public:
 } // chapter5
 } // eip
 
-#endif /* SRC_EIP_CHAPTER5_POWER_HPP_ */
+#endif /* SRC_EPI_CHAPTER5_POWER_HPP_ */

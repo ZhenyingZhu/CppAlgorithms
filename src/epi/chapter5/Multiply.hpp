@@ -1,10 +1,10 @@
-#ifndef SRC_EIP_CHAPTER5_MULTIPLY_HPP_
-#define SRC_EIP_CHAPTER5_MULTIPLY_HPP_
+#ifndef SRC_EPI_CHAPTER5_MULTIPLY_HPP_
+#define SRC_EPI_CHAPTER5_MULTIPLY_HPP_
 
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 class Multiply : public myutils::Solution {
@@ -12,7 +12,7 @@ class Multiply : public myutils::Solution {
 
 public:
     Multiply():
-        Solution("Chapter 5.5",
+        Solution("EPI Chapter 5.5",
                  "Multiply",
                  "Multiply x and y without"
                  " arithmetical operations.") { }
@@ -30,4 +30,4 @@ private:
 } // chapter5
 } // eip
 
-#endif /* SRC_EIP_CHAPTER5_MULTIPLY_HPP_ */
+#endif /* SRC_EPI_CHAPTER5_MULTIPLY_HPP_ */

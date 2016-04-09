@@ -1,12 +1,12 @@
-#ifndef SRC_EIP_CHAPTER5_REVERSEBITS_HPP_
-#define SRC_EIP_CHAPTER5_REVERSEBITS_HPP_
+#ifndef SRC_EPI_CHAPTER5_REVERSEBITS_HPP_
+#define SRC_EPI_CHAPTER5_REVERSEBITS_HPP_
 
 #include <unordered_map>
 
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 class ReverseBits : public myutils::Solution {
@@ -14,7 +14,7 @@ class ReverseBits : public myutils::Solution {
 
 public:
     ReverseBits():
-        Solution("Chapter 5.3",
+        Solution("EPI Chapter 5.3",
                  "Reverse all bits",
                  "Reverse bits from LSB to MSB.") { }
 
@@ -35,4 +35,4 @@ private:
 } // chapter5
 } // eip
 
-#endif /* SRC_EIP_CHAPTER5_REVERSEBITS_HPP_ */
+#endif /* SRC_EPI_CHAPTER5_REVERSEBITS_HPP_ */

@@ -3,21 +3,21 @@
 #include "Solution.h"
 #include "SmartPtr.h"
 #include "cppprimer/cppprimer.h"
-#include "eip/chapter5/Parity.hpp"
-#include "eip/chapter5/SwapBits.hpp"
-#include "eip/chapter5/ClosestIntSameBitCount.hpp"
-#include "eip/chapter5/ReverseBits.hpp"
-#include "eip/chapter5/Multiply.hpp"
-#include "eip/chapter5/Divide.hpp"
-#include "eip/chapter5/Power.hpp"
-#include "eip/chapter5/Reverse.hpp"
+#include "epi/chapter5/SwapBits.hpp"
+#include "epi/chapter5/ClosestIntSameBitCount.hpp"
+#include "epi/chapter5/ReverseBits.hpp"
+#include "epi/chapter5/Multiply.hpp"
+#include "epi/chapter5/Divide.hpp"
+#include "epi/chapter5/Parity.hpp"
+#include "epi/chapter5/Power.hpp"
+#include "epi/chapter5/Reverse.hpp"
 
 using std::cout;
 using std::endl;
 
 using namespace myutils;
 using namespace cppprimer;
-using namespace eip;
+using namespace epi;
 using namespace chapter5;
 
 void prepareSolutions() {

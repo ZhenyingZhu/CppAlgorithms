@@ -1,4 +1,4 @@
-#include "SwapBits.hpp"
+#include "../../epi/chapter5/SwapBits.hpp"
 
 #include <climits>
 #include <stdexcept>
@@ -11,7 +11,7 @@ using std::invalid_argument;
 using std::cout;
 using std::endl;
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
     long SwapBits::swapBits(long x, int i, int j) {
         int maxLength = sizeof(x) * CHAR_BIT;

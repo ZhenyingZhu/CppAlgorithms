@@ -1,11 +1,11 @@
-#ifndef SRC_EIP_CHAPTER5_SWAPBITS_HPP_
-#define SRC_EIP_CHAPTER5_SWAPBITS_HPP_
+#ifndef SRC_EPI_CHAPTER5_SWAPBITS_HPP_
+#define SRC_EPI_CHAPTER5_SWAPBITS_HPP_
 
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 #include "../../SolutionCollection.h"
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
 class SwapBits : public myutils::Solution {
@@ -29,4 +29,4 @@ public:
 } // chapter5
 } // eip
 
-#endif /* SRC_EIP_CHAPTER5_SWAPBITS_HPP_ */
+#endif /* SRC_EPI_CHAPTER5_SWAPBITS_HPP_ */

@@ -1,8 +1,8 @@
-#include "Multiply.hpp"
+#include "../../epi/chapter5/Multiply.hpp"
 
 #include <iostream>
 
-namespace eip {
+namespace epi {
 namespace chapter5 {
 
     unsigned Multiply::add(unsigned a, unsigned b) {
