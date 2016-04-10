@@ -32,6 +32,7 @@ SOURCES =			\
 	src/epi/chapter5/Parity.cpp			\
 	src/epi/chapter5/ClosestIntSameBitCount.cpp			\
 	src/epi/chapter5/ReverseBits.cpp			\
+	src/epi/chapter5/UniformRandom.cpp			\
 	src/epi/chapter6/PlusOne.cpp			\
 	src/epi/chapter6/MultiplyArray.cpp			\
 	src/epi/chapter6/CanReachEnd.cpp			\
