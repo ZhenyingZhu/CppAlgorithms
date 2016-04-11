@@ -13,6 +13,7 @@
 #include "epi/chapter5/Reverse.hpp"
 #include "epi/chapter5/IsPalindrome.hpp"
 #include "epi/chapter5/UniformRandom.hpp"
+#include "epi/chapter5/IntersectRectangle.hpp"
 
 using std::cout;
 using std::endl;
@@ -33,8 +34,7 @@ void prepareSolutions() {
     new Reverse(); // Chapter 5.8
     new IsPalindrome(); // Chapter 5.9
     new UniformRandom(); // Chapter 5.10
-    //// Chapter 5.11
-    //void test_intersect_rectangle();
+    new IntersectRectangle(); // Chapter 5.11
     //// Chapter 6.1
     //void test_dutch_flag_partition();
     //// Chapter 6.2
