@@ -13,6 +13,8 @@ class IntersectRectangle : public myutils::Solution {
 public:
     struct Rectangle;
 
+    struct Dot;
+
     IntersectRectangle():
         Solution("EPI Chapter 5.11",
                  "Find intersect rectangle of two rectangles.",
@@ -22,11 +24,15 @@ public:
 
     ~IntersectRectangle() { }
 
-    Rectangle intersectRectangle(const Rectangle&, const Rectangle&);
-
     Rectangle intersectBruteForce(const Rectangle&, const Rectangle&);
 
+    Rectangle intersectRectangle(const Rectangle&, const Rectangle&);
+
 private:
+    bool isInside(const Dot&, const Rectangle&);
+
+    Rectangle generateRectangleFromTwoDots(const Dot &upLeft, const Dot &downRight);
+
     bool isIntersect(const Rectangle&, const Rectangle&);
 };
 
