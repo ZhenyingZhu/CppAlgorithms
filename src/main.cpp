@@ -35,6 +35,7 @@ void prepareSolutions() {
     new IsPalindrome(); // Chapter 5.9
     new UniformRandom(); // Chapter 5.10
     new IntersectRectangle(); // Chapter 5.11
+
     //// Chapter 6.1
     //void test_dutch_flag_partition();
     //// Chapter 6.2
@@ -43,23 +44,8 @@ void prepareSolutions() {
     //void test_multiply_array();
     //// Chapter 6.4
     //void test_can_reach_end();
+
     /*
-    cout << "Swap Bits: " << endl;
-    test_swap_bits();
-    cout << "Cloest Int Same Bit Count: " << endl;
-    test_cloest_int_same_bit_count();
-    cout << "Multiply without arithmetical operators: " << endl;
-    test_multiply();
-    cout << "Divide x / y: " << endl;
-    test_divide();
-    cout << "Power x ^ y: " << endl;
-    test_power();
-    cout << "Reverse x: " << endl;
-    test_reverse();
-    cout << "Check if x is Palindrome: " << endl;
-    test_is_palindrome();
-    cout << "Find intersect of rectangles: " << endl;
-    test_intersect_rectangle();
     cout << "Increment an arbitrary-precision integer: " << endl;
     test_plus_one();
     cout << "Dutch Flag Partition: " << endl;
