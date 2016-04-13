@@ -7,7 +7,6 @@ SOURCES =			\
 	src/SolutionCollection.cpp			\
 	src/SmartPtr.cpp			\
 	src/MyUtils.cpp			\
-	src/DutchFlagPartition.cpp			\
 	src/cppprimer/StringOperations.cpp			\
 	src/cppprimer/CollectionErase.cpp			\
 	src/cppprimer/TestQuery.cpp			\
@@ -33,6 +32,7 @@ SOURCES =			\
 	src/epi/chapter5/ClosestIntSameBitCount.cpp			\
 	src/epi/chapter5/ReverseBits.cpp			\
 	src/epi/chapter5/UniformRandom.cpp			\
+	src/epi/chapter6/DutchFlagPartition.cpp			\
 	src/epi/chapter6/PlusOne.cpp			\
 	src/epi/chapter6/MultiplyArray.cpp			\
 	src/epi/chapter6/CanReachEnd.cpp			\

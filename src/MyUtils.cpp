@@ -1,9 +1,12 @@
+#include "MyUtils.h"
+
 #include <fstream>
 #include <vector>
 #include <iostream>
-#include "MyUtils.h"
 
-using namespace std;
+using std::ifstream;
+using std::string;
+using std::vector;
 
 namespace myutils {
 
@@ -20,10 +23,4 @@ extern string make_plural(size_t ctr, const string &word, const string &ending) 
     return (ctr == 1) ? word : word + ending;
 }
 
-extern void print_vec(vector<int> A) {
-    for (vector<int>::const_iterator iter = A.begin(); iter != A.end(); ++iter) {
-        cout << *iter;
-    }
-}
-
-}
+} // myutils

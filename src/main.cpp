@@ -14,6 +14,7 @@
 #include "epi/chapter5/IsPalindrome.hpp"
 #include "epi/chapter5/UniformRandom.hpp"
 #include "epi/chapter5/IntersectRectangle.hpp"
+#include "epi/chapter6/DutchFlagPartition.hpp"
 
 using std::cout;
 using std::endl;
@@ -22,6 +23,7 @@ using namespace myutils;
 using namespace cppprimer;
 using namespace epi;
 using namespace chapter5;
+using namespace chapter6;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -36,8 +38,7 @@ void prepareSolutions() {
     new UniformRandom(); // Chapter 5.10
     new IntersectRectangle(); // Chapter 5.11
 
-    //// Chapter 6.1
-    //void test_dutch_flag_partition();
+    new DutchFlagPartition(); // Chapter 6.1
     //// Chapter 6.2
     //void test_plus_one();
     //// Chapter 6.3
@@ -48,8 +49,6 @@ void prepareSolutions() {
     /*
     cout << "Increment an arbitrary-precision integer: " << endl;
     test_plus_one();
-    cout << "Dutch Flag Partition: " << endl;
-    test_dutch_flag_partition();
     cout << "Multiply two arbitary precision integers: " << endl;
     test_multiply_array();
     cout << "Advancing through an array: " << endl;
