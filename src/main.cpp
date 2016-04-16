@@ -15,6 +15,7 @@
 #include "epi/chapter5/UniformRandom.hpp"
 #include "epi/chapter5/IntersectRectangle.hpp"
 #include "epi/chapter6/DutchFlagPartition.hpp"
+#include "epi/chapter6/PlusOne.hpp"
 
 using std::cout;
 using std::endl;
@@ -39,16 +40,13 @@ void prepareSolutions() {
     new IntersectRectangle(); // Chapter 5.11
 
     new DutchFlagPartition(); // Chapter 6.1
-    //// Chapter 6.2
-    //void test_plus_one();
+    new PlusOne(); // Chapter 6.2
     //// Chapter 6.3
     //void test_multiply_array();
     //// Chapter 6.4
     //void test_can_reach_end();
 
     /*
-    cout << "Increment an arbitrary-precision integer: " << endl;
-    test_plus_one();
     cout << "Multiply two arbitary precision integers: " << endl;
     test_multiply_array();
     cout << "Advancing through an array: " << endl;

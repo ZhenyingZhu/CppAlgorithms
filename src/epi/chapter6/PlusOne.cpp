@@ -1,17 +1,19 @@
-/*
+#include "PlusOne.hpp"
+
 #include <vector>
 #include <iostream>
+
+#include "../../MyUtils.h"
 
 using std::vector; 
 using std::cout; 
 using std::endl; 
 
-namespace chapter6 {
-    /* EPI Chapter 6.2
-     * Increase a number that record in a vector.
-     *
+using myutils::print_vec;
 
-    vector<int> PlusOne(vector<int> A) {
+namespace epi {
+namespace chapter6 {
+    vector<int> PlusOne::plusOne(vector<int> A) {
         ++A.back();
         for (vector<int>::iterator iter = --A.end(); iter != A.begin() && *iter == 10; --iter) {
             *iter = 0;
@@ -32,15 +34,17 @@ namespace chapter6 {
         }
     }
 
-    void test_plus_one() {
+    bool PlusOne::test() {
         vector<int> input;
         input.push_back(9); input.push_back(9); input.push_back(9);
         cout << "Increase ";
         print_vec(input);
         cout << " by one is ";
-        print_vec(PlusOne(input));
+        print_vec(plusOne(input));
         cout << endl;
-    }
-}
 
-*/
+        return true;
+    }
+
+} // chapter6
+} // epi
