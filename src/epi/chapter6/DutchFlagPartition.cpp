@@ -9,7 +9,7 @@
 using std::vector;
 using std::cout;
 using std::endl;
-using myutils::print_vec;
+using myutils::vec_to_string;
 
 namespace epi {
 namespace chapter6 {
@@ -83,15 +83,9 @@ bool DutchFlagPartition::test() {
     dutchFlagPartition(1, res);
 
     if (shouldBe != res) {
-        cout << "Original: ";
-        print_vec(arr);
-        cout << endl;
-        cout << "Should be:";
-        print_vec(shouldBe);
-        cout << endl;
-        cout << "Result: ";
-        print_vec(res);
-        cout << endl;
+        cout << "Original: " << vec_to_string(arr) << endl;
+        cout << "Should be: " << vec_to_string(shouldBe) << endl;
+        cout << "Result: " << vec_to_string(res) << endl;
         return false;
     }
 

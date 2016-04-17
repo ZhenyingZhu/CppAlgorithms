@@ -22,7 +22,12 @@ namespace chapter6 {
 
         ~PlusOne() { }
 
+        std::vector<int> plusOneBruteForce(std::vector<int>);
+
         std::vector<int> plusOne(std::vector<int>);
+
+    private:
+        std::vector<int> generateVectorFromNum(int);
     };
 
 } // chapter6
