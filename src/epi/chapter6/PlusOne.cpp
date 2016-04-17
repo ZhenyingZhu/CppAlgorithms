@@ -28,19 +28,14 @@ namespace chapter6 {
         return A;
     }
 
-    void print_vec(vector<int> A) {
-        for (vector<int>::const_iterator iter = A.begin(); iter != A.end(); ++iter) {
-            cout << *iter;
-        }
-    }
-
     bool PlusOne::test() {
         vector<int> input;
         input.push_back(9); input.push_back(9); input.push_back(9);
+        vector<int> res = plusOne(input);
         cout << "Increase ";
         print_vec(input);
         cout << " by one is ";
-        print_vec(plusOne(input));
+        print_vec(res);
         cout << endl;
 
         return true;

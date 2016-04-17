@@ -24,7 +24,7 @@ void print_vec(std::vector<T> &vec) {
 
         std::cout << *iter;
     }
-    std::cout << ">" << std::endl;
+    std::cout << ">";
 }
 
 } // myutils

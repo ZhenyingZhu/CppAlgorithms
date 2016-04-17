@@ -85,10 +85,13 @@ bool DutchFlagPartition::test() {
     if (shouldBe != res) {
         cout << "Original: ";
         print_vec(arr);
+        cout << endl;
         cout << "Should be:";
         print_vec(shouldBe);
+        cout << endl;
         cout << "Result: ";
         print_vec(res);
+        cout << endl;
         return false;
     }
 
