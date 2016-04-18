@@ -34,7 +34,7 @@ SOURCES =			\
 	src/epi/chapter5/UniformRandom.cpp			\
 	src/epi/chapter6/DutchFlagPartition.cpp			\
 	src/epi/chapter6/PlusOne.cpp			\
-	src/epi/chapter6/MultiplyArray.cpp			\
+	src/epi/chapter6/Multiply.cpp			\
 	src/epi/chapter6/CanReachEnd.cpp			\
 	src/main.cpp
 

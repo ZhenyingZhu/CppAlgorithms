@@ -16,6 +16,7 @@
 #include "epi/chapter5/IntersectRectangle.hpp"
 #include "epi/chapter6/DutchFlagPartition.hpp"
 #include "epi/chapter6/PlusOne.hpp"
+#include "epi/chapter6/Multiply.hpp"
 
 using std::cout;
 using std::endl;
@@ -31,7 +32,7 @@ void prepareSolutions() {
     new SwapBits(); // Chapter 5.2
     new ReverseBits(); // Chapter 5.3
     new ClosestIntSameBitCount(); // Chapter 5.4
-    new Multiply(); // Chapter 5.5
+    new epi::chapter5::Multiply(); // Chapter 5.5
     new Divide(); // Chapter 5.6
     new Power(); // Chapter 5.7
     new Reverse(); // Chapter 5.8
@@ -41,14 +42,11 @@ void prepareSolutions() {
 
     new DutchFlagPartition(); // Chapter 6.1
     new PlusOne(); // Chapter 6.2
-    //// Chapter 6.3
-    //void test_multiply_array();
+    new epi::chapter6::Multiply(); // Chapter 6.3
     //// Chapter 6.4
     //void test_can_reach_end();
 
     /*
-    cout << "Multiply two arbitary precision integers: " << endl;
-    test_multiply_array();
     cout << "Advancing through an array: " << endl;
     test_can_reach_end();
     */
