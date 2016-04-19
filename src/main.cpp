@@ -17,6 +17,8 @@
 #include "epi/chapter6/DutchFlagPartition.hpp"
 #include "epi/chapter6/PlusOne.hpp"
 #include "epi/chapter6/Multiply.hpp"
+#include "epi/chapter6/CanReachEnd.hpp"
+#include "epi/chapter6/DeleteDuplicates.hpp"
 
 using std::cout;
 using std::endl;
@@ -43,13 +45,8 @@ void prepareSolutions() {
     new DutchFlagPartition(); // Chapter 6.1
     new PlusOne(); // Chapter 6.2
     new epi::chapter6::Multiply(); // Chapter 6.3
-    //// Chapter 6.4
-    //void test_can_reach_end();
-
-    /*
-    cout << "Advancing through an array: " << endl;
-    test_can_reach_end();
-    */
+    new CanReachEnd(); // Chapter 6.4
+    new DeleteDuplicates(); // Chapter 6.5
 }
 
 int main(int argc, char** argv)
