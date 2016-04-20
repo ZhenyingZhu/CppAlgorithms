@@ -19,6 +19,8 @@
 #include "epi/chapter6/Multiply.hpp"
 #include "epi/chapter6/CanReachEnd.hpp"
 #include "epi/chapter6/DeleteDuplicates.hpp"
+#include "epi/chapter6/BuyAndSellStockOnce.hpp"
+#include "epi/chapter6/BuyAndSellStockTwice.hpp"
 
 using std::cout;
 using std::endl;
@@ -47,6 +49,8 @@ void prepareSolutions() {
     new epi::chapter6::Multiply(); // Chapter 6.3
     new CanReachEnd(); // Chapter 6.4
     new DeleteDuplicates(); // Chapter 6.5
+    new BuyAndSellStockOnce(); // Chapter 6.6
+    new BuyAndSellStockTwice(); // Chapter 6.7
 }
 
 int main(int argc, char** argv)

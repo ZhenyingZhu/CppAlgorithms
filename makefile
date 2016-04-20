@@ -37,6 +37,8 @@ SOURCES =			\
 	src/epi/chapter6/Multiply.cpp			\
 	src/epi/chapter6/CanReachEnd.cpp			\
 	src/epi/chapter6/DeleteDuplicates.cpp			\
+	src/epi/chapter6/BuyAndSellStockOnce.cpp			\
+	src/epi/chapter6/BuyAndSellStockTwice.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
