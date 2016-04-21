@@ -21,6 +21,7 @@
 #include "epi/chapter6/DeleteDuplicates.hpp"
 #include "epi/chapter6/BuyAndSellStockOnce.hpp"
 #include "epi/chapter6/BuyAndSellStockTwice.hpp"
+#include "epi/chapter6/GeneratePrimes.hpp"
 
 using std::cout;
 using std::endl;
@@ -51,6 +52,7 @@ void prepareSolutions() {
     new DeleteDuplicates(); // Chapter 6.5
     new BuyAndSellStockOnce(); // Chapter 6.6
     new BuyAndSellStockTwice(); // Chapter 6.7
+    new GeneratePrimes(); // Chapter 6.8
 }
 
 int main(int argc, char** argv)
