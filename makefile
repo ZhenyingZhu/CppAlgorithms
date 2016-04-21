@@ -40,6 +40,7 @@ SOURCES =			\
 	src/epi/chapter6/BuyAndSellStockOnce.cpp			\
 	src/epi/chapter6/BuyAndSellStockTwice.cpp			\
 	src/epi/chapter6/GeneratePrimes.cpp			\
+	src/epi/chapter6/ApplyPermutation.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

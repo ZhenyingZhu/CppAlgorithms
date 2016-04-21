@@ -22,6 +22,7 @@
 #include "epi/chapter6/BuyAndSellStockOnce.hpp"
 #include "epi/chapter6/BuyAndSellStockTwice.hpp"
 #include "epi/chapter6/GeneratePrimes.hpp"
+#include "epi/chapter6/ApplyPermutation.hpp"
 
 using std::cout;
 using std::endl;
@@ -53,6 +54,7 @@ void prepareSolutions() {
     new BuyAndSellStockOnce(); // Chapter 6.6
     new BuyAndSellStockTwice(); // Chapter 6.7
     new GeneratePrimes(); // Chapter 6.8
+    new ApplyPermutation(); // Chapter 6.9
 }
 
 int main(int argc, char** argv)
