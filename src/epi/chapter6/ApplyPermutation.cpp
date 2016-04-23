@@ -18,9 +18,11 @@ namespace epi {
             return;
 
         for (size_t i = 0; i != perm.size(); ++i) {
+            // Actually not needed, because while condition deal with it
             if (perm[i] < 0)
                 continue;
 
+            // i never change in the while. So can use it as a tmp storage
             size_t cur = i;
             int put = vec[cur];
             while (perm[cur] >= 0) {
