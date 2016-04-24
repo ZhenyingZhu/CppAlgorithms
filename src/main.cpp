@@ -56,6 +56,8 @@ void prepareSolutions() {
     new GeneratePrimes(); // Chapter 6.8
     new ApplyPermutation(); // Chapter 6.9
 
+    // test
+
 }
 
 int main(int argc, char** argv)
