@@ -55,6 +55,7 @@ void prepareSolutions() {
     new BuyAndSellStockTwice(); // Chapter 6.7
     new GeneratePrimes(); // Chapter 6.8
     new ApplyPermutation(); // Chapter 6.9
+
 }
 
 int main(int argc, char** argv)
