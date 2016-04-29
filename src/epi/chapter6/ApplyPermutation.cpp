@@ -12,6 +12,11 @@ using myutils::vec_to_string;
 
 namespace epi {
   namespace chapter6 {
+    void ApplyPermutation::swap(int &a, int &b) {
+        int tmp = a;
+        a = b;
+        b = tmp;
+    }
 
     void ApplyPermutation::applyPermutationMutatePerm(vector<int> &perm, vector<int> &vec) {
         if ( vec.empty() || vec.size() != perm.size() )
@@ -24,15 +29,11 @@ namespace epi {
 
             // i never change in the while. So can use it as a tmp storage
             size_t cur = i;
-            int put = vec[cur];
             while (perm[cur] >= 0) {
-                int take = vec[ perm[cur] ];
-                vec[ perm[cur] ] = put;
-                put = take;
-
-                int next = perm[cur];
-                perm[cur] = perm[cur] - perm.size();
-                cur = next;
+                swap(vec[i], vec[ perm[cur] ]);
+                int tmp = perm[cur];
+                perm[cur] -= perm.size();
+                cur = tmp;
             }
         }
 

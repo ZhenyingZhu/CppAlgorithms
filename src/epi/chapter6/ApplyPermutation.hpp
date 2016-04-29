@@ -25,6 +25,9 @@ namespace epi {
         void applyPermutationMutatePerm(std::vector<int> &perm, std::vector<int> &vec);
 
         void applyPermutation(const std::vector<int> &perm, std::vector<int> &vec);
+
+    private:
+        void swap(int&, int&);
     };
 
   } // chapter6
