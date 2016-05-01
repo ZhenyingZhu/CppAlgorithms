@@ -24,6 +24,7 @@
 #include "epi/chapter6/GeneratePrimes.hpp"
 #include "epi/chapter6/ApplyPermutation.hpp"
 #include "epi/chapter6/NextPermutation.hpp"
+#include "epi/chapter6/RandomSampling.hpp"
 
 using std::cout;
 using std::endl;
@@ -57,6 +58,7 @@ void prepareSolutions() {
     new GeneratePrimes(); // Chapter 6.8
     new ApplyPermutation(); // Chapter 6.9
     new NextPermutation(); // Chapter 6.10
+    new RandomSampling(); // Chapter 6.11
 
 }
 

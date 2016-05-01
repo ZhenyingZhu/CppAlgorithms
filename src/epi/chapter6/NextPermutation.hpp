@@ -23,9 +23,9 @@ namespace epi {
 
         ~NextPermutation() { }
 
-        std::vector<int> nextPermutationBruteForce(const std::vector<int> perm);
+        std::vector<int> nextPermutationBruteForce(std::vector<int> perm);
 
-        std::vector<int> nextPermutation(const std::vector<int> perm);
+        std::vector<int> nextPermutation(std::vector<int> perm);
 
     private:
         bool isOneOfPerm(int num, const std::vector<int> perm);
