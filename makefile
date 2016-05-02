@@ -44,6 +44,7 @@ SOURCES =			\
 	src/epi/chapter6/NextPermutation.cpp			\
 	src/epi/chapter6/RandomSampling.cpp			\
 	src/epi/chapter6/OnlineRandomSample.cpp			\
+	src/epi/chapter6/ComputeRandomPermutation.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
