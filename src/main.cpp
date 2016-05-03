@@ -27,6 +27,7 @@
 #include "epi/chapter6/RandomSampling.hpp"
 #include "epi/chapter6/OnlineRandomSample.hpp"
 #include "epi/chapter6/ComputeRandomPermutation.hpp"
+#include "epi/chapter6/RandomSubset.hpp"
 
 using std::cout;
 using std::endl;
@@ -63,6 +64,7 @@ void prepareSolutions() {
     new RandomSampling(); // Chapter 6.11
     new OnlineRandomSample(); // Chapter 6.12
     new ComputeRandomPermutation(); // Chapter 6.13
+    new RandomSubset(); // Chapter 6.14
 
 }
 
