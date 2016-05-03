@@ -46,6 +46,7 @@ SOURCES =			\
 	src/epi/chapter6/OnlineRandomSample.cpp			\
 	src/epi/chapter6/ComputeRandomPermutation.cpp			\
 	src/epi/chapter6/RandomSubset.cpp			\
+	src/epi/chapter6/NonuniformRandomNumberGeneration.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

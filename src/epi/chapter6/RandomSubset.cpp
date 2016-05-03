@@ -5,6 +5,7 @@
 #include <random>
 #include <iostream>
 #include <algorithm>
+#include <string>
 
 #include "../../MyUtils.h"
 
@@ -16,6 +17,8 @@ using std::default_random_engine;
 using std::random_device;
 using std::uniform_int_distribution;
 using std::sort;
+using std::swap;
+using std::string;
 using myutils::vec_to_string;
 
 namespace epi {
@@ -35,13 +38,14 @@ namespace epi {
                 changedElements[randomIdx] = i;
             } else if ( ptr1 == changedElements.end() && ptr2 != changedElements.end() ) {
                 changedElements[randomIdx] = ptr2->second;
-                changedElements[i] = randomIdx;
+                ptr2->second = randomIdx;
             } else if ( ptr1 != changedElements.end() && ptr2 == changedElements.end() ) {
-                changedElements[randomIdx] = i;
                 changedElements[i] = ptr1->second;
+                ptr1->second = i;
             } else {
-                changedElements[randomIdx] = ptr2->second;
+                int tmp = ptr2->second;
                 changedElements[i] = ptr1->second;
+                changedElements[randomIdx] = tmp;
             }
         }
 
@@ -55,10 +59,39 @@ namespace epi {
         return res;
     }
 
+    vector<int> RandomSubset::randomSubsetBruteForce(int n, int k) {
+        vector<int> fullset;
+        for (int i = 0; i != n; ++i) {
+            fullset.push_back(i);
+        }
+
+        default_random_engine seed( (random_device()) () );
+
+        for (int i = 0; i != k; ++i) {
+            int randomIdx = uniform_int_distribution<int>{ i, n - 1 }(seed);
+
+            swap( fullset[i], fullset[randomIdx] );
+        }
+
+        vector<int> res(fullset.begin(), fullset.begin() + k);
+        sort(res.begin(), res.end());
+
+        return res;
+
+    }
+
     bool RandomSubset::test() {
+        unordered_map<string, int> bfmap;
         for (int i = 0; i != 16; ++i) {
             vector<int> res = randomSubset(4, 3);
-            cout << vec_to_string(res) << endl;
+            if ( bfmap.find(vec_to_string(res)) == bfmap.end() ) {
+                bfmap[vec_to_string(res)] = 0;
+            }
+            ++bfmap[vec_to_string(res)];
+        }
+
+        for (unordered_map<string, int>::const_iterator ptr = bfmap.begin(); ptr != bfmap.end(); ++ptr) {
+            cout << ptr->first << " : " << ptr->second << endl;
         }
 
         return true;

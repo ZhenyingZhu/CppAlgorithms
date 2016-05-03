@@ -23,6 +23,8 @@ namespace epi {
         ~RandomSubset() { }
 
         std::vector<int> randomSubset(int n, int k);
+
+        std::vector<int> randomSubsetBruteForce(int n, int k);
     };
   } // chapter6
 } // epi
