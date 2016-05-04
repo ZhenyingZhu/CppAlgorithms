@@ -29,6 +29,7 @@
 #include "epi/chapter6/ComputeRandomPermutation.hpp"
 #include "epi/chapter6/RandomSubset.hpp"
 #include "epi/chapter6/NonuniformRandomNumberGeneration.hpp"
+#include "epi/chapter6/IsValidSudoku.hpp"
 
 using std::cout;
 using std::endl;
@@ -67,6 +68,7 @@ void prepareSolutions() {
     new ComputeRandomPermutation(); // Chapter 6.13
     new RandomSubset(); // Chapter 6.14
     new NonuniformRandomNumberGeneration(); // Chapter 6.15
+    new IsValidSudoku(); // Chapter 6.16
 
 }
 
