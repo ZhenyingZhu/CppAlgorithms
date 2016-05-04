@@ -48,6 +48,7 @@ SOURCES =			\
 	src/epi/chapter6/RandomSubset.cpp			\
 	src/epi/chapter6/NonuniformRandomNumberGeneration.cpp			\
 	src/epi/chapter6/IsValidSudoku.cpp			\
+	src/epi/chapter6/MatrixInSprialOrder.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
