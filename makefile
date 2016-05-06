@@ -50,6 +50,7 @@ SOURCES =			\
 	src/epi/chapter6/IsValidSudoku.cpp			\
 	src/epi/chapter6/MatrixInSprialOrder.cpp			\
 	src/epi/chapter6/RotateMatrix.cpp			\
+	src/epi/chapter6/GeneratePascalTriangle.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

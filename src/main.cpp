@@ -32,6 +32,7 @@
 #include "epi/chapter6/IsValidSudoku.hpp"
 #include "epi/chapter6/MatrixInSprialOrder.hpp"
 #include "epi/chapter6/RotateMatrix.hpp"
+#include "epi/chapter6/GeneratePascalTriangle.hpp"
 
 using std::cout;
 using std::endl;
@@ -71,8 +72,9 @@ void prepareSolutions() {
 //    new RandomSubset(); // Chapter 6.14
 //    new NonuniformRandomNumberGeneration(); // Chapter 6.15
 //    new IsValidSudoku(); // Chapter 6.16
-    new MatrixInSprialOrder(); // Chapter 6.17
-    new RotateMatrix(); // Chapter 6.18
+//    new MatrixInSprialOrder(); // Chapter 6.17
+//    new RotateMatrix(); // Chapter 6.18
+    new GeneratePascalTriangle(); // Chapter 6.19
 
 }
 
