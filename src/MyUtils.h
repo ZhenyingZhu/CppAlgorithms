@@ -29,6 +29,28 @@ std::string vec_to_string(const std::vector<T> &vec) {
     return output;
 }
 
+template <typename T>
+std::string matrix_to_string(const std::vector< std::vector<T> > &matrix) {
+    std::string output = "";
+
+    for (typename std::vector<std::vector<T>>::const_iterator line = matrix.begin(); line != matrix.end(); ++ line) {
+        bool first_ele = true;
+        output += "|";
+        for (typename std::vector<T>::const_iterator iter = line->begin(); iter != line->end(); ++iter) {
+            if (first_ele)
+                first_ele = false;
+            else
+                output += "\t";
+
+            output += std::to_string(*iter);
+        }
+        output += "|";
+        output += "\n";
+    }
+
+    return output;
+}
+
 } // myutils
 
 #endif /* SRC_MYUTILS_H_ */

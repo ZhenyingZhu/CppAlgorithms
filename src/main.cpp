@@ -31,6 +31,7 @@
 #include "epi/chapter6/NonuniformRandomNumberGeneration.hpp"
 #include "epi/chapter6/IsValidSudoku.hpp"
 #include "epi/chapter6/MatrixInSprialOrder.hpp"
+#include "epi/chapter6/RotateMatrix.hpp"
 
 using std::cout;
 using std::endl;
@@ -71,6 +72,7 @@ void prepareSolutions() {
 //    new NonuniformRandomNumberGeneration(); // Chapter 6.15
 //    new IsValidSudoku(); // Chapter 6.16
     new MatrixInSprialOrder(); // Chapter 6.17
+    new RotateMatrix(); // Chapter 6.18
 
 }
 
