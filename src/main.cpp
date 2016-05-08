@@ -33,6 +33,7 @@
 #include "epi/chapter6/MatrixInSprialOrder.hpp"
 #include "epi/chapter6/RotateMatrix.hpp"
 #include "epi/chapter6/GeneratePascalTriangle.hpp"
+#include "epi/chapter7/InterconvertIntStr.hpp"
 
 using std::cout;
 using std::endl;
@@ -42,6 +43,7 @@ using namespace cppprimer;
 using namespace epi;
 using namespace chapter5;
 using namespace chapter6;
+using namespace chapter7;
 
 void prepareSolutions() {
 //    new Parity(); // Chapter 5.1
@@ -74,7 +76,9 @@ void prepareSolutions() {
 //    new IsValidSudoku(); // Chapter 6.16
 //    new MatrixInSprialOrder(); // Chapter 6.17
 //    new RotateMatrix(); // Chapter 6.18
-    new GeneratePascalTriangle(); // Chapter 6.19
+//    new GeneratePascalTriangle(); // Chapter 6.19
+//
+    new InterconvertIntStr(); // Chapter 7.1
 
 }
 
