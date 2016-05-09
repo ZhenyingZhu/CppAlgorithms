@@ -1,10 +1,3 @@
-/*
- * ConvertBase.hpp
- *
- *  Created on: May 8, 2016
- *      Author: zhu91
- */
-
 #ifndef SRC_EPI_CHAPTER7_CONVERTBASE_HPP_
 #define SRC_EPI_CHAPTER7_CONVERTBASE_HPP_
 

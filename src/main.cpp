@@ -35,6 +35,7 @@
 #include "epi/chapter6/GeneratePascalTriangle.hpp"
 #include "epi/chapter7/InterconvertIntStr.hpp"
 #include "epi/chapter7/ConvertBase.hpp"
+#include "epi/chapter7/SSDecodeColID.hpp"
 
 using std::cout;
 using std::endl;
@@ -81,6 +82,7 @@ void prepareSolutions() {
 //
     new InterconvertIntStr(); // Chapter 7.1
     new ConvertBase(); // Chapter 7.2
+    new SSDecodeColID(); // Chapter 7.3
 
 }
 
