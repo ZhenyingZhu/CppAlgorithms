@@ -34,6 +34,7 @@
 #include "epi/chapter6/RotateMatrix.hpp"
 #include "epi/chapter6/GeneratePascalTriangle.hpp"
 #include "epi/chapter7/InterconvertIntStr.hpp"
+#include "epi/chapter7/ConvertBase.hpp"
 
 using std::cout;
 using std::endl;
@@ -79,6 +80,7 @@ void prepareSolutions() {
 //    new GeneratePascalTriangle(); // Chapter 6.19
 //
     new InterconvertIntStr(); // Chapter 7.1
+    new ConvertBase(); // Chapter 7.2
 
 }
 

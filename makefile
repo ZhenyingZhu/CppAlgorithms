@@ -52,6 +52,7 @@ SOURCES =			\
 	src/epi/chapter6/RotateMatrix.cpp			\
 	src/epi/chapter6/GeneratePascalTriangle.cpp			\
 	src/epi/chapter7/InterconvertIntStr.cpp			\
+	src/epi/chapter7/ConvertBase.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
