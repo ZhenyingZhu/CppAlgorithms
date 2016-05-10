@@ -36,6 +36,8 @@
 #include "epi/chapter7/InterconvertIntStr.hpp"
 #include "epi/chapter7/ConvertBase.hpp"
 #include "epi/chapter7/SSDecodeColID.hpp"
+#include "epi/chapter7/ReplaceAndRemove.hpp"
+#include "epi/chapter7/IsPalindrome.hpp"
 
 using std::cout;
 using std::endl;
@@ -83,6 +85,8 @@ void prepareSolutions() {
     new InterconvertIntStr(); // Chapter 7.1
     new ConvertBase(); // Chapter 7.2
     new SSDecodeColID(); // Chapter 7.3
+    new ReplaceAndRemove(); // Chapter 7.4
+    new epi::chapter7::IsPalindrome(); // Chapter 7.5
 
 }
 

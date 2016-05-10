@@ -54,6 +54,8 @@ SOURCES =			\
 	src/epi/chapter7/InterconvertIntStr.cpp			\
 	src/epi/chapter7/ConvertBase.cpp			\
 	src/epi/chapter7/SSDecodeColID.cpp			\
+	src/epi/chapter7/ReplaceAndRemove.cpp			\
+	src/epi/chapter7/IsPalindrome.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
