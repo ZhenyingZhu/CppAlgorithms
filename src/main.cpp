@@ -38,6 +38,7 @@
 #include "epi/chapter7/SSDecodeColID.hpp"
 #include "epi/chapter7/ReplaceAndRemove.hpp"
 #include "epi/chapter7/IsPalindrome.hpp"
+#include "epi/chapter7/ReverseWords.hpp"
 
 using std::cout;
 using std::endl;
@@ -87,6 +88,7 @@ void prepareSolutions() {
     new SSDecodeColID(); // Chapter 7.3
     new ReplaceAndRemove(); // Chapter 7.4
     new epi::chapter7::IsPalindrome(); // Chapter 7.5
+    new ReverseWords(); // Chapter 7.6
 
 }
 
