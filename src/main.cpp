@@ -39,6 +39,7 @@
 #include "epi/chapter7/ReplaceAndRemove.hpp"
 #include "epi/chapter7/IsPalindrome.hpp"
 #include "epi/chapter7/ReverseWords.hpp"
+#include "epi/chapter7/PhoneMnemonic.hpp"
 
 using std::cout;
 using std::endl;
@@ -89,6 +90,7 @@ void prepareSolutions() {
     new ReplaceAndRemove(); // Chapter 7.4
     new epi::chapter7::IsPalindrome(); // Chapter 7.5
     new ReverseWords(); // Chapter 7.6
+    new PhoneMnemonic(); // Chapter 7.7
 
 }
 
