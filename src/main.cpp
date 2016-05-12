@@ -41,6 +41,7 @@
 #include "epi/chapter7/ReverseWords.hpp"
 #include "epi/chapter7/PhoneMnemonic.hpp"
 #include "epi/chapter7/LookAndSay.hpp"
+#include "epi/chapter7/RomanToInteger.hpp"
 
 using std::cout;
 using std::endl;
@@ -93,6 +94,7 @@ void prepareSolutions() {
     new ReverseWords(); // Chapter 7.6
     new PhoneMnemonic(); // Chapter 7.7
     new LookAndSay(); // Chapter 7.8
+    new RomanToInteger(); // Chapter 7.9
 
 }
 

@@ -5,7 +5,6 @@
 #include "../../SmartPtr.h"
 
 #include <string>
-#include <array>
 
 namespace epi {
   namespace chapter7 {

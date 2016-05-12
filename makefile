@@ -59,6 +59,7 @@ SOURCES =			\
 	src/epi/chapter7/ReverseWords.cpp			\
 	src/epi/chapter7/PhoneMnemonic.cpp			\
 	src/epi/chapter7/LookAndSay.cpp			\
+	src/epi/chapter7/RomanToInteger.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
