@@ -40,6 +40,7 @@
 #include "epi/chapter7/IsPalindrome.hpp"
 #include "epi/chapter7/ReverseWords.hpp"
 #include "epi/chapter7/PhoneMnemonic.hpp"
+#include "epi/chapter7/LookAndSay.hpp"
 
 using std::cout;
 using std::endl;
@@ -91,6 +92,7 @@ void prepareSolutions() {
     new epi::chapter7::IsPalindrome(); // Chapter 7.5
     new ReverseWords(); // Chapter 7.6
     new PhoneMnemonic(); // Chapter 7.7
+    new LookAndSay(); // Chapter 7.8
 
 }
 
