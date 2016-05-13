@@ -42,6 +42,7 @@
 #include "epi/chapter7/PhoneMnemonic.hpp"
 #include "epi/chapter7/LookAndSay.hpp"
 #include "epi/chapter7/RomanToInteger.hpp"
+#include "epi/chapter7/GetValidIPAddress.hpp"
 
 using std::cout;
 using std::endl;
@@ -95,6 +96,7 @@ void prepareSolutions() {
     new PhoneMnemonic(); // Chapter 7.7
     new LookAndSay(); // Chapter 7.8
     new RomanToInteger(); // Chapter 7.9
+    new GetValidIPAddress(); // Chapter 7.10
 
 }
 
