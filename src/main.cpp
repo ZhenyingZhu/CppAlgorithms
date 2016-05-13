@@ -43,6 +43,7 @@
 #include "epi/chapter7/LookAndSay.hpp"
 #include "epi/chapter7/RomanToInteger.hpp"
 #include "epi/chapter7/GetValidIPAddress.hpp"
+#include "epi/chapter7/SnakeString.hpp"
 
 using std::cout;
 using std::endl;
@@ -87,16 +88,17 @@ void prepareSolutions() {
 //    new RotateMatrix(); // Chapter 6.18
 //    new GeneratePascalTriangle(); // Chapter 6.19
 //
-    new InterconvertIntStr(); // Chapter 7.1
-    new ConvertBase(); // Chapter 7.2
-    new SSDecodeColID(); // Chapter 7.3
-    new ReplaceAndRemove(); // Chapter 7.4
-    new epi::chapter7::IsPalindrome(); // Chapter 7.5
-    new ReverseWords(); // Chapter 7.6
-    new PhoneMnemonic(); // Chapter 7.7
-    new LookAndSay(); // Chapter 7.8
-    new RomanToInteger(); // Chapter 7.9
-    new GetValidIPAddress(); // Chapter 7.10
+//    new InterconvertIntStr(); // Chapter 7.1
+//    new ConvertBase(); // Chapter 7.2
+//    new SSDecodeColID(); // Chapter 7.3
+//    new ReplaceAndRemove(); // Chapter 7.4
+//    new epi::chapter7::IsPalindrome(); // Chapter 7.5
+//    new ReverseWords(); // Chapter 7.6
+//    new PhoneMnemonic(); // Chapter 7.7
+//    new LookAndSay(); // Chapter 7.8
+//    new RomanToInteger(); // Chapter 7.9
+//    new GetValidIPAddress(); // Chapter 7.10
+    new SnakeString(); // Chapter 7.11
 
 }
 
