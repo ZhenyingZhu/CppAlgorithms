@@ -62,6 +62,8 @@ SOURCES =			\
 	src/epi/chapter7/RomanToInteger.cpp			\
 	src/epi/chapter7/GetValidIPAddress.cpp			\
 	src/epi/chapter7/SnakeString.cpp			\
+	src/epi/chapter7/RLE.cpp			\
+	src/epi/chapter7/RabinKarp.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

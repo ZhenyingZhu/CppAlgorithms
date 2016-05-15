@@ -44,6 +44,8 @@
 #include "epi/chapter7/RomanToInteger.hpp"
 #include "epi/chapter7/GetValidIPAddress.hpp"
 #include "epi/chapter7/SnakeString.hpp"
+#include "epi/chapter7/RLE.hpp"
+#include "epi/chapter7/RabinKarp.hpp"
 
 using std::cout;
 using std::endl;
@@ -98,7 +100,9 @@ void prepareSolutions() {
 //    new LookAndSay(); // Chapter 7.8
 //    new RomanToInteger(); // Chapter 7.9
 //    new GetValidIPAddress(); // Chapter 7.10
-    new SnakeString(); // Chapter 7.11
+//    new SnakeString(); // Chapter 7.11
+    new RLE(); // Chapter 7.12
+    new RabinKarp(); // Chapter 7.13
 
 }
 
