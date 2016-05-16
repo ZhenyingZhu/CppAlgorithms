@@ -42,13 +42,13 @@ namespace epi {
         else
             cur->next = list2;
 
-        return dummy;
+        return dummy->next;
     }
 
     bool MergeTwoSortedLists::test() {
         vector<int> v1 = {2, 5, 7};
         vector<int> v2 = {3, 11};
-        vector<int> sv = {0, 2, 3, 5, 7, 11};
+        vector<int> sv = {2, 3, 5, 7, 11};
         shared_ptr<ListNode<int>> l1 = createList(v1);
         shared_ptr<ListNode<int>> l2 = createList(v2);
         shared_ptr<ListNode<int>> shouldBe = createList(sv);
