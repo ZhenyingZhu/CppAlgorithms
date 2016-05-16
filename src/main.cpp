@@ -46,6 +46,7 @@
 #include "epi/chapter7/SnakeString.hpp"
 #include "epi/chapter7/RLE.hpp"
 #include "epi/chapter7/RabinKarp.hpp"
+#include "epi/chapter8/MergeTwoSortedLists.hpp"
 
 using std::cout;
 using std::endl;
@@ -56,6 +57,7 @@ using namespace epi;
 using namespace chapter5;
 using namespace chapter6;
 using namespace chapter7;
+using namespace chapter8;
 
 void prepareSolutions() {
 //    new Parity(); // Chapter 5.1
@@ -101,8 +103,10 @@ void prepareSolutions() {
 //    new RomanToInteger(); // Chapter 7.9
 //    new GetValidIPAddress(); // Chapter 7.10
 //    new SnakeString(); // Chapter 7.11
-    new RLE(); // Chapter 7.12
-    new RabinKarp(); // Chapter 7.13
+//    new RLE(); // Chapter 7.12
+//    new RabinKarp(); // Chapter 7.13
+//
+    new MergeTwoSortedLists(); // Chapter 8.1
 
 }
 
