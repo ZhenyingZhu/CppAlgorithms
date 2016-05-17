@@ -65,6 +65,7 @@ SOURCES =			\
 	src/epi/chapter7/RLE.cpp			\
 	src/epi/chapter7/RabinKarp.cpp			\
 	src/epi/chapter8/MergeTwoSortedLists.cpp			\
+	src/epi/chapter8/ReverseSublist.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

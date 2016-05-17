@@ -47,6 +47,7 @@
 #include "epi/chapter7/RLE.hpp"
 #include "epi/chapter7/RabinKarp.hpp"
 #include "epi/chapter8/MergeTwoSortedLists.hpp"
+#include "epi/chapter8/ReverseSublist.hpp"
 
 using std::cout;
 using std::endl;
@@ -107,6 +108,7 @@ void prepareSolutions() {
 //    new RabinKarp(); // Chapter 7.13
 //
     new MergeTwoSortedLists(); // Chapter 8.1
+    new ReverseSublist(); // Chapter 8.2
 
 }
 
