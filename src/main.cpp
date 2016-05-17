@@ -48,6 +48,7 @@
 #include "epi/chapter7/RabinKarp.hpp"
 #include "epi/chapter8/MergeTwoSortedLists.hpp"
 #include "epi/chapter8/ReverseSublist.hpp"
+#include "epi/chapter8/HasCycle.hpp"
 
 using std::cout;
 using std::endl;
@@ -109,6 +110,7 @@ void prepareSolutions() {
 //
     new MergeTwoSortedLists(); // Chapter 8.1
     new ReverseSublist(); // Chapter 8.2
+    new HasCycle(); // Chapter 8.3
 
 }
 
