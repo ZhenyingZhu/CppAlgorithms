@@ -68,6 +68,7 @@ SOURCES =			\
 	src/epi/chapter8/ReverseSublist.cpp			\
 	src/epi/chapter8/HasCycle.cpp			\
 	src/epi/chapter8/OverlappingNoCycleLists.cpp			\
+	src/epi/chapter8/OverlappingLists.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

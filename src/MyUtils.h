@@ -92,6 +92,18 @@ namespace myutils {
     }
 
     template <typename T>
+    std::shared_ptr<ListNode<T>> find_node(const std::shared_ptr<ListNode<T>> &list, T data) {
+        std::shared_ptr<ListNode<T>> ptr = list;
+        while (ptr) {
+            if (ptr->data == data)
+                break;
+
+            ptr = ptr->next;
+        }
+        return ptr;
+    }
+
+    template <typename T>
     std::string list_to_string(const std::shared_ptr<ListNode<T>> &list) {
         std::string res("");
 
