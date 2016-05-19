@@ -52,6 +52,7 @@
 #include "epi/chapter8/OverlappingNoCycleLists.hpp"
 #include "epi/chapter8/OverlappingLists.hpp"
 #include "epi/chapter8/DeletionFromList.hpp"
+#include "epi/chapter8/RemoveKthLast.hpp"
 
 using std::cout;
 using std::endl;
@@ -117,6 +118,7 @@ void prepareSolutions() {
     new OverlappingNoCycleLists(); // Chapter 8.4
     new OverlappingLists(); // Chapter 8.5
     new DeletionFromList(); // Chapter 8.6
+    new RemoveKthLast(); // Chapter 8.7
 
 }
 

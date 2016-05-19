@@ -70,6 +70,7 @@ SOURCES =			\
 	src/epi/chapter8/OverlappingNoCycleLists.cpp			\
 	src/epi/chapter8/OverlappingLists.cpp			\
 	src/epi/chapter8/DeletionFromList.cpp			\
+	src/epi/chapter8/RemoveKthLast.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
