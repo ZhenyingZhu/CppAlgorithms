@@ -51,6 +51,7 @@
 #include "epi/chapter8/HasCycle.hpp"
 #include "epi/chapter8/OverlappingNoCycleLists.hpp"
 #include "epi/chapter8/OverlappingLists.hpp"
+#include "epi/chapter8/DeletionFromList.hpp"
 
 using std::cout;
 using std::endl;
@@ -115,6 +116,7 @@ void prepareSolutions() {
     new HasCycle(); // Chapter 8.3
     new OverlappingNoCycleLists(); // Chapter 8.4
     new OverlappingLists(); // Chapter 8.5
+    new DeletionFromList(); // Chapter 8.6
 
 }
 
