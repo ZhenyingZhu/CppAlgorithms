@@ -53,6 +53,7 @@
 #include "epi/chapter8/OverlappingLists.hpp"
 #include "epi/chapter8/DeletionFromList.hpp"
 #include "epi/chapter8/RemoveKthLast.hpp"
+#include "epi/chapter8/RemoveDuplicates.hpp"
 
 using std::cout;
 using std::endl;
@@ -119,6 +120,7 @@ void prepareSolutions() {
     new OverlappingLists(); // Chapter 8.5
     new DeletionFromList(); // Chapter 8.6
     new RemoveKthLast(); // Chapter 8.7
+    new RemoveDuplicates(); // Chapter 8.8
 
 }
 
