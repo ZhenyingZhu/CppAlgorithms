@@ -54,6 +54,7 @@
 #include "epi/chapter8/DeletionFromList.hpp"
 #include "epi/chapter8/RemoveKthLast.hpp"
 #include "epi/chapter8/RemoveDuplicates.hpp"
+#include "epi/chapter8/CyclicallyRightShiftList.hpp"
 
 using std::cout;
 using std::endl;
@@ -121,6 +122,7 @@ void prepareSolutions() {
     new DeletionFromList(); // Chapter 8.6
     new RemoveKthLast(); // Chapter 8.7
     new RemoveDuplicates(); // Chapter 8.8
+    new CyclicallyRightShiftList(); // Chapter 8.9
 
 }
 
