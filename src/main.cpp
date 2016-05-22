@@ -56,6 +56,7 @@
 #include "epi/chapter8/RemoveDuplicates.hpp"
 #include "epi/chapter8/CyclicallyRightShiftList.hpp"
 #include "epi/chapter8/EvenOddMerge.hpp"
+#include "epi/chapter8/IsLinkedListAPalindrome.hpp"
 
 using std::cout;
 using std::endl;
@@ -125,6 +126,7 @@ void prepareSolutions() {
     new RemoveDuplicates(); // Chapter 8.8
     new CyclicallyRightShiftList(); // Chapter 8.9
     new EvenOddMerge(); // Chapter 8.10
+    new IsLinkedListAPalindrome(); // Chapter 8.11
 
 }
 
