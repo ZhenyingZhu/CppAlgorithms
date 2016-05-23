@@ -57,6 +57,7 @@
 #include "epi/chapter8/CyclicallyRightShiftList.hpp"
 #include "epi/chapter8/EvenOddMerge.hpp"
 #include "epi/chapter8/IsLinkedListAPalindrome.hpp"
+#include "epi/chapter8/ListPivoting.hpp"
 
 using std::cout;
 using std::endl;
@@ -127,6 +128,7 @@ void prepareSolutions() {
     new CyclicallyRightShiftList(); // Chapter 8.9
     new EvenOddMerge(); // Chapter 8.10
     new IsLinkedListAPalindrome(); // Chapter 8.11
+    new ListPivoting(); // Chapter 8.12
 
 }
 
