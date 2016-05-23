@@ -58,6 +58,7 @@
 #include "epi/chapter8/EvenOddMerge.hpp"
 #include "epi/chapter8/IsLinkedListAPalindrome.hpp"
 #include "epi/chapter8/ListPivoting.hpp"
+#include "epi/chapter8/AddTwoNumbers.hpp"
 
 using std::cout;
 using std::endl;
@@ -129,6 +130,7 @@ void prepareSolutions() {
     new EvenOddMerge(); // Chapter 8.10
     new IsLinkedListAPalindrome(); // Chapter 8.11
     new ListPivoting(); // Chapter 8.12
+    new AddTwoNumbers(); // Chapter 8.13
 
 }
 
