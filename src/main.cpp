@@ -59,6 +59,7 @@
 #include "epi/chapter8/IsLinkedListAPalindrome.hpp"
 #include "epi/chapter8/ListPivoting.hpp"
 #include "epi/chapter8/AddTwoNumbers.hpp"
+#include "epi/chapter9/MaxStack.hpp"
 
 using std::cout;
 using std::endl;
@@ -70,6 +71,7 @@ using namespace chapter5;
 using namespace chapter6;
 using namespace chapter7;
 using namespace chapter8;
+using namespace chapter9;
 
 void prepareSolutions() {
 //    new Parity(); // Chapter 5.1
@@ -118,19 +120,21 @@ void prepareSolutions() {
 //    new RLE(); // Chapter 7.12
 //    new RabinKarp(); // Chapter 7.13
 //
-    new MergeTwoSortedLists(); // Chapter 8.1
-    new ReverseSublist(); // Chapter 8.2
-    new HasCycle(); // Chapter 8.3
-    new OverlappingNoCycleLists(); // Chapter 8.4
-    new OverlappingLists(); // Chapter 8.5
-    new DeletionFromList(); // Chapter 8.6
-    new RemoveKthLast(); // Chapter 8.7
-    new RemoveDuplicates(); // Chapter 8.8
-    new CyclicallyRightShiftList(); // Chapter 8.9
-    new EvenOddMerge(); // Chapter 8.10
-    new IsLinkedListAPalindrome(); // Chapter 8.11
-    new ListPivoting(); // Chapter 8.12
-    new AddTwoNumbers(); // Chapter 8.13
+//    new MergeTwoSortedLists(); // Chapter 8.1
+//    new ReverseSublist(); // Chapter 8.2
+//    new HasCycle(); // Chapter 8.3
+//    new OverlappingNoCycleLists(); // Chapter 8.4
+//    new OverlappingLists(); // Chapter 8.5
+//    new DeletionFromList(); // Chapter 8.6
+//    new RemoveKthLast(); // Chapter 8.7
+//    new RemoveDuplicates(); // Chapter 8.8
+//    new CyclicallyRightShiftList(); // Chapter 8.9
+//    new EvenOddMerge(); // Chapter 8.10
+//    new IsLinkedListAPalindrome(); // Chapter 8.11
+//    new ListPivoting(); // Chapter 8.12
+//    new AddTwoNumbers(); // Chapter 8.13
+//
+    new MaxStack(); // Chapter 9.1
 
 }
 

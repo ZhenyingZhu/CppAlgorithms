@@ -77,6 +77,7 @@ SOURCES =			\
 	src/epi/chapter8/IsLinkedListAPalindrome.cpp			\
 	src/epi/chapter8/ListPivoting.cpp			\
 	src/epi/chapter8/AddTwoNumbers.cpp			\
+	src/epi/chapter9/MaxStack.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
