@@ -78,6 +78,7 @@ SOURCES =			\
 	src/epi/chapter8/ListPivoting.cpp			\
 	src/epi/chapter8/AddTwoNumbers.cpp			\
 	src/epi/chapter9/MaxStack.cpp			\
+	src/epi/chapter9/Eval.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

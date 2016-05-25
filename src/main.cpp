@@ -60,6 +60,7 @@
 #include "epi/chapter8/ListPivoting.hpp"
 #include "epi/chapter8/AddTwoNumbers.hpp"
 #include "epi/chapter9/MaxStack.hpp"
+#include "epi/chapter9/Eval.hpp"
 
 using std::cout;
 using std::endl;
@@ -135,6 +136,7 @@ void prepareSolutions() {
 //    new AddTwoNumbers(); // Chapter 8.13
 //
     new MaxStack(); // Chapter 9.1
+    new Eval(); // Chapter 9.2
 
 }
 
