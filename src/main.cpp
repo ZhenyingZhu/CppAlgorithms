@@ -61,6 +61,7 @@
 #include "epi/chapter8/AddTwoNumbers.hpp"
 #include "epi/chapter9/MaxStack.hpp"
 #include "epi/chapter9/Eval.hpp"
+#include "epi/chapter9/IsWellFormed.hpp"
 
 using std::cout;
 using std::endl;
@@ -137,6 +138,7 @@ void prepareSolutions() {
 //
     new MaxStack(); // Chapter 9.1
     new Eval(); // Chapter 9.2
+    new IsWellFormed(); // Chapter 9.3
 
 }
 
