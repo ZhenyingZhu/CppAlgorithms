@@ -80,6 +80,8 @@ SOURCES =			\
 	src/epi/chapter9/MaxStack.cpp			\
 	src/epi/chapter9/Eval.cpp			\
 	src/epi/chapter9/IsWellFormed.cpp			\
+	src/epi/chapter9/ShortestEquivalentPath.cpp			\
+	src/epi/chapter9/SetJumpOrder.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

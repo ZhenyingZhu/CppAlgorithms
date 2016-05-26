@@ -62,6 +62,8 @@
 #include "epi/chapter9/MaxStack.hpp"
 #include "epi/chapter9/Eval.hpp"
 #include "epi/chapter9/IsWellFormed.hpp"
+#include "epi/chapter9/ShortestEquivalentPath.hpp"
+#include "epi/chapter9/SetJumpOrder.hpp"
 
 using std::cout;
 using std::endl;
@@ -139,6 +141,8 @@ void prepareSolutions() {
     new MaxStack(); // Chapter 9.1
     new Eval(); // Chapter 9.2
     new IsWellFormed(); // Chapter 9.3
+    new ShortestEquivalentPath(); // Chapter 9.4
+    new SetJumpOrder(); // Chapter 9.5
 
 }
 
