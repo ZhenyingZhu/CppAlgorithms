@@ -64,6 +64,7 @@
 #include "epi/chapter9/IsWellFormed.hpp"
 #include "epi/chapter9/ShortestEquivalentPath.hpp"
 #include "epi/chapter9/SetJumpOrder.hpp"
+#include "epi/chapter9/ExamineBuildingsWithSunset.hpp"
 
 using std::cout;
 using std::endl;
@@ -143,6 +144,7 @@ void prepareSolutions() {
     new IsWellFormed(); // Chapter 9.3
     new ShortestEquivalentPath(); // Chapter 9.4
     new SetJumpOrder(); // Chapter 9.5
+    new ExamineBuildingsWithSunset(); // Chapter 9.6
 
 }
 
