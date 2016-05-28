@@ -83,6 +83,7 @@ SOURCES =			\
 	src/epi/chapter9/ShortestEquivalentPath.cpp			\
 	src/epi/chapter9/SetJumpOrder.cpp			\
 	src/epi/chapter9/ExamineBuildingsWithSunset.cpp			\
+	src/epi/chapter9/BinaryTreeDepthOrder.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
