@@ -1,4 +1,4 @@
-#include "CircularQueue.hpp"
+#include "StackQueue.hpp"
 
 #include <vector>
 #include <algorithm>
@@ -7,56 +7,42 @@
 
 #include "../../MyUtils.h"
 
-using std::vector;
-using std::rotate;
+using std::stack;
 using std::length_error;
 using std::invalid_argument;
 using std::cout;
 using std::endl;
-using myutils::vec_to_string;
 
 namespace epi {
   namespace chapter9 {
-    class CircularQueue::Queue {
+    class StackQueue::Queue {
     public:
-        explicit Queue(size_t capacity) : entries_(capacity) { }
-
-        size_t size() const {
-            return size_;
-        }
-
         void enqueue(int x) {
-            if (size() == entries_.size()) {
-                rotate(entries_.begin(), entries_.begin() + head_, entries_.end());
-                entries_.resize(kScaleFactor * entries_.size());
-                head_ = 0;
-                tail_ = size();
-            }
-
-            entries_[tail_] = x;
-            tail_ = (tail_ + 1) % entries_.size();
-            ++size_;
+            enq_.push(x);
         }
 
         int dequeue() {
-            if (size() == 0)
-                throw length_error("Empty queue");
+            if (deq_.empty()) {
+                if (enq_.empty())
+                    throw length_error("Empty queue");
 
-            int ele = entries_[head_];
-            head_ = (head_ + 1) % entries_.size();
-            --size_;
+                while (!enq_.empty()) {
+                    deq_.push(enq_.top());
+                    enq_.pop();
+                }
+            }
+
+            int ele = deq_.top();
+            deq_.pop();
             return ele;
         }
 
     private:
-        const size_t kScaleFactor = 2;
-        size_t head_ = 0, tail_ = 0;
-        size_t size_ = 0;
-        std::vector<int> entries_;
+        std::stack<int> enq_, deq_;
     };
 
-    bool CircularQueue::test() {
-        Queue q(3);
+    bool StackQueue::test() {
+        Queue q;
         int res;
 
         q.enqueue(1);
