@@ -66,6 +66,7 @@
 #include "epi/chapter9/SetJumpOrder.hpp"
 #include "epi/chapter9/ExamineBuildingsWithSunset.hpp"
 #include "epi/chapter9/BinaryTreeDepthOrder.hpp"
+#include "epi/chapter9/CircularQueue.hpp"
 
 using std::cout;
 using std::endl;
@@ -147,6 +148,7 @@ void prepareSolutions() {
     new SetJumpOrder(); // Chapter 9.5
     new ExamineBuildingsWithSunset(); // Chapter 9.6
     new BinaryTreeDepthOrder(); // Chapter 9.7
+    new CircularQueue(); // Chapter 9.8
 
 }
 
