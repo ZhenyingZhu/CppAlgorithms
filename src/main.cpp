@@ -68,6 +68,7 @@
 #include "epi/chapter9/BinaryTreeDepthOrder.hpp"
 #include "epi/chapter9/CircularQueue.hpp"
 #include "epi/chapter9/StackQueue.hpp"
+#include "epi/chapter9/QueueWithMax.hpp"
 
 using std::cout;
 using std::endl;
@@ -151,6 +152,7 @@ void prepareSolutions() {
     new BinaryTreeDepthOrder(); // Chapter 9.7
     new CircularQueue(); // Chapter 9.8
     new StackQueue(); // Chapter 9.9
+    new QueueWithMax(); // Chapter 9.10
 
 }
 

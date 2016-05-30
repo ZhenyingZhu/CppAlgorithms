@@ -17,6 +17,17 @@ namespace myutils {
     std::string make_plural(size_t ctr, const std::string &word, const std::string &ending);
 
     template <typename T>
+    bool test_same(T shouldBe, T result) {
+        if (shouldBe != result) {
+            std::cout << "Should be: " << shouldBe << std::endl;
+            std::cout << "Result: " << result << std::endl;
+            return false;
+        }
+
+        return true;
+    }
+
+    template <typename T>
     std::string vec_to_string(const std::vector<T> &vec) {
         std::string output = "<";
         bool first_ele(true);

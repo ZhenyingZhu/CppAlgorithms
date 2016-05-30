@@ -86,6 +86,7 @@ SOURCES =			\
 	src/epi/chapter9/BinaryTreeDepthOrder.cpp			\
 	src/epi/chapter9/CircularQueue.cpp			\
 	src/epi/chapter9/StackQueue.cpp			\
+	src/epi/chapter9/QueueWithMax.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
