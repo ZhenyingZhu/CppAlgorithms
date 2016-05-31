@@ -69,6 +69,7 @@
 #include "epi/chapter9/CircularQueue.hpp"
 #include "epi/chapter9/StackQueue.hpp"
 #include "epi/chapter9/QueueWithMax.hpp"
+#include "epi/chapter10/IsBalanced.hpp"
 
 using std::cout;
 using std::endl;
@@ -81,6 +82,7 @@ using namespace chapter6;
 using namespace chapter7;
 using namespace chapter8;
 using namespace chapter9;
+using namespace chapter10;
 
 void prepareSolutions() {
 //    new Parity(); // Chapter 5.1
@@ -143,16 +145,18 @@ void prepareSolutions() {
 //    new ListPivoting(); // Chapter 8.12
 //    new AddTwoNumbers(); // Chapter 8.13
 //
-    new MaxStack(); // Chapter 9.1
-    new Eval(); // Chapter 9.2
-    new IsWellFormed(); // Chapter 9.3
-    new ShortestEquivalentPath(); // Chapter 9.4
-    new SetJumpOrder(); // Chapter 9.5
-    new ExamineBuildingsWithSunset(); // Chapter 9.6
-    new BinaryTreeDepthOrder(); // Chapter 9.7
-    new CircularQueue(); // Chapter 9.8
-    new StackQueue(); // Chapter 9.9
-    new QueueWithMax(); // Chapter 9.10
+//    new MaxStack(); // Chapter 9.1
+//    new Eval(); // Chapter 9.2
+//    new IsWellFormed(); // Chapter 9.3
+//    new ShortestEquivalentPath(); // Chapter 9.4
+//    new SetJumpOrder(); // Chapter 9.5
+//    new ExamineBuildingsWithSunset(); // Chapter 9.6
+//    new BinaryTreeDepthOrder(); // Chapter 9.7
+//    new CircularQueue(); // Chapter 9.8
+//    new StackQueue(); // Chapter 9.9
+//    new QueueWithMax(); // Chapter 9.10
+//
+    new IsBalanced(); // Chapter 10.1
 
 }
 
