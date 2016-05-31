@@ -9,6 +9,7 @@
 #include <stdexcept>
 
 #include "ListNode.h"
+#include "BinaryTreeNode.h"
 
 namespace myutils {
 
@@ -81,6 +82,8 @@ namespace myutils {
 
         return head;
     }
+
+    std::unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const std::vector<int> &vec, size_t *pos);
 
     template <typename T>
     bool is_equal(const std::shared_ptr<ListNode<T>> &l1, const std::shared_ptr<ListNode<T>> &l2) {
