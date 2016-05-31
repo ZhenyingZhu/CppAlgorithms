@@ -4,6 +4,7 @@
 #include "../../Solution.h"
 #include "../../SmartPtr.h"
 
+#include "../../BinaryTreeNode.h"
 #include <stack>
 #include <memory>
 
@@ -13,13 +14,13 @@ namespace epi {
     class BinaryTreeDepthOrder : public myutils::Solution {
         friend class myutils::SmartPtr;
 
-    private:
-        template <typename T>
-        struct BinaryTreeNode {
-            T data;
-            std::unique_ptr<BinaryTreeNode<T>> left;
-            std::unique_ptr<BinaryTreeNode<T>> right;
-        };
+//    private:
+//        template <typename T>
+//        struct BinaryTreeNode {
+//            T data;
+//            std::unique_ptr<BinaryTreeNode<T>> left;
+//            std::unique_ptr<BinaryTreeNode<T>> right;
+//        };
 
     public:
         BinaryTreeDepthOrder():
@@ -30,7 +31,7 @@ namespace epi {
 
         ~BinaryTreeDepthOrder() { }
 
-        std::vector<std::vector<int>> binaryTreeDepthOrder(const std::unique_ptr<BinaryTreeNode<int>> &tree);
+        std::vector<std::vector<int>> binaryTreeDepthOrder(const std::unique_ptr<myutils::BinaryTreeNode<int>> &tree);
 
         bool test();
     };

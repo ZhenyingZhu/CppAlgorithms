@@ -7,9 +7,11 @@
 #include <iostream>
 
 #include "../../MyUtils.h"
+#include "../../BinaryTreeNode.h"
 
 using std::queue;
 using std::unique_ptr;
+using myutils::BinaryTreeNode;
 using std::move;
 using std::vector;
 using std::string;
