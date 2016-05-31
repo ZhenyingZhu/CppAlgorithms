@@ -88,6 +88,7 @@ SOURCES =			\
 	src/epi/chapter9/StackQueue.cpp			\
 	src/epi/chapter9/QueueWithMax.cpp			\
 	src/epi/chapter10/IsBalanced.cpp			\
+	src/epi/chapter10/IsSymmetric.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

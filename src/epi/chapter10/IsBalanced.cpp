@@ -57,7 +57,7 @@ namespace epi {
         unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, new size_t(0));
 
         if (isBalanced(root2)) {
-            cout << "root2 should be balanced" << endl;
+            cout << "root2 should not be balanced" << endl;
             return false;
         }
 

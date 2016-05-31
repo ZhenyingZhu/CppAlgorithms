@@ -70,6 +70,7 @@
 #include "epi/chapter9/StackQueue.hpp"
 #include "epi/chapter9/QueueWithMax.hpp"
 #include "epi/chapter10/IsBalanced.hpp"
+#include "epi/chapter10/IsSymmetric.hpp"
 
 using std::cout;
 using std::endl;
@@ -157,6 +158,7 @@ void prepareSolutions() {
 //    new QueueWithMax(); // Chapter 9.10
 //
     new IsBalanced(); // Chapter 10.1
+    new IsSymmetric(); // Chapter 10.2
 
 }
 
