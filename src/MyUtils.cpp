@@ -35,10 +35,15 @@ extern unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const vector<int> 
     }
 
     unique_ptr<BinaryTreeNode<int>> root( new BinaryTreeNode<int>{vec[*pos]} );
+    root.get()->parent = nullptr;
     ++(*pos);
     root.get()->left = move( createPreOrderIntBTree(vec, pos) );
+    if (root.get()->left)
+        root.get()->left.get()->parent = root.get();
     ++(*pos);
     root.get()->right = move( createPreOrderIntBTree(vec, pos) );
+    if (root.get()->right)
+        root.get()->right.get()->parent = root.get();
 
     return root;
 }

@@ -72,6 +72,7 @@
 #include "epi/chapter10/IsBalanced.hpp"
 #include "epi/chapter10/IsSymmetric.hpp"
 #include "epi/chapter10/LCA.hpp"
+#include "epi/chapter10/LCAWithParent.hpp"
 
 using std::cout;
 using std::endl;
@@ -161,6 +162,7 @@ void prepareSolutions() {
     new IsBalanced(); // Chapter 10.1
     new IsSymmetric(); // Chapter 10.2
     new LCA(); // Chapter 10.3
+    new LCAWithParent(); // Chapter 10.4
 
 }
 

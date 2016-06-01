@@ -8,6 +8,7 @@ namespace myutils {
   struct BinaryTreeNode {
       T data;
       std::unique_ptr<BinaryTreeNode<T>> left, right;
+      BinaryTreeNode<T> *parent;
   };
 } // myutils
 
