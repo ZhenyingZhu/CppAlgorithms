@@ -73,6 +73,7 @@
 #include "epi/chapter10/IsSymmetric.hpp"
 #include "epi/chapter10/LCA.hpp"
 #include "epi/chapter10/LCAWithParent.hpp"
+#include "epi/chapter10/SumRootToLeaf.hpp"
 
 using std::cout;
 using std::endl;
@@ -163,6 +164,7 @@ void prepareSolutions() {
     new IsSymmetric(); // Chapter 10.2
     new LCA(); // Chapter 10.3
     new LCAWithParent(); // Chapter 10.4
+    new SumRootToLeaf(); // Chapter 10.5
 
 }
 

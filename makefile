@@ -91,6 +91,7 @@ SOURCES =			\
 	src/epi/chapter10/IsSymmetric.cpp			\
 	src/epi/chapter10/LCA.cpp			\
 	src/epi/chapter10/LCAWithParent.cpp			\
+	src/epi/chapter10/SumRootToLeaf.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
