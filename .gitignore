@@ -82,3 +82,6 @@ $RECYCLE.BIN/
 .cproject
 .project
 .settings
+
+# cstags
+tags
