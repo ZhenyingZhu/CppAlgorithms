@@ -74,6 +74,7 @@
 #include "epi/chapter10/LCA.hpp"
 #include "epi/chapter10/LCAWithParent.hpp"
 #include "epi/chapter10/SumRootToLeaf.hpp"
+#include "epi/chapter10/HasPathSum.hpp"
 
 using std::cout;
 using std::endl;
@@ -165,6 +166,7 @@ void prepareSolutions() {
     new LCA(); // Chapter 10.3
     new LCAWithParent(); // Chapter 10.4
     new SumRootToLeaf(); // Chapter 10.5
+    new HasPathSum(); // Chapter 10.6
 
 }
 
