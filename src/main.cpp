@@ -76,6 +76,7 @@
 #include "epi/chapter10/SumRootToLeaf.hpp"
 #include "epi/chapter10/HasPathSum.hpp"
 #include "epi/chapter10/BSTInSortedOrder.hpp"
+#include "epi/chapter10/PreorderTraversal.hpp"
 
 using std::cout;
 using std::endl;
@@ -169,6 +170,7 @@ void prepareSolutions() {
     new SumRootToLeaf(); // Chapter 10.5
     new HasPathSum(); // Chapter 10.6
     new BSTInSortedOrder(); // Chapter 10.7
+    new PreorderTraversal(); // Chapter 10.8
 
 }
 
