@@ -93,6 +93,7 @@ SOURCES =			\
 	src/epi/chapter10/LCAWithParent.cpp			\
 	src/epi/chapter10/SumRootToLeaf.cpp			\
 	src/epi/chapter10/HasPathSum.cpp			\
+	src/epi/chapter10/BSTInSortedOrder.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

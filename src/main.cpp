@@ -75,6 +75,7 @@
 #include "epi/chapter10/LCAWithParent.hpp"
 #include "epi/chapter10/SumRootToLeaf.hpp"
 #include "epi/chapter10/HasPathSum.hpp"
+#include "epi/chapter10/BSTInSortedOrder.hpp"
 
 using std::cout;
 using std::endl;
@@ -167,6 +168,7 @@ void prepareSolutions() {
     new LCAWithParent(); // Chapter 10.4
     new SumRootToLeaf(); // Chapter 10.5
     new HasPathSum(); // Chapter 10.6
+    new BSTInSortedOrder(); // Chapter 10.7
 
 }
 
