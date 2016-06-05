@@ -77,6 +77,7 @@
 #include "epi/chapter10/HasPathSum.hpp"
 #include "epi/chapter10/BSTInSortedOrder.hpp"
 #include "epi/chapter10/PreorderTraversal.hpp"
+#include "epi/chapter10/FindKthNodeBinaryTree.hpp"
 
 using std::cout;
 using std::endl;
@@ -171,6 +172,7 @@ void prepareSolutions() {
     new HasPathSum(); // Chapter 10.6
     new BSTInSortedOrder(); // Chapter 10.7
     new PreorderTraversal(); // Chapter 10.8
+    new FindKthNodeBinaryTree(); // Chapter 10.9
 
 }
 

@@ -95,6 +95,7 @@ SOURCES =			\
 	src/epi/chapter10/HasPathSum.cpp			\
 	src/epi/chapter10/BSTInSortedOrder.cpp			\
 	src/epi/chapter10/PreorderTraversal.cpp			\
+	src/epi/chapter10/FindKthNodeBinaryTree.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
