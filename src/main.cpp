@@ -78,6 +78,7 @@
 #include "epi/chapter10/BSTInSortedOrder.hpp"
 #include "epi/chapter10/PreorderTraversal.hpp"
 #include "epi/chapter10/FindKthNodeBinaryTree.hpp"
+#include "epi/chapter10/FindSuccessor.hpp"
 
 using std::cout;
 using std::endl;
@@ -173,6 +174,7 @@ void prepareSolutions() {
     new BSTInSortedOrder(); // Chapter 10.7
     new PreorderTraversal(); // Chapter 10.8
     new FindKthNodeBinaryTree(); // Chapter 10.9
+    new FindSuccessor(); // Chapter 10.10
 
 }
 

@@ -96,6 +96,7 @@ SOURCES =			\
 	src/epi/chapter10/BSTInSortedOrder.cpp			\
 	src/epi/chapter10/PreorderTraversal.cpp			\
 	src/epi/chapter10/FindKthNodeBinaryTree.cpp			\
+	src/epi/chapter10/FindSuccessor.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
