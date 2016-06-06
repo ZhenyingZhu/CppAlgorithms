@@ -12,6 +12,7 @@
 
 using std::unique_ptr;
 using myutils::BinaryTreeNode;
+using myutils::BTNULL;
 using std::abs;
 using std::max;
 using std::invalid_argument;
@@ -45,7 +46,7 @@ namespace epi {
     }
 
     bool IsBalanced::test() {
-        vector<int> preOrder1 = {0, 1, 2, 256, 256, 3, 256, 256, 4};
+        vector<int> preOrder1 = {0, 1, 2, BTNULL, BTNULL, 3, BTNULL, BTNULL, 4};
         unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
 
         if (!isBalanced(root1)) {
@@ -53,7 +54,7 @@ namespace epi {
             return false;
         }
 
-        vector<int> preOrder2 = {0, 1, 2, 3, 256, 256, 256, 256, 4};
+        vector<int> preOrder2 = {0, 1, 2, 3, BTNULL, BTNULL, BTNULL, BTNULL, 4};
         unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, new size_t(0));
 
         if (isBalanced(root2)) {

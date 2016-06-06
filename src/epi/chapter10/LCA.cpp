@@ -12,6 +12,7 @@
 
 using std::unique_ptr;
 using myutils::BinaryTreeNode;
+using myutils::BTNULL;
 using std::abs;
 using std::max;
 using std::invalid_argument;
@@ -59,7 +60,7 @@ namespace epi {
     }
 
     bool LCA::test() {
-        vector<int> preOrder1 = {314, 6, 256, 2, 256, 3, 256, 256, 6, 2, 3};
+        vector<int> preOrder1 = {314, 6, BTNULL, 2, BTNULL, 3, BTNULL, BTNULL, 6, 2, 3};
         unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
         unique_ptr<BinaryTreeNode<int>> &node11 = root1.get()->left;
         unique_ptr<BinaryTreeNode<int>> &node12 = root1.get()->right;

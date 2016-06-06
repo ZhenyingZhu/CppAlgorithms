@@ -1,9 +1,12 @@
 #ifndef SRC_BINARYTREENODE_H_
 #define SRC_BINARYTREENODE_H_
 
+#include <climits>
 #include <memory>
 
 namespace myutils {
+  const int BTNULL = INT_MAX;
+
   template <typename T>
   struct BinaryTreeNode {
       BinaryTreeNode(T d): data(d), parent(nullptr), size(0) { }

@@ -13,6 +13,7 @@ using std::unique_ptr;
 using std::vector;
 using std::stack;
 using myutils::BinaryTreeNode;
+using myutils::BTNULL;
 using std::invalid_argument;
 using myutils::createPreOrderIntBTree;
 using myutils::vec_to_string;
@@ -56,10 +57,10 @@ namespace epi {
     }
 
     bool BSTInSortedOrder::test() {
-        vector<int> preOrder1 = {314, 6, 271, 28, 256, 256, 0, 256, 256,
-                561, 256, 3, 17, 256, 256, 256,
-                6, 2, 256, 1, 401, 256, 641, 256, 256, 257, 256, 256,
-                271, 256, 28
+        vector<int> preOrder1 = {314, 6, 271, 28, BTNULL, BTNULL, 0, BTNULL, BTNULL,
+                561, BTNULL, 3, 17, BTNULL, BTNULL, BTNULL,
+                6, 2, BTNULL, 1, 401, BTNULL, 641, BTNULL, BTNULL, 257, BTNULL, BTNULL,
+                271, BTNULL, 28
         };
         unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
 

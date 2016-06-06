@@ -63,7 +63,12 @@ namespace epi {
         q.enqueue(6);
 
         for (int i = 3; i != 7; ++i) {
-            res = q.dequeue();
+            try {
+                res = q.dequeue();
+            } catch (length_error &ex) {
+                cout << ex.what() << endl;
+                continue;
+            }
             if (res != i) {
                 cout << "Should be: " << i << endl;
                 cout << "Result: " << res << endl;
@@ -71,7 +76,11 @@ namespace epi {
             }
         }
 
-        q.dequeue();
+        try {
+            q.dequeue();
+        } catch (length_error &ex) {
+            cout << ex.what() << endl;
+        }
 
         return true;
     }

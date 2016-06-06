@@ -16,6 +16,7 @@ using myutils::BinaryTreeNode;
 using std::invalid_argument;
 using myutils::createPreOrderIntBTree;
 using myutils::vec_to_string;
+using myutils::BTNULL;
 using std::cout;
 using std::endl;
 
@@ -51,7 +52,7 @@ namespace epi {
     }
 
     bool InorderTraversal::test() {
-        vector<int> preOrder1 = {5, 3, 1, 256, 2, 256, 256, 4, 256, 256, 6, 256, 7};
+        vector<int> preOrder1 = {5, 3, 1, BTNULL, 2, BTNULL, BTNULL, 4, BTNULL, BTNULL, 6, BTNULL, 7};
         unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
 
         vector<int> res = inorderTraversal(root1);

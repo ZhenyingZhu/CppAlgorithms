@@ -12,6 +12,7 @@
 
 using std::unique_ptr;
 using myutils::BinaryTreeNode;
+using myutils::BTNULL;
 using std::abs;
 using std::max;
 using std::invalid_argument;
@@ -43,7 +44,7 @@ namespace epi {
     }
 
     bool IsSymmetric::test() {
-        vector<int> preOrder1 = {314, 6, 256, 2, 256, 3, 256, 256, 6, 2, 3};
+        vector<int> preOrder1 = {314, 6, BTNULL, 2, BTNULL, 3, BTNULL, BTNULL, 6, 2, 3};
         unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
 
         if (!isSymmetric(root1)) {
@@ -51,7 +52,7 @@ namespace epi {
             return false;
         }
 
-        vector<int> preOrder2 = {314, 6, 256, 561, 256, 3, 256, 256, 6, 2, 3};
+        vector<int> preOrder2 = {314, 6, BTNULL, 561, BTNULL, 3, BTNULL, BTNULL, 6, 2, 3};
         unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, new size_t(0));
 
         if (isSymmetric(root2)) {
@@ -59,7 +60,7 @@ namespace epi {
             return false;
         }
 
-        vector<int> preOrder3 = {314, 6, 256, 561, 256, 3, 256, 256, 6, 2};
+        vector<int> preOrder3 = {314, 6, BTNULL, 561, BTNULL, 3, BTNULL, BTNULL, 6, 2};
         unique_ptr<BinaryTreeNode<int>> root3 = createPreOrderIntBTree(preOrder3, new size_t(0));
 
         if (isSymmetric(root3)) {

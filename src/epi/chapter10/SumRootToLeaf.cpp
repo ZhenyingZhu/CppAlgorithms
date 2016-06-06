@@ -13,6 +13,7 @@
 
 using std::unique_ptr;
 using myutils::BinaryTreeNode;
+using myutils::BTNULL;
 using std::abs;
 using std::max;
 using std::swap;
@@ -48,10 +49,10 @@ namespace epi {
 
     bool SumRootToLeaf::test() {
         vector<int> preOrder1 =
-        {1, 0, 0, 0, 256, 256, 1, 256, 256,
-                1, 256, 1, 0, 256, 256, 256,
-                1, 0, 256, 0, 1, 256, 1, 256, 256,
-                0, 256, 256, 0, 256, 0, 256, 256};
+        {1, 0, 0, 0, BTNULL, BTNULL, 1, BTNULL, BTNULL,
+                1, BTNULL, 1, 0, BTNULL, BTNULL, BTNULL,
+                1, 0, BTNULL, 0, 1, BTNULL, 1, BTNULL, BTNULL,
+                0, BTNULL, BTNULL, 0, BTNULL, 0, BTNULL, BTNULL};
         unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
 
         int res = sumRootToLeaf(root1);
