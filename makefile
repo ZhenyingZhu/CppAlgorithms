@@ -100,6 +100,7 @@ SOURCES =			\
 	src/epi/chapter10/InorderTraversal.cpp			\
 	src/epi/chapter10/BinaryTreeFromPreorderInorder.cpp			\
 	src/epi/chapter10/ReconstructPreorder.cpp			\
+	src/epi/chapter10/CreateListOfLeaves.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

@@ -82,6 +82,7 @@
 #include "epi/chapter10/InorderTraversal.hpp"
 #include "epi/chapter10/BinaryTreeFromPreorderInorder.hpp"
 #include "epi/chapter10/ReconstructPreorder.hpp"
+#include "epi/chapter10/CreateListOfLeaves.hpp"
 
 using std::cout;
 using std::endl;
@@ -181,6 +182,7 @@ void prepareSolutions() {
     new InorderTraversal(); // Chapter 10.11
     new BinaryTreeFromPreorderInorder(); // Chapter 10.12
     new ReconstructPreorder(); // Chapter 10.13
+    new CreateListOfLeaves(); // Chapter 10.14
 
 }
 
