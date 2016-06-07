@@ -81,6 +81,7 @@
 #include "epi/chapter10/FindSuccessor.hpp"
 #include "epi/chapter10/InorderTraversal.hpp"
 #include "epi/chapter10/BinaryTreeFromPreorderInorder.hpp"
+#include "epi/chapter10/ReconstructPreorder.hpp"
 
 using std::cout;
 using std::endl;
@@ -179,6 +180,7 @@ void prepareSolutions() {
     new FindSuccessor(); // Chapter 10.10
     new InorderTraversal(); // Chapter 10.11
     new BinaryTreeFromPreorderInorder(); // Chapter 10.12
+    new ReconstructPreorder(); // Chapter 10.13
 
 }
 

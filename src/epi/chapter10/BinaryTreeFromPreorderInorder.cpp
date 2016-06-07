@@ -14,6 +14,7 @@ using std::unique_ptr;
 using std::vector;
 using std::find;
 using std::move;
+using myutils::traversePreInOrder;
 using myutils::BinaryTreeNode;
 using myutils::BTNULL;
 using std::invalid_argument;
@@ -58,20 +59,6 @@ namespace epi {
         vector<int>::const_iterator pst = preorder.begin(), ped = preorder.end() - 1;
         vector<int>::const_iterator ist = inorder.begin(), ied = inorder.end() - 1;
         return btConstructHelper(preorder, pst, ped, inorder, ist, ied);
-    }
-
-    void BinaryTreeFromPreorderInorder::traversePreInOrder(unique_ptr<BinaryTreeNode<int>> &tree,
-            vector<int> &preorder, vector<int> &inorder) {
-        if (!tree)
-            return;
-
-        auto *node = tree.get();
-        preorder.push_back(node->data);
-        if (node->left)
-            traversePreInOrder(node->left, preorder, inorder);
-        inorder.push_back(node->data);
-        if (node->right)
-            traversePreInOrder(node->right, preorder, inorder);
     }
 
     bool BinaryTreeFromPreorderInorder::test() {

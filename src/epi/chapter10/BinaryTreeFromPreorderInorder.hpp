@@ -37,8 +37,6 @@ namespace epi {
                 std::vector<int>::const_iterator pst, std::vector<int>::const_iterator ped,
                 const std::vector<int> &inorder,
                 std::vector<int>::const_iterator ist, std::vector<int>::const_iterator ied);
-
-        void traversePreInOrder(std::unique_ptr<myutils::BinaryTreeNode<int>> &tree, std::vector<int> &preorder, std::vector<int> &inorder);
     };
 
   } // chapter10

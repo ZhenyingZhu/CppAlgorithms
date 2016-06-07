@@ -85,6 +85,8 @@ namespace myutils {
 
     std::unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const std::vector<int> &vec, size_t *pos);
 
+    void traversePreInOrder(std::unique_ptr<myutils::BinaryTreeNode<int>> &tree, std::vector<int> &preorder, std::vector<int> &inorder);
+
     template <typename T>
     bool is_equal(const std::shared_ptr<ListNode<T>> &l1, const std::shared_ptr<ListNode<T>> &l2) {
         std::shared_ptr<ListNode<T>> p1 = l1;

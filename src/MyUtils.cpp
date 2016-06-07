@@ -48,4 +48,18 @@ extern unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const vector<int> 
     return root;
 }
 
+extern void traversePreInOrder(unique_ptr<BinaryTreeNode<int>> &tree,
+        vector<int> &preorder, vector<int> &inorder) {
+    if (!tree)
+        return;
+
+    auto *node = tree.get();
+    preorder.push_back(node->data);
+    if (node->left)
+        traversePreInOrder(node->left, preorder, inorder);
+    inorder.push_back(node->data);
+    if (node->right)
+        traversePreInOrder(node->right, preorder, inorder);
+}
+
 } // myutils
