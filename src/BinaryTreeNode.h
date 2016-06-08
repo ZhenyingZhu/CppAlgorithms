@@ -11,6 +11,11 @@ namespace myutils {
   struct BinaryTreeNode {
       BinaryTreeNode(T d): data(d), parent(nullptr), size(0) { }
 
+      ~BinaryTreeNode() {
+          delete parent;
+          parent = nullptr;
+      }
+
       T data;
       std::unique_ptr<BinaryTreeNode<T>> left, right;
       BinaryTreeNode<T> *parent;
