@@ -83,6 +83,7 @@
 #include "epi/chapter10/BinaryTreeFromPreorderInorder.hpp"
 #include "epi/chapter10/ReconstructPreorder.hpp"
 #include "epi/chapter10/CreateListOfLeaves.hpp"
+#include "epi/chapter10/ExteriorBinaryTree.hpp"
 
 using std::cout;
 using std::endl;
@@ -183,6 +184,7 @@ void prepareSolutions() {
     new BinaryTreeFromPreorderInorder(); // Chapter 10.12
     new ReconstructPreorder(); // Chapter 10.13
     new CreateListOfLeaves(); // Chapter 10.14
+    new ExteriorBinaryTree(); // Chapter 10.15
 
 }
 
@@ -192,5 +194,6 @@ int main(int argc, char** argv)
     SolutionCollection::getInstance()->checkSolutions();
 
     cout << "**********\n" << "All done." << endl;
+    cout << "In total " << SolutionCollection::getInstance()->solutionsNum() << " questions." << endl;
     return 0;
 }

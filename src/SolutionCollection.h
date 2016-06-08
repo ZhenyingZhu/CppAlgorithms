@@ -21,6 +21,8 @@ public:
     void insertSolution(const SmartPtr&);
 
     bool checkSolutions();
+
+    size_t solutionsNum();
 private:
     static SolutionCollection *instance;
 
@@ -30,6 +32,7 @@ private:
     SolutionCollection(const SolutionCollection&);
 
     SolutionCollection& operator=(const SolutionCollection&);
+
 };
 
 } // myutils

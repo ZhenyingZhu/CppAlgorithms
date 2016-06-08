@@ -64,7 +64,7 @@ namespace epi {
         }
 
         if (res != ans) {
-            cout << "preorder should be " << vec_to_string(res) << endl;
+            cout << "preorder should be " << vec_to_string(ans) << endl;
             cout << "result " << vec_to_string(res) << endl;
             return false;
         }

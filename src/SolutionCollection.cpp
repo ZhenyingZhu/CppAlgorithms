@@ -50,4 +50,8 @@ bool SolutionCollection::checkSolutions() {
     return true;
 }
 
+size_t SolutionCollection::solutionsNum() {
+    return solVec.size();
+}
+
 } // myutils
