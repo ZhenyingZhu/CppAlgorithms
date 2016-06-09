@@ -85,6 +85,7 @@
 #include "epi/chapter10/CreateListOfLeaves.hpp"
 #include "epi/chapter10/ExteriorBinaryTree.hpp"
 #include "epi/chapter10/ConstructRightSibling.hpp"
+#include "epi/chapter10/BinaryTreeLocking.hpp"
 
 using std::cout;
 using std::endl;
@@ -187,6 +188,7 @@ void prepareSolutions() {
     new CreateListOfLeaves(); // Chapter 10.14
     new ExteriorBinaryTree(); // Chapter 10.15
     new ConstructRightSibling(); // Chapter 10.16
+    new BinaryTreeLocking(); // Chapter 10.17
 
 }
 

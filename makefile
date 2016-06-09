@@ -103,6 +103,7 @@ SOURCES =			\
 	src/epi/chapter10/CreateListOfLeaves.cpp			\
 	src/epi/chapter10/ExteriorBinaryTree.cpp			\
 	src/epi/chapter10/ConstructRightSibling.cpp			\
+	src/epi/chapter10/BinaryTreeLocking.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
