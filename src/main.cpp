@@ -86,6 +86,7 @@
 #include "epi/chapter10/ExteriorBinaryTree.hpp"
 #include "epi/chapter10/ConstructRightSibling.hpp"
 #include "epi/chapter10/BinaryTreeLocking.hpp"
+#include "epi/chapter11/TopK.hpp"
 
 using std::cout;
 using std::endl;
@@ -99,6 +100,7 @@ using namespace chapter7;
 using namespace chapter8;
 using namespace chapter9;
 using namespace chapter10;
+using namespace chapter11;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -199,5 +201,6 @@ int main(int argc, char** argv)
 
     cout << "**********\n" << "All done." << endl;
     cout << "In total " << SolutionCollection::getInstance()->solutionsNum() << " questions." << endl;
+
     return 0;
 }
