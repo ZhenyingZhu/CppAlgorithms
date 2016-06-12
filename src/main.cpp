@@ -91,6 +91,7 @@
 #include "epi/chapter11/SortKIncreasingDecreasingArray.hpp"
 #include "epi/chapter11/SortApproximatelySortedData.hpp"
 #include "epi/chapter11/FindClosestKStars.hpp"
+#include "epi/chapter11/OnlineMedian.hpp"
 
 using std::cout;
 using std::endl;
@@ -200,6 +201,7 @@ void prepareSolutions() {
     new SortKIncreasingDecreasingArray(); // Chapter 11.2
     new SortApproximatelySortedData(); // Chapter 11.3
     new FindClosestKStars(); // Chapter 11.4
+    new OnlineMedian(); // Chapter 11.5
 
 }
 
