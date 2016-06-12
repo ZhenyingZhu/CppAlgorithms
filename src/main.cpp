@@ -90,6 +90,7 @@
 #include "epi/chapter11/MergeSortedArrays.hpp"
 #include "epi/chapter11/SortKIncreasingDecreasingArray.hpp"
 #include "epi/chapter11/SortApproximatelySortedData.hpp"
+#include "epi/chapter11/FindClosestKStars.hpp"
 
 using std::cout;
 using std::endl;
@@ -198,6 +199,7 @@ void prepareSolutions() {
     new MergeSortedArrays(); // Chapter 11.1
     new SortKIncreasingDecreasingArray(); // Chapter 11.2
     new SortApproximatelySortedData(); // Chapter 11.3
+    new FindClosestKStars(); // Chapter 11.4
 
 }
 
