@@ -87,6 +87,7 @@
 #include "epi/chapter10/ConstructRightSibling.hpp"
 #include "epi/chapter10/BinaryTreeLocking.hpp"
 #include "epi/chapter11/TopK.hpp"
+#include "epi/chapter11/MergeSortedArrays.hpp"
 
 using std::cout;
 using std::endl;
@@ -191,6 +192,8 @@ void prepareSolutions() {
     new ExteriorBinaryTree(); // Chapter 10.15
     new ConstructRightSibling(); // Chapter 10.16
     new BinaryTreeLocking(); // Chapter 10.17
+
+    new MergeSortedArrays(); // Chapter 11.1
 
 }
 
