@@ -88,6 +88,7 @@
 #include "epi/chapter10/BinaryTreeLocking.hpp"
 #include "epi/chapter11/TopK.hpp"
 #include "epi/chapter11/MergeSortedArrays.hpp"
+#include "epi/chapter11/SortKIncreasingDecreasingArray.hpp"
 
 using std::cout;
 using std::endl;
@@ -194,6 +195,7 @@ void prepareSolutions() {
     new BinaryTreeLocking(); // Chapter 10.17
 
     new MergeSortedArrays(); // Chapter 11.1
+    new SortKIncreasingDecreasingArray(); // Chapter 11.2
 
 }
 

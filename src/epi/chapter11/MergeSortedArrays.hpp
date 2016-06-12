@@ -19,6 +19,8 @@ namespace epi {
                      "each file. Pop an element and refill with "
                      "the file that contains it.") { }
 
+        ~MergeSortedArrays() { }
+
         std::vector<int> mergeSortedArrays(const std::vector<std::vector<int>> &sortedArrays);
 
         bool test();

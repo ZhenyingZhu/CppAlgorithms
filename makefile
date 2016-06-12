@@ -106,6 +106,7 @@ SOURCES =			\
 	src/epi/chapter10/BinaryTreeLocking.cpp			\
 	src/epi/chapter11/TopK.cpp			\
 	src/epi/chapter11/MergeSortedArrays.cpp			\
+	src/epi/chapter11/SortKIncreasingDecreasingArray.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
