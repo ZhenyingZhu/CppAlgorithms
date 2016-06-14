@@ -93,6 +93,7 @@
 #include "epi/chapter11/FindClosestKStars.hpp"
 #include "epi/chapter11/OnlineMedian.hpp"
 #include "epi/chapter11/KLargestInBinaryHeap.hpp"
+#include "epi/chapter11/StackByHeap.hpp"
 
 using std::cout;
 using std::endl;
@@ -204,6 +205,7 @@ void prepareSolutions() {
     new FindClosestKStars(); // Chapter 11.4
     new OnlineMedian(); // Chapter 11.5
     new KLargestInBinaryHeap(); // Chapter 11.6
+    new StackByHeap(); // Chapter 11/7
 
 }
 

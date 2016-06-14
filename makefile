@@ -111,6 +111,7 @@ SOURCES =			\
 	src/epi/chapter11/FindClosestKStars.cpp			\
 	src/epi/chapter11/OnlineMedian.cpp			\
 	src/epi/chapter11/KLargestInBinaryHeap.cpp			\
+	src/epi/chapter11/StackByHeap.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
