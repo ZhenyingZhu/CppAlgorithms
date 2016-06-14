@@ -92,6 +92,7 @@
 #include "epi/chapter11/SortApproximatelySortedData.hpp"
 #include "epi/chapter11/FindClosestKStars.hpp"
 #include "epi/chapter11/OnlineMedian.hpp"
+#include "epi/chapter11/KLargestInBinaryHeap.hpp"
 
 using std::cout;
 using std::endl;
@@ -202,6 +203,7 @@ void prepareSolutions() {
     new SortApproximatelySortedData(); // Chapter 11.3
     new FindClosestKStars(); // Chapter 11.4
     new OnlineMedian(); // Chapter 11.5
+    new KLargestInBinaryHeap(); // Chapter 11.6
 
 }
 
