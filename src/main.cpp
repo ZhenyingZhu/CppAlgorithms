@@ -94,6 +94,7 @@
 #include "epi/chapter11/OnlineMedian.hpp"
 #include "epi/chapter11/KLargestInBinaryHeap.hpp"
 #include "epi/chapter11/StackByHeap.hpp"
+#include "epi/chapter12/SearchFirstOfK.hpp"
 
 using std::cout;
 using std::endl;
@@ -108,6 +109,7 @@ using namespace chapter8;
 using namespace chapter9;
 using namespace chapter10;
 using namespace chapter11;
+using namespace chapter12;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -205,7 +207,9 @@ void prepareSolutions() {
     new FindClosestKStars(); // Chapter 11.4
     new OnlineMedian(); // Chapter 11.5
     new KLargestInBinaryHeap(); // Chapter 11.6
-    new StackByHeap(); // Chapter 11/7
+    new StackByHeap(); // Chapter 11.7
+
+    new SearchFirstOfK(); // Chapter 12.1
 
 }
 
