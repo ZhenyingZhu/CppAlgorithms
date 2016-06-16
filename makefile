@@ -113,6 +113,8 @@ SOURCES =			\
 	src/epi/chapter11/KLargestInBinaryHeap.cpp			\
 	src/epi/chapter11/StackByHeap.cpp			\
 	src/epi/chapter12/SearchFirstOfK.cpp			\
+	src/epi/chapter12/SearchEntryEqualToItsIndex.cpp			\
+	src/epi/chapter12/SearchSmallest.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
