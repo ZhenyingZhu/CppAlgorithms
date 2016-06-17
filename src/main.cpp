@@ -97,6 +97,7 @@
 #include "epi/chapter12/SearchFirstOfK.hpp"
 #include "epi/chapter12/SearchEntryEqualToItsIndex.hpp"
 #include "epi/chapter12/SearchSmallest.hpp"
+#include "epi/chapter12/SquareRoot.hpp"
 
 using std::cout;
 using std::endl;
@@ -214,6 +215,7 @@ void prepareSolutions() {
     new SearchFirstOfK(); // Chapter 12.1
     new SearchEntryEqualToItsIndex(); // Chapter 12.2
     new SearchSmallest(); // Chapter 12.3
+    new SquareRoot(); // Chapter 12.4
 
 }
 
