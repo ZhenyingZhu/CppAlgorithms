@@ -116,6 +116,7 @@ SOURCES =			\
 	src/epi/chapter12/SearchEntryEqualToItsIndex.cpp			\
 	src/epi/chapter12/SearchSmallest.cpp			\
 	src/epi/chapter12/SquareRoot.cpp			\
+	src/epi/chapter12/DoubleSquareRoot.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
