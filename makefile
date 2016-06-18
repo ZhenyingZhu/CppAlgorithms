@@ -118,6 +118,7 @@ SOURCES =			\
 	src/epi/chapter12/SquareRoot.cpp			\
 	src/epi/chapter12/DoubleSquareRoot.cpp			\
 	src/epi/chapter12/MatrixSearch.cpp			\
+	src/epi/chapter12/FindMinMax.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
