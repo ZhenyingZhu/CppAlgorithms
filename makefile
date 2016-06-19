@@ -121,6 +121,7 @@ SOURCES =			\
 	src/epi/chapter12/FindMinMax.cpp			\
 	src/epi/chapter12/FindKthLargest.cpp			\
 	src/epi/chapter12/FindMissingElement.cpp			\
+	src/epi/chapter12/FindBuplicateMissing.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

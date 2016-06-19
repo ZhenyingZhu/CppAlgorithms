@@ -103,6 +103,7 @@
 #include "epi/chapter12/FindMinMax.hpp"
 #include "epi/chapter12/FindKthLargest.hpp"
 #include "epi/chapter12/FindMissingElement.hpp"
+#include "epi/chapter12/FindBuplicateMissing.hpp"
 
 using std::cout;
 using std::endl;
@@ -226,6 +227,7 @@ void prepareSolutions() {
     new FindMinMax(); // Chapter 12.7
     new FindKthLargest(); // Chapter 12.8
     new FindMissingElement(); // Chapter 12.9
+    new FindBuplicateMissing(); // Chapter 12.10
 
 }
 
