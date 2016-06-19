@@ -102,6 +102,7 @@
 #include "epi/chapter12/MatrixSearch.hpp"
 #include "epi/chapter12/FindMinMax.hpp"
 #include "epi/chapter12/FindKthLargest.hpp"
+#include "epi/chapter12/FindMissingElement.hpp"
 
 using std::cout;
 using std::endl;
@@ -224,6 +225,7 @@ void prepareSolutions() {
     new MatrixSearch(); // Chapter 12.6
     new FindMinMax(); // Chapter 12.7
     new FindKthLargest(); // Chapter 12.8
+    new FindMissingElement(); // Chapter 12.9
 
 }
 
