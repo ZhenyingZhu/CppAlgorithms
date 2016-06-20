@@ -105,6 +105,7 @@
 #include "epi/chapter12/FindMissingElement.hpp"
 #include "epi/chapter12/FindBuplicateMissing.hpp"
 #include "epi/chapter13/MergeContactLists.hpp"
+#include "epi/chapter13/CanFormPalindrome.hpp"
 
 using std::cout;
 using std::endl;
@@ -230,6 +231,8 @@ void prepareSolutions() {
     new FindKthLargest(); // Chapter 12.8
     new FindMissingElement(); // Chapter 12.9
     new FindBuplicateMissing(); // Chapter 12.10
+
+    new CanFormPalindrome(); // Chapter 13.1
 
 }
 
