@@ -104,6 +104,7 @@
 #include "epi/chapter12/FindKthLargest.hpp"
 #include "epi/chapter12/FindMissingElement.hpp"
 #include "epi/chapter12/FindBuplicateMissing.hpp"
+#include "epi/chapter13/MergeContactLists.hpp"
 
 using std::cout;
 using std::endl;
@@ -119,6 +120,7 @@ using namespace chapter9;
 using namespace chapter10;
 using namespace chapter11;
 using namespace chapter12;
+using namespace chapter13;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
