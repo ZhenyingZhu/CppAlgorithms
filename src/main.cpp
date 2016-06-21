@@ -107,6 +107,7 @@
 #include "epi/chapter13/MergeContactLists.hpp"
 #include "epi/chapter13/CanFormPalindrome.hpp"
 #include "epi/chapter13/IsLetterConstructibleFromMagazine.hpp"
+#include "epi/chapter13/ISBNCache.hpp"
 
 using std::cout;
 using std::endl;
@@ -235,6 +236,7 @@ void prepareSolutions() {
 
     new CanFormPalindrome(); // Chapter 13.1
     new IsLetterConstructibleFromMagazine(); // Chapter 13.2
+    new ISBNCache(); // Chapter 13.3
 
 }
 
