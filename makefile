@@ -124,6 +124,7 @@ SOURCES =			\
 	src/epi/chapter12/FindBuplicateMissing.cpp			\
 	src/epi/chapter13/MergeContactLists.cpp			\
 	src/epi/chapter13/CanFormPalindrome.cpp			\
+	src/epi/chapter13/IsLetterConstructibleFromMagazine.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

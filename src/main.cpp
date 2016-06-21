@@ -106,6 +106,7 @@
 #include "epi/chapter12/FindBuplicateMissing.hpp"
 #include "epi/chapter13/MergeContactLists.hpp"
 #include "epi/chapter13/CanFormPalindrome.hpp"
+#include "epi/chapter13/IsLetterConstructibleFromMagazine.hpp"
 
 using std::cout;
 using std::endl;
@@ -233,6 +234,7 @@ void prepareSolutions() {
     new FindBuplicateMissing(); // Chapter 12.10
 
     new CanFormPalindrome(); // Chapter 13.1
+    new IsLetterConstructibleFromMagazine(); // Chapter 13.2
 
 }
 
