@@ -109,6 +109,7 @@
 #include "epi/chapter13/IsLetterConstructibleFromMagazine.hpp"
 #include "epi/chapter13/ISBNCache.hpp"
 #include "epi/chapter13/LCA.hpp"
+#include "epi/chapter13/MostFrequentQueries.hpp"
 
 using std::cout;
 using std::endl;
@@ -239,6 +240,7 @@ void prepareSolutions() {
     new IsLetterConstructibleFromMagazine(); // Chapter 13.2
     new ISBNCache(); // Chapter 13.3
     new epi::chapter13::LCA(); // Chapter 13.4
+    new MostFrequentQueries(); // Chapter 13.5
 
 }
 
