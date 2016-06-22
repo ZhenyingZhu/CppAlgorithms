@@ -126,6 +126,7 @@ SOURCES =			\
 	src/epi/chapter13/CanFormPalindrome.cpp			\
 	src/epi/chapter13/IsLetterConstructibleFromMagazine.cpp			\
 	src/epi/chapter13/ISBNCache.cpp			\
+	src/epi/chapter13/LCA.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

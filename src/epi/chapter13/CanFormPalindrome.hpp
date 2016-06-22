@@ -25,5 +25,4 @@ namespace epi {
   } // chapter13
 } // epi
 
-
 #endif /* SRC_EPI_CHAPTER13_CANFORMPALINDROME_HPP_ */

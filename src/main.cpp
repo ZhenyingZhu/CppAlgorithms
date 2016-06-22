@@ -108,6 +108,7 @@
 #include "epi/chapter13/CanFormPalindrome.hpp"
 #include "epi/chapter13/IsLetterConstructibleFromMagazine.hpp"
 #include "epi/chapter13/ISBNCache.hpp"
+#include "epi/chapter13/LCA.hpp"
 
 using std::cout;
 using std::endl;
@@ -199,7 +200,7 @@ void prepareSolutions() {
 
     new IsBalanced(); // Chapter 10.1
     new IsSymmetric(); // Chapter 10.2
-    new LCA(); // Chapter 10.3
+    new epi::chapter10::LCA(); // Chapter 10.3
     new LCAWithParent(); // Chapter 10.4
     new SumRootToLeaf(); // Chapter 10.5
     new HasPathSum(); // Chapter 10.6
@@ -237,6 +238,7 @@ void prepareSolutions() {
     new CanFormPalindrome(); // Chapter 13.1
     new IsLetterConstructibleFromMagazine(); // Chapter 13.2
     new ISBNCache(); // Chapter 13.3
+    new epi::chapter13::LCA(); // Chapter 13.4
 
 }
 
