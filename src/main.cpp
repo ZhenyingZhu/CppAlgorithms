@@ -111,6 +111,7 @@
 #include "epi/chapter13/LCA.hpp"
 #include "epi/chapter13/MostFrequentQueries.hpp"
 #include "epi/chapter13/FindNearestRepetition.hpp"
+#include "epi/chapter13/FindSmallestSubarrayCoveringSet.hpp"
 
 using std::cout;
 using std::endl;
@@ -243,6 +244,7 @@ void prepareSolutions() {
     new epi::chapter13::LCA(); // Chapter 13.4
     new MostFrequentQueries(); // Chapter 13.5
     new FindNearestRepetition(); // Chapter 13.6
+    new FindSmallestSubarrayCoveringSet(); // Chapter 13.7
 
 }
 
