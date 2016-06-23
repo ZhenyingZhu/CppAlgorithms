@@ -110,6 +110,7 @@
 #include "epi/chapter13/ISBNCache.hpp"
 #include "epi/chapter13/LCA.hpp"
 #include "epi/chapter13/MostFrequentQueries.hpp"
+#include "epi/chapter13/FindNearestRepetition.hpp"
 
 using std::cout;
 using std::endl;
@@ -241,6 +242,7 @@ void prepareSolutions() {
     new ISBNCache(); // Chapter 13.3
     new epi::chapter13::LCA(); // Chapter 13.4
     new MostFrequentQueries(); // Chapter 13.5
+    new FindNearestRepetition(); // Chapter 13.6
 
 }
 
