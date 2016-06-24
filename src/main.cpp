@@ -113,6 +113,7 @@
 #include "epi/chapter13/FindNearestRepetition.hpp"
 #include "epi/chapter13/FindSmallestSubarrayCoveringSet.hpp"
 #include "epi/chapter13/FindSmallestSequentiallyCoveringSubset.hpp"
+#include "epi/chapter13/LongestSubarrayWithDistinctEntries.hpp"
 
 using std::cout;
 using std::endl;
@@ -247,6 +248,7 @@ void prepareSolutions() {
     new FindNearestRepetition(); // Chapter 13.6
     new FindSmallestSubarrayCoveringSet(); // Chapter 13.7
     new FindSmallestSequentiallyCoveringSubset(); // Chapter 13.8
+    new LongestSubarrayWithDistinctEntries(); // Chapter 13.9
 
 }
 
