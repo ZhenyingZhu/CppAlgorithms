@@ -130,6 +130,7 @@ SOURCES =			\
 	src/epi/chapter13/MostFrequentQueries.cpp			\
 	src/epi/chapter13/FindNearestRepetition.cpp			\
 	src/epi/chapter13/FindSmallestSubarrayCoveringSet.cpp			\
+	src/epi/chapter13/FindSmallestSequentiallyCoveringSubset.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

@@ -112,6 +112,7 @@
 #include "epi/chapter13/MostFrequentQueries.hpp"
 #include "epi/chapter13/FindNearestRepetition.hpp"
 #include "epi/chapter13/FindSmallestSubarrayCoveringSet.hpp"
+#include "epi/chapter13/FindSmallestSequentiallyCoveringSubset.hpp"
 
 using std::cout;
 using std::endl;
@@ -245,6 +246,7 @@ void prepareSolutions() {
     new MostFrequentQueries(); // Chapter 13.5
     new FindNearestRepetition(); // Chapter 13.6
     new FindSmallestSubarrayCoveringSet(); // Chapter 13.7
+    new FindSmallestSequentiallyCoveringSubset(); // Chapter 13.8
 
 }
 
