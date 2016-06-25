@@ -114,6 +114,7 @@
 #include "epi/chapter13/FindSmallestSubarrayCoveringSet.hpp"
 #include "epi/chapter13/FindSmallestSequentiallyCoveringSubset.hpp"
 #include "epi/chapter13/LongestSubarrayWithDistinctEntries.hpp"
+#include "epi/chapter13/LongestContainedRange.hpp"
 
 using std::cout;
 using std::endl;
@@ -249,6 +250,7 @@ void prepareSolutions() {
     new FindSmallestSubarrayCoveringSet(); // Chapter 13.7
     new FindSmallestSequentiallyCoveringSubset(); // Chapter 13.8
     new LongestSubarrayWithDistinctEntries(); // Chapter 13.9
+    new LongestContainedRange(); // Chapter 13.10
 
 }
 
