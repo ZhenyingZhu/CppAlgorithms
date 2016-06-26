@@ -134,6 +134,7 @@ SOURCES =			\
 	src/epi/chapter13/LongestSubarrayWithDistinctEntries.cpp			\
 	src/epi/chapter13/LongestContainedRange.cpp			\
 	src/epi/chapter13/FindStudentWithHighestBestOfThreeScores.cpp			\
+	src/epi/chapter13/FindAllSubstrings.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
