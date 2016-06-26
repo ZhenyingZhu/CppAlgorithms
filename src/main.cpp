@@ -117,6 +117,7 @@
 #include "epi/chapter13/LongestContainedRange.hpp"
 #include "epi/chapter13/FindStudentWithHighestBestOfThreeScores.hpp"
 #include "epi/chapter13/FindAllSubstrings.hpp"
+#include "epi/chapter13/TestCollatzConjecture.hpp"
 
 using std::cout;
 using std::endl;
@@ -255,6 +256,7 @@ void prepareSolutions() {
     new LongestContainedRange(); // Chapter 13.10
     new FindStudentWithHighestBestOfThreeScores(); // Chapter 13.11
     new FindAllSubstrings(); // Chapter13.12
+    new TestCollatzConjecture(); // Chapter13.13
 
 }
 
