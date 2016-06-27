@@ -118,6 +118,7 @@
 #include "epi/chapter13/FindStudentWithHighestBestOfThreeScores.hpp"
 #include "epi/chapter13/FindAllSubstrings.hpp"
 #include "epi/chapter13/TestCollatzConjecture.hpp"
+#include "epi/chapter14/IntersectTwoSortedArrays.hpp"
 
 using std::cout;
 using std::endl;
@@ -134,6 +135,7 @@ using namespace chapter10;
 using namespace chapter11;
 using namespace chapter12;
 using namespace chapter13;
+using namespace chapter14;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -257,6 +259,8 @@ void prepareSolutions() {
     new FindStudentWithHighestBestOfThreeScores(); // Chapter 13.11
     new FindAllSubstrings(); // Chapter13.12
     new TestCollatzConjecture(); // Chapter13.13
+
+    new IntersectTwoSortedArrays(); // Chapter14.1
 
 }
 

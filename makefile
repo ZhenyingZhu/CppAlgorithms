@@ -136,6 +136,7 @@ SOURCES =			\
 	src/epi/chapter13/FindStudentWithHighestBestOfThreeScores.cpp			\
 	src/epi/chapter13/FindAllSubstrings.cpp			\
 	src/epi/chapter13/TestCollatzConjecture.cpp			\
+	src/epi/chapter14/IntersectTwoSortedArrays.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
