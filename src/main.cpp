@@ -120,6 +120,7 @@
 #include "epi/chapter13/TestCollatzConjecture.hpp"
 #include "epi/chapter14/IntersectTwoSortedArrays.hpp"
 #include "epi/chapter14/MergeTwoSortedArrays.hpp"
+#include "epi/chapter14/EliminateDuplicate.hpp"
 
 using std::cout;
 using std::endl;
@@ -262,7 +263,8 @@ void prepareSolutions() {
     new TestCollatzConjecture(); // Chapter 13.13
 
     new IntersectTwoSortedArrays(); // Chapter 14.1
-    new MergeTwoSortedArrays(); // Chapter14.2
+    new MergeTwoSortedArrays(); // Chapter 14.2
+    new EliminateDuplicate(); // Chapter 14.3
 
 }
 
