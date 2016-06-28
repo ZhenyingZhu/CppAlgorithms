@@ -119,6 +119,7 @@
 #include "epi/chapter13/FindAllSubstrings.hpp"
 #include "epi/chapter13/TestCollatzConjecture.hpp"
 #include "epi/chapter14/IntersectTwoSortedArrays.hpp"
+#include "epi/chapter14/MergeTwoSortedArrays.hpp"
 
 using std::cout;
 using std::endl;
@@ -257,10 +258,11 @@ void prepareSolutions() {
     new LongestSubarrayWithDistinctEntries(); // Chapter 13.9
     new LongestContainedRange(); // Chapter 13.10
     new FindStudentWithHighestBestOfThreeScores(); // Chapter 13.11
-    new FindAllSubstrings(); // Chapter13.12
-    new TestCollatzConjecture(); // Chapter13.13
+    new FindAllSubstrings(); // Chapter 13.12
+    new TestCollatzConjecture(); // Chapter 13.13
 
-    new IntersectTwoSortedArrays(); // Chapter14.1
+    new IntersectTwoSortedArrays(); // Chapter 14.1
+    new MergeTwoSortedArrays(); // Chapter14.2
 
 }
 
