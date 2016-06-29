@@ -121,6 +121,7 @@
 #include "epi/chapter14/IntersectTwoSortedArrays.hpp"
 #include "epi/chapter14/MergeTwoSortedArrays.hpp"
 #include "epi/chapter14/EliminateDuplicate.hpp"
+#include "epi/chapter14/FindMaxSimultaneousEvents.hpp"
 
 using std::cout;
 using std::endl;
@@ -265,6 +266,7 @@ void prepareSolutions() {
     new IntersectTwoSortedArrays(); // Chapter 14.1
     new MergeTwoSortedArrays(); // Chapter 14.2
     new EliminateDuplicate(); // Chapter 14.3
+    new FindMaxSimultaneousEvents(); // Chapter 14.4
 
 }
 
