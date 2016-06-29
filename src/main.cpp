@@ -122,6 +122,7 @@
 #include "epi/chapter14/MergeTwoSortedArrays.hpp"
 #include "epi/chapter14/EliminateDuplicate.hpp"
 #include "epi/chapter14/FindMaxSimultaneousEvents.hpp"
+#include "epi/chapter14/AddInterval.hpp"
 
 using std::cout;
 using std::endl;
@@ -267,6 +268,7 @@ void prepareSolutions() {
     new MergeTwoSortedArrays(); // Chapter 14.2
     new EliminateDuplicate(); // Chapter 14.3
     new FindMaxSimultaneousEvents(); // Chapter 14.4
+    new AddInterval(); // Chapter 14.5
 
 }
 

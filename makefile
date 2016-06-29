@@ -140,6 +140,7 @@ SOURCES =			\
 	src/epi/chapter14/MergeTwoSortedArrays.cpp			\
 	src/epi/chapter14/EliminateDuplicate.cpp			\
 	src/epi/chapter14/FindMaxSimultaneousEvents.cpp			\
+	src/epi/chapter14/AddInterval.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
