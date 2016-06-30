@@ -20,6 +20,8 @@ using std::ostream;
 namespace epi {
   namespace chapter14 {
     struct UnionOfIntervals::Interval {
+    private:
+        // Even though this struct is private, left and right are still public
         struct Endpoint {
             bool operator<(const Endpoint &other) const {
                 if (val < other.val)
@@ -35,6 +37,7 @@ namespace epi {
             bool isClosed;
         };
 
+    public:
         Interval(int leftVal, bool leftClosed, int rightVal, bool rightClosed):
             left{leftVal, leftClosed}, right{rightVal, rightClosed} { }
 
