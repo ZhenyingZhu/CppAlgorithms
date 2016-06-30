@@ -123,6 +123,7 @@
 #include "epi/chapter14/EliminateDuplicate.hpp"
 #include "epi/chapter14/FindMaxSimultaneousEvents.hpp"
 #include "epi/chapter14/AddInterval.hpp"
+#include "epi/chapter14/UnionOfIntervals.hpp"
 
 using std::cout;
 using std::endl;
@@ -269,6 +270,7 @@ void prepareSolutions() {
     new EliminateDuplicate(); // Chapter 14.3
     new FindMaxSimultaneousEvents(); // Chapter 14.4
     new AddInterval(); // Chapter 14.5
+    new UnionOfIntervals(); // Chapter 14.6
 
 }
 
