@@ -125,6 +125,7 @@
 #include "epi/chapter14/AddInterval.hpp"
 #include "epi/chapter14/UnionOfIntervals.hpp"
 #include "epi/chapter14/GroupByAge.hpp"
+#include "epi/chapter14/TeamPhotoDay1.hpp"
 
 using std::cout;
 using std::endl;
@@ -273,6 +274,7 @@ void prepareSolutions() {
     new AddInterval(); // Chapter 14.5
     new UnionOfIntervals(); // Chapter 14.6
     new GroupByAge(); // Chapter 14.7
+    new TeamPhotoDay1(); // Chapter 14.8
 
 }
 
