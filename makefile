@@ -144,6 +144,8 @@ SOURCES =			\
 	src/epi/chapter14/UnionOfIntervals.cpp			\
 	src/epi/chapter14/GroupByAge.cpp			\
 	src/epi/chapter14/TeamPhotoDay1.cpp			\
+	src/epi/chapter14/StableSortList.cpp			\
+	src/epi/chapter14/FindSalaryCap.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

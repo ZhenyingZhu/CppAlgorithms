@@ -126,6 +126,8 @@
 #include "epi/chapter14/UnionOfIntervals.hpp"
 #include "epi/chapter14/GroupByAge.hpp"
 #include "epi/chapter14/TeamPhotoDay1.hpp"
+#include "epi/chapter14/StableSortList.hpp"
+#include "epi/chapter14/FindSalaryCap.hpp"
 
 using std::cout;
 using std::endl;
@@ -275,6 +277,8 @@ void prepareSolutions() {
     new UnionOfIntervals(); // Chapter 14.6
     new GroupByAge(); // Chapter 14.7
     new TeamPhotoDay1(); // Chapter 14.8
+    new StableSortList(); // Chapter 14.9
+    new FindSalaryCap(); // Chapter 14.10
 
 }
 
