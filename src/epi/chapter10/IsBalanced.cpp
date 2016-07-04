@@ -47,7 +47,8 @@ namespace epi {
 
     bool IsBalanced::test() {
         vector<int> preOrder1 = {0, 1, 2, BTNULL, BTNULL, 3, BTNULL, BTNULL, 4};
-        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         if (!isBalanced(root1)) {
             cout << "root1 should be balanced" << endl;
@@ -55,7 +56,8 @@ namespace epi {
         }
 
         vector<int> preOrder2 = {0, 1, 2, 3, BTNULL, BTNULL, BTNULL, BTNULL, 4};
-        unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, new size_t(0));
+        pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, &pos);
 
         if (isBalanced(root2)) {
             cout << "root2 should not be balanced" << endl;

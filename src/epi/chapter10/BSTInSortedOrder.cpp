@@ -62,7 +62,8 @@ namespace epi {
                 6, 2, BTNULL, 1, 401, BTNULL, 641, BTNULL, BTNULL, 257, BTNULL, BTNULL,
                 271, BTNULL, 28
         };
-        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         vector<int> res = inSortedOrder(root1);
         vector<int> ans = {28, 271, 0, 6, 561, 17, 3, 314, 2, 401, 641, 1, 257, 6, 271, 28};

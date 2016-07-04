@@ -72,7 +72,8 @@ namespace epi {
     bool FindKthNodeBinaryTree::test() {
         vector<int> preOrder1 = {5, 3, 1, BTNULL, 2, BTNULL, BTNULL, 4, BTNULL, BTNULL,
                 6, BTNULL, 7};
-        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         for (int i = 1; i != 8; ++i) {
             auto res = findKthNodeBinaryTree(root1, i);

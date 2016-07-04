@@ -92,7 +92,8 @@ namespace epi {
                 6, 2, BTNULL, 1, 401, BTNULL, 641, BTNULL, BTNULL, 257, BTNULL, BTNULL,
                 271, BTNULL, 28
         };
-        unique_ptr<BTSiblingNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BTSiblingNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         constructRightSibling(root1.get());
 

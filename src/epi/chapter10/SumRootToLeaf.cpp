@@ -53,7 +53,8 @@ namespace epi {
                 1, BTNULL, 1, 0, BTNULL, BTNULL, BTNULL,
                 1, 0, BTNULL, 0, 1, BTNULL, 1, BTNULL, BTNULL,
                 0, BTNULL, BTNULL, 0, BTNULL, 0, BTNULL, BTNULL};
-        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         int res = sumRootToLeaf(root1);
 

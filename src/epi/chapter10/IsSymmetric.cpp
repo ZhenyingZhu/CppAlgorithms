@@ -45,7 +45,8 @@ namespace epi {
 
     bool IsSymmetric::test() {
         vector<int> preOrder1 = {314, 6, BTNULL, 2, BTNULL, 3, BTNULL, BTNULL, 6, 2, 3};
-        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         if (!isSymmetric(root1)) {
             cout << "root1 should be symmetric" << endl;
@@ -53,7 +54,8 @@ namespace epi {
         }
 
         vector<int> preOrder2 = {314, 6, BTNULL, 561, BTNULL, 3, BTNULL, BTNULL, 6, 2, 3};
-        unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, new size_t(0));
+        pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root2 = createPreOrderIntBTree(preOrder2, &pos);
 
         if (isSymmetric(root2)) {
             cout << "root2 should not be symmetric" << endl;
@@ -61,7 +63,8 @@ namespace epi {
         }
 
         vector<int> preOrder3 = {314, 6, BTNULL, 561, BTNULL, 3, BTNULL, BTNULL, 6, 2};
-        unique_ptr<BinaryTreeNode<int>> root3 = createPreOrderIntBTree(preOrder3, new size_t(0));
+        pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root3 = createPreOrderIntBTree(preOrder3, &pos);
 
         if (isSymmetric(root3)) {
             cout << "root2 should not be symmetric" << endl;

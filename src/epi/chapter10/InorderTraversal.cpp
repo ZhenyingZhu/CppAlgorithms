@@ -53,7 +53,8 @@ namespace epi {
 
     bool InorderTraversal::test() {
         vector<int> preOrder1 = {5, 3, 1, BTNULL, 2, BTNULL, BTNULL, 4, BTNULL, BTNULL, 6, BTNULL, 7};
-        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> root1 = createPreOrderIntBTree(preOrder1, &pos);
 
         vector<int> res = inorderTraversal(root1);
         vector<int> ans = {1, 2, 3, 4, 5, 6, 7};

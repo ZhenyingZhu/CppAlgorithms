@@ -55,7 +55,8 @@ namespace epi {
         vector<int> preOrder = {19, 7, 3, 2, BTNULL, BTNULL, 5, BTNULL, BTNULL, 11, BTNULL, 17, 13, BTNULL, BTNULL, BTNULL,
             43, 23, BTNULL, 37, 29, BTNULL, 31, BTNULL, BTNULL, 41, BTNULL, BTNULL, 47, BTNULL, 53, BTNULL, BTNULL};
 
-        unique_ptr<BinaryTreeNode<int>> tree = createPreOrderIntBTree(preOrder, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BinaryTreeNode<int>> tree = createPreOrderIntBTree(preOrder, &pos);
 
         if ( !isBinaryTreeBST(tree) ) {
             cout << "Should be a BST" << endl;

@@ -61,7 +61,8 @@ namespace epi {
                 17, 13, BST_INT_NULL, BST_INT_NULL, BST_INT_NULL, 43, 23, BST_INT_NULL, 37, 29, BST_INT_NULL, 31, BST_INT_NULL, BST_INT_NULL,
                 41, BST_INT_NULL, BST_INT_NULL, 47, BST_INT_NULL, 53, BST_INT_NULL, BST_INT_NULL};
 
-        unique_ptr<BSTNode<int>> tree = createPreOrderIntBST(preOrder, new size_t(0));
+        size_t pos = 0;
+        unique_ptr<BSTNode<int>> tree = createPreOrderIntBST(preOrder, &pos);
 
         vector<int> ans = {53, 47, 43};
         vector<int> res = findKLargestInBST(tree, 3);

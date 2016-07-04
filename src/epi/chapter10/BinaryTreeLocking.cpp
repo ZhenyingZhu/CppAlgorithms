@@ -114,7 +114,8 @@ namespace epi {
                 6, 2, BTNULL, 1, 401, BTNULL, 641, BTNULL, BTNULL, 257, BTNULL, BTNULL,
                 271, BTNULL, 28
         };
-        shared_ptr<BinaryTreeNode> root1 = createPreOrderIntBTree(preOrder1, new size_t(0));
+        size_t pos = 0;
+        shared_ptr<BinaryTreeNode> root1 = createPreOrderIntBTree(preOrder1, &pos);
         shared_ptr<BinaryTreeNode> node561 = root1->getLeft()->getRight();
         if (!node561->lock()) {
             cout << "Cannot lock node " << node561->getData() << endl;
