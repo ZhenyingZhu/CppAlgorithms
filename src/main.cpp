@@ -130,6 +130,7 @@
 #include "epi/chapter14/FindSalaryCap.hpp"
 #include "epi/chapter15/IsBinaryTreeBST.hpp"
 #include "epi/chapter15/FindFirstGreaterThanK.hpp"
+#include "epi/chapter15/FindKLargestInBST.hpp"
 
 using std::cout;
 using std::endl;
@@ -285,6 +286,7 @@ void prepareSolutions() {
 
     new IsBinaryTreeBST(); // Chapter 15.1
     new FindFirstGreaterThanK(); // Chapter 15.2
+    new FindKLargestInBST(); // Chapter 15.3
 
 }
 
