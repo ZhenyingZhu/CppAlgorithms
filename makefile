@@ -149,6 +149,7 @@ SOURCES =			\
 	src/epi/chapter15/IsBinaryTreeBST.cpp			\
 	src/epi/chapter15/FindFirstGreaterThanK.cpp			\
 	src/epi/chapter15/FindKLargestInBST.cpp			\
+	src/epi/chapter15/FindLCA.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
