@@ -128,6 +128,7 @@
 #include "epi/chapter14/TeamPhotoDay1.hpp"
 #include "epi/chapter14/StableSortList.hpp"
 #include "epi/chapter14/FindSalaryCap.hpp"
+#include "epi/chapter15/IsBinaryTreeBST.hpp"
 
 using std::cout;
 using std::endl;
@@ -145,6 +146,7 @@ using namespace chapter11;
 using namespace chapter12;
 using namespace chapter13;
 using namespace chapter14;
+using namespace chapter15;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -279,6 +281,8 @@ void prepareSolutions() {
     new TeamPhotoDay1(); // Chapter 14.8
     new StableSortList(); // Chapter 14.9
     new FindSalaryCap(); // Chapter 14.10
+
+    new IsBinaryTreeBST(); // Chapter 15.1
 
 }
 

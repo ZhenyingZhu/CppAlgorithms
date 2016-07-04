@@ -29,7 +29,7 @@ extern string make_plural(size_t ctr, const string &word, const string &ending) 
 }
 
 extern unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const vector<int> &vec, size_t *pos) {
-    // use 256 to indicate a null ptr
+    // use INTMAX to indicate a null ptr
     if (*pos >= vec.size() || vec[*pos] == myutils::BTNULL) {
         return nullptr;
     }

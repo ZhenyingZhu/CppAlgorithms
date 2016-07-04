@@ -146,6 +146,7 @@ SOURCES =			\
 	src/epi/chapter14/TeamPhotoDay1.cpp			\
 	src/epi/chapter14/StableSortList.cpp			\
 	src/epi/chapter14/FindSalaryCap.cpp			\
+	src/epi/chapter15/IsBinaryTreeBST.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

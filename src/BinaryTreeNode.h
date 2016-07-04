@@ -3,6 +3,7 @@
 
 #include <climits>
 #include <memory>
+#include <iostream>
 
 namespace myutils {
   const int BTNULL = INT_MAX;
@@ -12,8 +13,9 @@ namespace myutils {
       BinaryTreeNode(T d): data(d), parent(nullptr), size(0) { }
 
       ~BinaryTreeNode() {
-          delete parent;
-          parent = nullptr;
+          // cannot delete parent because it is another node which has unique_ptr points to
+//          delete parent;
+//          parent = nullptr;
       }
 
       T data;
