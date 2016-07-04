@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "BinaryTreeNode.h"
+#include "BSTNode.h"
 
 using std::ifstream;
 using std::string;
@@ -44,6 +45,21 @@ extern unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const vector<int> 
     root.get()->right = move( createPreOrderIntBTree(vec, pos) );
     if (root.get()->right)
         root.get()->right.get()->parent = root.get();
+
+    return root;
+}
+
+extern unique_ptr<BSTNode<int>> createPreOrderIntBST(const vector<int> &vec, size_t *pos) {
+    // use INTMAX to indicate a null ptr
+    if (*pos >= vec.size() || vec[*pos] == myutils::BST_INT_NULL) {
+        return nullptr;
+    }
+
+    unique_ptr<BSTNode<int>> root( new BSTNode<int>{vec[*pos]} );
+    ++(*pos);
+    root.get()->left = move( createPreOrderIntBST(vec, pos) );
+    ++(*pos);
+    root.get()->right = move( createPreOrderIntBST(vec, pos) );
 
     return root;
 }

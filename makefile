@@ -147,6 +147,7 @@ SOURCES =			\
 	src/epi/chapter14/StableSortList.cpp			\
 	src/epi/chapter14/FindSalaryCap.cpp			\
 	src/epi/chapter15/IsBinaryTreeBST.cpp			\
+	src/epi/chapter15/FindFirstGreaterThanK.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

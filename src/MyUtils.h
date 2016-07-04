@@ -10,6 +10,7 @@
 
 #include "ListNode.h"
 #include "BinaryTreeNode.h"
+#include "BSTNode.h"
 
 namespace myutils {
 
@@ -84,6 +85,8 @@ namespace myutils {
     }
 
     std::unique_ptr<BinaryTreeNode<int>> createPreOrderIntBTree(const std::vector<int> &vec, size_t *pos);
+
+    std::unique_ptr<BSTNode<int>> createPreOrderIntBST(const std::vector<int> &vec, size_t *pos);
 
     void traversePreInOrder(std::unique_ptr<myutils::BinaryTreeNode<int>> &tree, std::vector<int> &preorder, std::vector<int> &inorder);
 
