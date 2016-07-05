@@ -64,6 +64,29 @@ extern unique_ptr<BSTNode<int>> createPreOrderIntBST(const vector<int> &vec, siz
     return root;
 }
 
+unique_ptr<BSTNode<int>> preorderBSTHelper(const vector<int> &preorderSeq,
+        size_t &pos, int lowerBound, int higherBound) {
+    if (pos >= preorderSeq.size())
+        return nullptr;
+
+    int data = preorderSeq[pos];
+    if ( data < lowerBound || data > higherBound )
+        return nullptr;
+
+    ++pos;
+    unique_ptr<BSTNode<int>> res(new BSTNode<int>(data));
+    res.get()->left = move( preorderBSTHelper(preorderSeq, pos, lowerBound, data) );
+    res.get()->right = move( preorderBSTHelper(preorderSeq, pos, data, higherBound) );
+
+    return res;
+}
+
+extern unique_ptr<BSTNode<int>> createBSTFromPreorder(const vector<int> &preorderSeq) {
+    size_t pos = 0;
+    size_t &p = pos;
+    return preorderBSTHelper(preorderSeq, p, INT_MIN, INT_MAX);
+}
+
 extern void traversePreInOrder(unique_ptr<BinaryTreeNode<int>> &tree,
         vector<int> &preorder, vector<int> &inorder) {
     if (!tree)

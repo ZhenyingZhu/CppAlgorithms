@@ -13,7 +13,7 @@ using std::unique_ptr;
 using std::vector;
 using myutils::BSTNode;
 using myutils::BST_INT_NULL;
-using myutils::createPreOrderIntBST;
+using myutils::createBSTFromPreorder;
 using myutils::vec_to_string;
 using std::cout;
 using std::endl;
@@ -48,12 +48,9 @@ namespace epi {
     }
 
     bool FindLCA::test() {
-        vector<int> preOrder = {19, 7, 3, 2, BST_INT_NULL, BST_INT_NULL, 5, BST_INT_NULL, BST_INT_NULL, 11, BST_INT_NULL,
-                17, 13, BST_INT_NULL, BST_INT_NULL, BST_INT_NULL, 43, 23, BST_INT_NULL, 37, 29, BST_INT_NULL, 31, BST_INT_NULL, BST_INT_NULL,
-                41, BST_INT_NULL, BST_INT_NULL, 47, BST_INT_NULL, 53, BST_INT_NULL, BST_INT_NULL};
+        vector<int> preOrder = {19, 7, 3, 2, 5, 11, 17, 13, 43, 23, 37, 29, 31, 41, 47, 53};
 
-        size_t pos = 0;
-        unique_ptr<BSTNode<int>> tree = createPreOrderIntBST(preOrder, &pos);
+        unique_ptr<BSTNode<int>> tree = createBSTFromPreorder(preOrder);
         unique_ptr<BSTNode<int>> &c = tree.get()->left.get()->left;
         unique_ptr<BSTNode<int>> &g = tree.get()->left.get()->right.get()->right;
 

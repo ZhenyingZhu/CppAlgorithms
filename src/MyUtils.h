@@ -88,6 +88,8 @@ namespace myutils {
 
     std::unique_ptr<BSTNode<int>> createPreOrderIntBST(const std::vector<int> &vec, size_t *pos);
 
+    std::unique_ptr<BSTNode<int>> createBSTFromPreorder(const std::vector<int> &preorderSeq);
+
     void traversePreInOrder(std::unique_ptr<myutils::BinaryTreeNode<int>> &tree, std::vector<int> &preorder, std::vector<int> &inorder);
 
     template <typename T>

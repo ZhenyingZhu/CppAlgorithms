@@ -132,6 +132,7 @@
 #include "epi/chapter15/FindFirstGreaterThanK.hpp"
 #include "epi/chapter15/FindKLargestInBST.hpp"
 #include "epi/chapter15/FindLCA.hpp"
+#include "epi/chapter15/RebuildBSTFromPreorder.hpp"
 
 using std::cout;
 using std::endl;
@@ -289,6 +290,7 @@ void prepareSolutions() {
     new FindFirstGreaterThanK(); // Chapter 15.2
     new FindKLargestInBST(); // Chapter 15.3
     new FindLCA(); // Chapter 15.4
+    new RebuildBSTFromPreorder(); // Chapter 15.5
 
 }
 
