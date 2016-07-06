@@ -133,6 +133,7 @@
 #include "epi/chapter15/FindKLargestInBST.hpp"
 #include "epi/chapter15/FindLCA.hpp"
 #include "epi/chapter15/RebuildBSTFromPreorder.hpp"
+#include "epi/chapter15/FindClosestElementsInSortedArrays.hpp"
 
 using std::cout;
 using std::endl;
@@ -291,6 +292,7 @@ void prepareSolutions() {
     new FindKLargestInBST(); // Chapter 15.3
     new FindLCA(); // Chapter 15.4
     new RebuildBSTFromPreorder(); // Chapter 15.5
+    new FindClosestElementsInSortedArrays(); // Chapter15.6
 
 }
 

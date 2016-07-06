@@ -151,6 +151,7 @@ SOURCES =			\
 	src/epi/chapter15/FindKLargestInBST.cpp			\
 	src/epi/chapter15/FindLCA.cpp			\
 	src/epi/chapter15/RebuildBSTFromPreorder.cpp			\
+	src/epi/chapter15/FindClosestElementsInSortedArrays.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
