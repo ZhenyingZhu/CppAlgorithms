@@ -135,6 +135,7 @@
 #include "epi/chapter15/RebuildBSTFromPreorder.hpp"
 #include "epi/chapter15/FindClosestElementsInSortedArrays.hpp"
 #include "epi/chapter15/GenerateFirstKABSqrt2.hpp"
+#include "epi/chapter15/BuildMinHeightBSTFromSortedArray.hpp"
 
 using std::cout;
 using std::endl;
@@ -295,6 +296,7 @@ void prepareSolutions() {
     new RebuildBSTFromPreorder(); // Chapter 15.5
     new FindClosestElementsInSortedArrays(); // Chapter15.6
     new GenerateFirstKABSqrt2(); // Chapter 15.7
+    new BuildMinHeightBSTFromSortedArray(); // Chapter 15.9
 
 }
 
