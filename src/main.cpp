@@ -136,6 +136,7 @@
 #include "epi/chapter15/FindClosestElementsInSortedArrays.hpp"
 #include "epi/chapter15/GenerateFirstKABSqrt2.hpp"
 #include "epi/chapter15/BuildMinHeightBSTFromSortedArray.hpp"
+#include "epi/chapter15/BinarySearchTree.hpp"
 
 using std::cout;
 using std::endl;
@@ -297,6 +298,7 @@ void prepareSolutions() {
     new FindClosestElementsInSortedArrays(); // Chapter15.6
     new GenerateFirstKABSqrt2(); // Chapter 15.7
     new BuildMinHeightBSTFromSortedArray(); // Chapter 15.9
+    new BinarySearchTree(); // Chapter 15.10
 
 }
 
