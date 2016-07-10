@@ -155,6 +155,7 @@ SOURCES =			\
 	src/epi/chapter15/GenerateFirstKABSqrt2.cpp			\
 	src/epi/chapter15/BuildMinHeightBSTFromSortedArray.cpp			\
 	src/epi/chapter15/BinarySearchTree.cpp			\
+	src/epi/chapter15/NodesOnPath.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

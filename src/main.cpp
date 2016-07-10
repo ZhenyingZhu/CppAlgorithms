@@ -137,6 +137,7 @@
 #include "epi/chapter15/GenerateFirstKABSqrt2.hpp"
 #include "epi/chapter15/BuildMinHeightBSTFromSortedArray.hpp"
 #include "epi/chapter15/BinarySearchTree.hpp"
+#include "epi/chapter15/NodesOnPath.hpp"
 
 using std::cout;
 using std::endl;
@@ -299,6 +300,7 @@ void prepareSolutions() {
     new GenerateFirstKABSqrt2(); // Chapter 15.7
     new BuildMinHeightBSTFromSortedArray(); // Chapter 15.9
     new BinarySearchTree(); // Chapter 15.10
+    new NodesOnPath(); // Chapter 15.11
 
 }
 
