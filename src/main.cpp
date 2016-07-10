@@ -138,6 +138,7 @@
 #include "epi/chapter15/BuildMinHeightBSTFromSortedArray.hpp"
 #include "epi/chapter15/BinarySearchTree.hpp"
 #include "epi/chapter15/NodesOnPath.hpp"
+#include "epi/chapter15/RangeLookupInBST.hpp"
 
 using std::cout;
 using std::endl;
@@ -301,6 +302,7 @@ void prepareSolutions() {
     new BuildMinHeightBSTFromSortedArray(); // Chapter 15.9
     new BinarySearchTree(); // Chapter 15.10
     new NodesOnPath(); // Chapter 15.11
+    new RangeLookupInBST(); // Chapter 15.12
 
 }
 
