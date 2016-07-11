@@ -158,6 +158,7 @@ SOURCES =			\
 	src/epi/chapter15/NodesOnPath.cpp			\
 	src/epi/chapter15/RangeLookupInBST.cpp			\
 	src/epi/chapter15/AddCredits.cpp			\
+	src/epi/chapter16/ComputeTowerHanoi.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

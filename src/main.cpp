@@ -140,6 +140,7 @@
 #include "epi/chapter15/NodesOnPath.hpp"
 #include "epi/chapter15/RangeLookupInBST.hpp"
 #include "epi/chapter15/AddCredits.hpp"
+#include "epi/chapter16/ComputeTowerHanoi.hpp"
 
 using std::cout;
 using std::endl;
@@ -158,6 +159,7 @@ using namespace chapter12;
 using namespace chapter13;
 using namespace chapter14;
 using namespace chapter15;
+using namespace chapter16;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -305,6 +307,8 @@ void prepareSolutions() {
     new NodesOnPath(); // Chapter 15.11
     new RangeLookupInBST(); // Chapter 15.12
     new AddCredits(); // Chapter 15.13
+
+    new ComputeTowerHanoi(); // Chapter 16.1
 
 }
 
