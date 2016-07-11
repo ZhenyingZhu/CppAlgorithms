@@ -139,6 +139,7 @@
 #include "epi/chapter15/BinarySearchTree.hpp"
 #include "epi/chapter15/NodesOnPath.hpp"
 #include "epi/chapter15/RangeLookupInBST.hpp"
+#include "epi/chapter15/AddCredits.hpp"
 
 using std::cout;
 using std::endl;
@@ -303,6 +304,7 @@ void prepareSolutions() {
     new BinarySearchTree(); // Chapter 15.10
     new NodesOnPath(); // Chapter 15.11
     new RangeLookupInBST(); // Chapter 15.12
+    new AddCredits(); // Chapter 15.13
 
 }
 
