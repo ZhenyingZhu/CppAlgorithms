@@ -141,6 +141,7 @@
 #include "epi/chapter15/RangeLookupInBST.hpp"
 #include "epi/chapter15/AddCredits.hpp"
 #include "epi/chapter16/ComputeTowerHanoi.hpp"
+#include "epi/chapter16/NQueens.hpp"
 
 using std::cout;
 using std::endl;
@@ -309,6 +310,7 @@ void prepareSolutions() {
     new AddCredits(); // Chapter 15.13
 
     new ComputeTowerHanoi(); // Chapter 16.1
+    new NQueens(); // Chapter 16.2
 
 }
 
