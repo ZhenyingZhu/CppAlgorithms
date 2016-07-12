@@ -142,6 +142,7 @@
 #include "epi/chapter15/AddCredits.hpp"
 #include "epi/chapter16/ComputeTowerHanoi.hpp"
 #include "epi/chapter16/NQueens.hpp"
+#include "epi/chapter16/Permutations.hpp"
 
 using std::cout;
 using std::endl;
@@ -311,6 +312,7 @@ void prepareSolutions() {
 
     new ComputeTowerHanoi(); // Chapter 16.1
     new NQueens(); // Chapter 16.2
+    new Permutations(); // Chapter 16.3
 
 }
 

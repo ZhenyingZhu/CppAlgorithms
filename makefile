@@ -160,6 +160,7 @@ SOURCES =			\
 	src/epi/chapter15/AddCredits.cpp			\
 	src/epi/chapter16/ComputeTowerHanoi.cpp			\
 	src/epi/chapter16/NQueens.cpp			\
+	src/epi/chapter16/Permutations.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
