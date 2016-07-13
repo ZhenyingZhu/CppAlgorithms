@@ -162,6 +162,7 @@ SOURCES =			\
 	src/epi/chapter16/NQueens.cpp			\
 	src/epi/chapter16/Permutations.cpp			\
 	src/epi/chapter16/GeneratePowerSet.cpp			\
+	src/epi/chapter16/Combinations.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

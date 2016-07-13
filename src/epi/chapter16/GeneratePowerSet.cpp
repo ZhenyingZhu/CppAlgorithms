@@ -16,7 +16,7 @@ using std::endl;
 
 namespace epi {
   namespace chapter16 {
-    void GeneratePowerSet::generatePowerSetHelper(const vector<int> &array, size_t pos, vector<int> prevAdded, vector<vector<int>> &result) {
+    void GeneratePowerSet::generatePowerSetHelper(const vector<int> &array, size_t pos, vector<int> &prevAdded, vector<vector<int>> &result) {
         result.push_back(prevAdded);
 
         for (size_t i = pos; i != array.size(); ++i) {
@@ -49,6 +49,8 @@ namespace epi {
             for (vector<int> vec : res) {
                 cout << vec_to_string(vec) << endl;
             }
+
+            return false;
         }
 
         return true;

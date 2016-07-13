@@ -4,7 +4,6 @@
 #include "../../Solution.h"
 
 #include <vector>
-#include <memory>
 
 namespace epi {
   namespace chapter16 {
@@ -23,7 +22,7 @@ namespace epi {
 
     private:
         void generatePowerSetHelper(const std::vector<int> &array, size_t pos,
-                std::vector<int> prevAdded, std::vector<std::vector<int>> &result);
+                std::vector<int> &prevAdded, std::vector<std::vector<int>> &result);
 
     };
 

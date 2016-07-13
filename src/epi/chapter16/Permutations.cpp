@@ -66,6 +66,8 @@ namespace epi {
             for (vector<int> vec : res) {
                 cout << vec_to_string(vec) << endl;
             }
+
+            return false;
         }
 
         return true;
