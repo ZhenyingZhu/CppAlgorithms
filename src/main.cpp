@@ -146,6 +146,7 @@
 #include "epi/chapter16/GeneratePowerSet.hpp"
 #include "epi/chapter16/Combinations.hpp"
 #include "epi/chapter16/GenerateBalancedParentheses.hpp"
+#include "epi/chapter16/PalindromePartitioning.hpp"
 
 using std::cout;
 using std::endl;
@@ -319,6 +320,7 @@ void prepareSolutions() {
     new GeneratePowerSet(); // Chapter 16.4
     new Combinations(); // Chapter 16.5
     new GenerateBalancedParentheses(); // Chapter 16.6
+    new PalindromePartitioning(); // Chapter 16.7
 
 }
 
