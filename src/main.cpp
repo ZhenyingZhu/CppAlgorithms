@@ -145,6 +145,7 @@
 #include "epi/chapter16/Permutations.hpp"
 #include "epi/chapter16/GeneratePowerSet.hpp"
 #include "epi/chapter16/Combinations.hpp"
+#include "epi/chapter16/GenerateBalancedParentheses.hpp"
 
 using std::cout;
 using std::endl;
@@ -317,6 +318,7 @@ void prepareSolutions() {
     new Permutations(); // Chapter 16.3
     new GeneratePowerSet(); // Chapter 16.4
     new Combinations(); // Chapter 16.5
+    new GenerateBalancedParentheses(); // Chapter 16.6
 
 }
 
