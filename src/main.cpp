@@ -147,6 +147,7 @@
 #include "epi/chapter16/Combinations.hpp"
 #include "epi/chapter16/GenerateBalancedParentheses.hpp"
 #include "epi/chapter16/PalindromePartitioning.hpp"
+#include "epi/chapter16/GenerateAllBinaryTrees.hpp"
 
 using std::cout;
 using std::endl;
@@ -321,6 +322,7 @@ void prepareSolutions() {
     new Combinations(); // Chapter 16.5
     new GenerateBalancedParentheses(); // Chapter 16.6
     new PalindromePartitioning(); // Chapter 16.7
+    new GenerateAllBinaryTrees(); // Chapter 16.8
 
 }
 

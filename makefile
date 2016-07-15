@@ -165,6 +165,7 @@ SOURCES =			\
 	src/epi/chapter16/Combinations.cpp			\
 	src/epi/chapter16/GenerateBalancedParentheses.cpp			\
 	src/epi/chapter16/PalindromePartitioning.cpp			\
+	src/epi/chapter16/GenerateAllBinaryTrees.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
