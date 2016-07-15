@@ -148,6 +148,7 @@
 #include "epi/chapter16/GenerateBalancedParentheses.hpp"
 #include "epi/chapter16/PalindromePartitioning.hpp"
 #include "epi/chapter16/GenerateAllBinaryTrees.hpp"
+#include "epi/chapter16/SolveSudoku.hpp"
 
 using std::cout;
 using std::endl;
@@ -323,6 +324,7 @@ void prepareSolutions() {
     new GenerateBalancedParentheses(); // Chapter 16.6
     new PalindromePartitioning(); // Chapter 16.7
     new GenerateAllBinaryTrees(); // Chapter 16.8
+    new SolveSudoku(); // Chapter 16.9
 
 }
 
