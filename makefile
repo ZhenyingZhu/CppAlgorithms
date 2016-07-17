@@ -167,6 +167,8 @@ SOURCES =			\
 	src/epi/chapter16/PalindromePartitioning.cpp			\
 	src/epi/chapter16/GenerateAllBinaryTrees.cpp			\
 	src/epi/chapter16/SolveSudoku.cpp			\
+	src/epi/chapter16/GrayCode.cpp			\
+	src/epi/chapter16/ComputeDiameter.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

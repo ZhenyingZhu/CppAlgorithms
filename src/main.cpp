@@ -149,6 +149,8 @@
 #include "epi/chapter16/PalindromePartitioning.hpp"
 #include "epi/chapter16/GenerateAllBinaryTrees.hpp"
 #include "epi/chapter16/SolveSudoku.hpp"
+#include "epi/chapter16/GrayCode.hpp"
+#include "epi/chapter16/ComputeDiameter.hpp"
 
 using std::cout;
 using std::endl;
@@ -325,6 +327,8 @@ void prepareSolutions() {
     new PalindromePartitioning(); // Chapter 16.7
     new GenerateAllBinaryTrees(); // Chapter 16.8
     new SolveSudoku(); // Chapter 16.9
+    new GrayCode(); // Chapter 16.10
+    new ComputeDiameter(); // Chapter 16.11
 
 }
 
