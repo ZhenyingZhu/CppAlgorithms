@@ -169,6 +169,7 @@ SOURCES =			\
 	src/epi/chapter16/SolveSudoku.cpp			\
 	src/epi/chapter16/GrayCode.cpp			\
 	src/epi/chapter16/ComputeDiameter.cpp			\
+	src/epi/chapter17/NumCombinationsForFinalScore.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

@@ -151,6 +151,7 @@
 #include "epi/chapter16/SolveSudoku.hpp"
 #include "epi/chapter16/GrayCode.hpp"
 #include "epi/chapter16/ComputeDiameter.hpp"
+#include "epi/chapter17/NumCombinationsForFinalScore.hpp"
 
 using std::cout;
 using std::endl;
@@ -170,6 +171,7 @@ using namespace chapter13;
 using namespace chapter14;
 using namespace chapter15;
 using namespace chapter16;
+using namespace chapter17;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -329,6 +331,8 @@ void prepareSolutions() {
     new SolveSudoku(); // Chapter 16.9
     new GrayCode(); // Chapter 16.10
     new ComputeDiameter(); // Chapter 16.11
+
+    new NumCombinationsForFinalScore(); // Chapter 17.1
 
 }
 
