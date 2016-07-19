@@ -170,6 +170,8 @@ SOURCES =			\
 	src/epi/chapter16/GrayCode.cpp			\
 	src/epi/chapter16/ComputeDiameter.cpp			\
 	src/epi/chapter17/NumCombinationsForFinalScore.cpp			\
+	src/epi/chapter17/LevenshteinDistance.cpp			\
+	src/epi/chapter17/NumberOfWays.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

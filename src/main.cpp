@@ -152,6 +152,8 @@
 #include "epi/chapter16/GrayCode.hpp"
 #include "epi/chapter16/ComputeDiameter.hpp"
 #include "epi/chapter17/NumCombinationsForFinalScore.hpp"
+#include "epi/chapter17/LevenshteinDistance.hpp"
+#include "epi/chapter17/NumberOfWays.hpp"
 
 using std::cout;
 using std::endl;
@@ -333,6 +335,8 @@ void prepareSolutions() {
     new ComputeDiameter(); // Chapter 16.11
 
     new NumCombinationsForFinalScore(); // Chapter 17.1
+    new LevenshteinDistance(); // Chapter 17.2
+    new NumberOfWays(); // Chapter 17.3
 
 }
 
