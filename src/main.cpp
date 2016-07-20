@@ -155,6 +155,7 @@
 #include "epi/chapter17/LevenshteinDistance.hpp"
 #include "epi/chapter17/NumberOfWays.hpp"
 #include "epi/chapter17/ComputeBinomialCoefficient.hpp"
+#include "epi/chapter17/IsPatternContainedInGrid.hpp"
 
 using std::cout;
 using std::endl;
@@ -339,6 +340,7 @@ void prepareSolutions() {
     new LevenshteinDistance(); // Chapter 17.2
     new NumberOfWays(); // Chapter 17.3
     new ComputeBinomialCoefficient(); // Chapter 17.4
+    new IsPatternContainedInGrid(); // Chapter 17.5
 
 }
 
