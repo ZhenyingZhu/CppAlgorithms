@@ -172,6 +172,7 @@ SOURCES =			\
 	src/epi/chapter17/NumCombinationsForFinalScore.cpp			\
 	src/epi/chapter17/LevenshteinDistance.cpp			\
 	src/epi/chapter17/NumberOfWays.cpp			\
+	src/epi/chapter17/ComputeBinomialCoefficient.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

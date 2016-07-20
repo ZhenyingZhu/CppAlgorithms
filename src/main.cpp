@@ -154,6 +154,7 @@
 #include "epi/chapter17/NumCombinationsForFinalScore.hpp"
 #include "epi/chapter17/LevenshteinDistance.hpp"
 #include "epi/chapter17/NumberOfWays.hpp"
+#include "epi/chapter17/ComputeBinomialCoefficient.hpp"
 
 using std::cout;
 using std::endl;
@@ -337,6 +338,7 @@ void prepareSolutions() {
     new NumCombinationsForFinalScore(); // Chapter 17.1
     new LevenshteinDistance(); // Chapter 17.2
     new NumberOfWays(); // Chapter 17.3
+    new ComputeBinomialCoefficient(); // Chapter 17.4
 
 }
 
