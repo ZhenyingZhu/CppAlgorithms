@@ -174,6 +174,7 @@ SOURCES =			\
 	src/epi/chapter17/NumberOfWays.cpp			\
 	src/epi/chapter17/ComputeBinomialCoefficient.cpp			\
 	src/epi/chapter17/IsPatternContainedInGrid.cpp			\
+	src/epi/chapter17/OptimumSubjecToCapacity.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

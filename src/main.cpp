@@ -156,6 +156,7 @@
 #include "epi/chapter17/NumberOfWays.hpp"
 #include "epi/chapter17/ComputeBinomialCoefficient.hpp"
 #include "epi/chapter17/IsPatternContainedInGrid.hpp"
+#include "epi/chapter17/OptimumSubjecToCapacity.hpp"
 
 using std::cout;
 using std::endl;
@@ -341,6 +342,7 @@ void prepareSolutions() {
     new NumberOfWays(); // Chapter 17.3
     new ComputeBinomialCoefficient(); // Chapter 17.4
     new IsPatternContainedInGrid(); // Chapter 17.5
+    new OptimumSubjecToCapacity(); // Chapter 17.6
 
 }
 
