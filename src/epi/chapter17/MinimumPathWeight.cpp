@@ -34,7 +34,7 @@ namespace epi {
                     currMinWights[col] = min(prevMinWeights[col], prevMinWeights[col - 1]) + thisRow[col];
             }
 
-            prevMinWeights = currMinWights;
+            prevMinWeights = currMinWights; // use swap to same operations
         }
 
         int min = prevMinWeights[0];
