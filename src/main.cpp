@@ -158,6 +158,7 @@
 #include "epi/chapter17/IsPatternContainedInGrid.hpp"
 #include "epi/chapter17/OptimumSubjecToCapacity.hpp"
 #include "epi/chapter17/DecomposeIntoDictionaryWords.hpp"
+#include "epi/chapter17/MinimumPathWeight.hpp"
 
 using std::cout;
 using std::endl;
@@ -345,6 +346,7 @@ void prepareSolutions() {
     new IsPatternContainedInGrid(); // Chapter 17.5
     new OptimumSubjecToCapacity(); // Chapter 17.6
     new DecomposeIntoDictionaryWords(); // Chapter 17.7
+    new MinimumPathWeight(); // Chapter 17.8
 
 }
 
