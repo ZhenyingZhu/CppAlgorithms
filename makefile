@@ -178,6 +178,7 @@ SOURCES =			\
 	src/epi/chapter17/DecomposeIntoDictionaryWords.cpp			\
 	src/epi/chapter17/MinimumPathWeight.cpp			\
 	src/epi/chapter17/MaximumRevenue.cpp			\
+	src/epi/chapter17/NumberOfWaysToTop.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

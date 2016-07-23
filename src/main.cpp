@@ -160,6 +160,7 @@
 #include "epi/chapter17/DecomposeIntoDictionaryWords.hpp"
 #include "epi/chapter17/MinimumPathWeight.hpp"
 #include "epi/chapter17/MaximumRevenue.hpp"
+#include "epi/chapter17/NumberOfWaysToTop.hpp"
 
 using std::cout;
 using std::endl;
@@ -349,6 +350,7 @@ void prepareSolutions() {
     new DecomposeIntoDictionaryWords(); // Chapter 17.7
     new MinimumPathWeight(); // Chapter 17.8
     new MaximumRevenue(); // Chapter 17.9
+    new NumberOfWaysToTop(); // Chapter 17.10
 
 }
 
