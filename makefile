@@ -180,6 +180,7 @@ SOURCES =			\
 	src/epi/chapter17/MaximumRevenue.cpp			\
 	src/epi/chapter17/NumberOfWaysToTop.cpp			\
 	src/epi/chapter17/MinimumMessiness.cpp			\
+	src/epi/chapter17/LongestNondecreasingSubsequenceLength.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

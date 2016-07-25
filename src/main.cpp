@@ -162,6 +162,7 @@
 #include "epi/chapter17/MaximumRevenue.hpp"
 #include "epi/chapter17/NumberOfWaysToTop.hpp"
 #include "epi/chapter17/MinimumMessiness.hpp"
+#include "epi/chapter17/LongestNondecreasingSubsequenceLength.hpp"
 
 using std::cout;
 using std::endl;
@@ -353,7 +354,7 @@ void prepareSolutions() {
     new MaximumRevenue(); // Chapter 17.9
     new NumberOfWaysToTop(); // Chapter 17.10
     new MinimumMessiness(); // Chapter 17.11
-
+    new LongestNondecreasingSubsequenceLength(); // Chapter 17.12
 }
 
 int main(int argc, char** argv)
