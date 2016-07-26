@@ -181,6 +181,7 @@ SOURCES =			\
 	src/epi/chapter17/NumberOfWaysToTop.cpp			\
 	src/epi/chapter17/MinimumMessiness.cpp			\
 	src/epi/chapter17/LongestNondecreasingSubsequenceLength.cpp			\
+	src/epi/chapter18/OptimumTaskAssignment.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

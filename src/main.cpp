@@ -163,6 +163,7 @@
 #include "epi/chapter17/NumberOfWaysToTop.hpp"
 #include "epi/chapter17/MinimumMessiness.hpp"
 #include "epi/chapter17/LongestNondecreasingSubsequenceLength.hpp"
+#include "epi/chapter18/OptimumTaskAssignment.hpp"
 
 using std::cout;
 using std::endl;
@@ -183,6 +184,7 @@ using namespace chapter14;
 using namespace chapter15;
 using namespace chapter16;
 using namespace chapter17;
+using namespace chapter18;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -355,6 +357,8 @@ void prepareSolutions() {
     new NumberOfWaysToTop(); // Chapter 17.10
     new MinimumMessiness(); // Chapter 17.11
     new LongestNondecreasingSubsequenceLength(); // Chapter 17.12
+
+    new OptimumTaskAssignment(); // Chapter 18.1
 }
 
 int main(int argc, char** argv)
