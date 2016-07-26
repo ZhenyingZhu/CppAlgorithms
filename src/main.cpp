@@ -164,6 +164,7 @@
 #include "epi/chapter17/MinimumMessiness.hpp"
 #include "epi/chapter17/LongestNondecreasingSubsequenceLength.hpp"
 #include "epi/chapter18/OptimumTaskAssignment.hpp"
+#include "epi/chapter18/MinimumTotalWaitingTime.hpp"
 
 using std::cout;
 using std::endl;
@@ -359,6 +360,7 @@ void prepareSolutions() {
     new LongestNondecreasingSubsequenceLength(); // Chapter 17.12
 
     new OptimumTaskAssignment(); // Chapter 18.1
+    new MinimumTotalWaitingTime(); // Chapter 18.2
 }
 
 int main(int argc, char** argv)
