@@ -166,6 +166,7 @@
 #include "epi/chapter18/OptimumTaskAssignment.hpp"
 #include "epi/chapter18/MinimumTotalWaitingTime.hpp"
 #include "epi/chapter18/FindMinimumVisits.hpp"
+#include "epi/chapter18/HasThreeSum.hpp"
 
 using std::cout;
 using std::endl;
@@ -363,6 +364,7 @@ void prepareSolutions() {
     new OptimumTaskAssignment(); // Chapter 18.1
     new MinimumTotalWaitingTime(); // Chapter 18.2
     new FindMinimumVisits(); // Chapter 18.3
+    new HasThreeSum(); // Chapter 18.4
 }
 
 int main(int argc, char** argv)

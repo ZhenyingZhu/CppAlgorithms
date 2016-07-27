@@ -184,6 +184,7 @@ SOURCES =			\
 	src/epi/chapter18/OptimumTaskAssignment.cpp			\
 	src/epi/chapter18/MinimumTotalWaitingTime.cpp			\
 	src/epi/chapter18/FindMinimumVisits.cpp			\
+	src/epi/chapter18/HasThreeSum.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
