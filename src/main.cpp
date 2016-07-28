@@ -167,6 +167,7 @@
 #include "epi/chapter18/MinimumTotalWaitingTime.hpp"
 #include "epi/chapter18/FindMinimumVisits.hpp"
 #include "epi/chapter18/HasThreeSum.hpp"
+#include "epi/chapter18/MajoritySearch.hpp"
 
 using std::cout;
 using std::endl;
@@ -365,6 +366,7 @@ void prepareSolutions() {
     new MinimumTotalWaitingTime(); // Chapter 18.2
     new FindMinimumVisits(); // Chapter 18.3
     new HasThreeSum(); // Chapter 18.4
+    new MajoritySearch(); // Chapter 18.5
 }
 
 int main(int argc, char** argv)
