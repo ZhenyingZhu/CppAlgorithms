@@ -186,6 +186,7 @@ SOURCES =			\
 	src/epi/chapter18/FindMinimumVisits.cpp			\
 	src/epi/chapter18/HasThreeSum.cpp			\
 	src/epi/chapter18/MajoritySearch.cpp			\
+	src/epi/chapter18/FindAmpleCity.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

@@ -168,6 +168,7 @@
 #include "epi/chapter18/FindMinimumVisits.hpp"
 #include "epi/chapter18/HasThreeSum.hpp"
 #include "epi/chapter18/MajoritySearch.hpp"
+#include "epi/chapter18/FindAmpleCity.hpp"
 
 using std::cout;
 using std::endl;
@@ -367,6 +368,7 @@ void prepareSolutions() {
     new FindMinimumVisits(); // Chapter 18.3
     new HasThreeSum(); // Chapter 18.4
     new MajoritySearch(); // Chapter 18.5
+    new FindAmpleCity(); // Chapter 18.6
 }
 
 int main(int argc, char** argv)
