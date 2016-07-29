@@ -170,6 +170,7 @@
 #include "epi/chapter18/MajoritySearch.hpp"
 #include "epi/chapter18/FindAmpleCity.hpp"
 #include "epi/chapter18/GetMaxTrappedWater.hpp"
+#include "epi/chapter18/CalculateLargestRectangle.hpp"
 
 using std::cout;
 using std::endl;
@@ -371,6 +372,7 @@ void prepareSolutions() {
     new MajoritySearch(); // Chapter 18.5
     new FindAmpleCity(); // Chapter 18.6
     new GetMaxTrappedWater(); // Chapter 18.7
+    new CalculateLargestRectangle(); // Chapter 18.8
 }
 
 int main(int argc, char** argv)

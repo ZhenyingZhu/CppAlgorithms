@@ -21,9 +21,6 @@ namespace epi {
 
         bool test();
 
-    private:
-        const int kMPG = 20;
-
     };
 
   } // chapter18
