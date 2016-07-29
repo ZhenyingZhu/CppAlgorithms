@@ -169,6 +169,7 @@
 #include "epi/chapter18/HasThreeSum.hpp"
 #include "epi/chapter18/MajoritySearch.hpp"
 #include "epi/chapter18/FindAmpleCity.hpp"
+#include "epi/chapter18/GetMaxTrappedWater.hpp"
 
 using std::cout;
 using std::endl;
@@ -369,6 +370,7 @@ void prepareSolutions() {
     new HasThreeSum(); // Chapter 18.4
     new MajoritySearch(); // Chapter 18.5
     new FindAmpleCity(); // Chapter 18.6
+    new GetMaxTrappedWater(); // Chapter 18.7
 }
 
 int main(int argc, char** argv)
