@@ -171,6 +171,7 @@
 #include "epi/chapter18/FindAmpleCity.hpp"
 #include "epi/chapter18/GetMaxTrappedWater.hpp"
 #include "epi/chapter18/CalculateLargestRectangle.hpp"
+#include "epi/chapter19/SearchMaze.hpp"
 
 using std::cout;
 using std::endl;
@@ -192,6 +193,7 @@ using namespace chapter15;
 using namespace chapter16;
 using namespace chapter17;
 using namespace chapter18;
+using namespace chapter19;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -373,6 +375,8 @@ void prepareSolutions() {
     new FindAmpleCity(); // Chapter 18.6
     new GetMaxTrappedWater(); // Chapter 18.7
     new CalculateLargestRectangle(); // Chapter 18.8
+
+    new SearchMaze(); // Chapter 19.1
 }
 
 int main(int argc, char** argv)
