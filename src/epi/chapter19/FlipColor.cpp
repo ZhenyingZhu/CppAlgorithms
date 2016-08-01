@@ -115,7 +115,7 @@ namespace epi {
         if (matrix != ans) {
             for (const deque<bool> &row : matrix) {
                 for (const bool &value : row) {
-                    cout << (value ? 0 : 1) << " ";
+                    cout << (value ? 1 : 0) << " ";
                 }
                 cout << endl;
             }
