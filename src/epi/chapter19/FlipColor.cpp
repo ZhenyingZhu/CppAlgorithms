@@ -58,7 +58,7 @@ namespace epi {
         return stream;
     }
 
-    void FlipColor::flipColor(int x, int y, std::vector<std::deque<bool>> &matrix) {
+    void FlipColor::flipColor(int x, int y, vector<deque<bool>> &matrix) {
         assert(!matrix.empty() && !matrix[0].empty());
 
         bool value = matrix[x][y];

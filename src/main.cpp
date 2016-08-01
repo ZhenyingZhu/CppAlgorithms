@@ -173,6 +173,7 @@
 #include "epi/chapter18/CalculateLargestRectangle.hpp"
 #include "epi/chapter19/SearchMaze.hpp"
 #include "epi/chapter19/FlipColor.hpp"
+#include "epi/chapter19/FillSurroundedRegions.hpp"
 
 using std::cout;
 using std::endl;
@@ -379,6 +380,7 @@ void prepareSolutions() {
 
     new SearchMaze(); // Chapter 19.1
     new FlipColor(); // Chapter 19.2
+    new FillSurroundedRegions(); // Chapter 19.3
 }
 
 int main(int argc, char** argv)
