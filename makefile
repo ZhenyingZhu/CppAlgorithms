@@ -190,6 +190,7 @@ SOURCES =			\
 	src/epi/chapter18/GetMaxTrappedWater.cpp			\
 	src/epi/chapter18/CalculateLargestRectangle.cpp			\
 	src/epi/chapter19/SearchMaze.cpp			\
+	src/epi/chapter19/FlipColor.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

@@ -172,6 +172,7 @@
 #include "epi/chapter18/GetMaxTrappedWater.hpp"
 #include "epi/chapter18/CalculateLargestRectangle.hpp"
 #include "epi/chapter19/SearchMaze.hpp"
+#include "epi/chapter19/FlipColor.hpp"
 
 using std::cout;
 using std::endl;
@@ -377,6 +378,7 @@ void prepareSolutions() {
     new CalculateLargestRectangle(); // Chapter 18.8
 
     new SearchMaze(); // Chapter 19.1
+    new FlipColor(); // Chapter 19.2
 }
 
 int main(int argc, char** argv)
