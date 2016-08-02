@@ -12,7 +12,7 @@ namespace epi {
         struct Coordinate;
 
         FillSurroundedRegions():
-            Solution("EPI Chapter 19.4",
+            Solution("EPI Chapter 19.3",
                      "Compute enclosed regions",
                      "Given a matrix with B and W color cells. Replace "
                      "all W color cells with B if they cannot reach the "
