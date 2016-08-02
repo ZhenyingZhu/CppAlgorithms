@@ -175,6 +175,7 @@
 #include "epi/chapter19/FlipColor.hpp"
 #include "epi/chapter19/FillSurroundedRegions.hpp"
 #include "epi/chapter19/IsDeadlocked.hpp"
+#include "epi/chapter19/CloneGraph.hpp"
 
 using std::cout;
 using std::endl;
@@ -383,6 +384,7 @@ void prepareSolutions() {
     new FlipColor(); // Chapter 19.2
     new FillSurroundedRegions(); // Chapter 19.3
     new IsDeadlocked(); // Chapter 19.4
+    new CloneGraph(); // Chapter 19.5
 }
 
 int main(int argc, char** argv)
