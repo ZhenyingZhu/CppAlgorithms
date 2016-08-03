@@ -176,6 +176,7 @@
 #include "epi/chapter19/FillSurroundedRegions.hpp"
 #include "epi/chapter19/IsDeadlocked.hpp"
 #include "epi/chapter19/CloneGraph.hpp"
+#include "epi/chapter19/IsAnyPlacementFeasible.hpp"
 
 using std::cout;
 using std::endl;
@@ -385,6 +386,7 @@ void prepareSolutions() {
     new FillSurroundedRegions(); // Chapter 19.3
     new IsDeadlocked(); // Chapter 19.4
     new CloneGraph(); // Chapter 19.5
+    new IsAnyPlacementFeasible(); // Chapter 19.6
 }
 
 int main(int argc, char** argv)

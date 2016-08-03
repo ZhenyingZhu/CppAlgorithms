@@ -194,6 +194,7 @@ SOURCES =			\
 	src/epi/chapter19/FillSurroundedRegions.cpp			\
 	src/epi/chapter19/IsDeadlocked.cpp			\
 	src/epi/chapter19/CloneGraph.cpp			\
+	src/epi/chapter19/IsAnyPlacementFeasible.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
