@@ -178,6 +178,7 @@
 #include "epi/chapter19/CloneGraph.hpp"
 #include "epi/chapter19/IsAnyPlacementFeasible.hpp"
 #include "epi/chapter19/TransformString.hpp"
+#include "epi/chapter19/FindLargestNumberTeams.hpp"
 
 using std::cout;
 using std::endl;
@@ -389,6 +390,7 @@ void prepareSolutions() {
     new CloneGraph(); // Chapter 19.5
     new IsAnyPlacementFeasible(); // Chapter 19.6
     new TransformString(); // Chapter 19.7
+    new FindLargestNumberTeams(); // Chapter 19.8
 }
 
 int main(int argc, char** argv)
