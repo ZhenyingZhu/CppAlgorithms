@@ -179,6 +179,7 @@
 #include "epi/chapter19/IsAnyPlacementFeasible.hpp"
 #include "epi/chapter19/TransformString.hpp"
 #include "epi/chapter19/FindLargestNumberTeams.hpp"
+#include "epi/chapter19/DijkstraShortestPath.hpp"
 
 using std::cout;
 using std::endl;
@@ -391,6 +392,7 @@ void prepareSolutions() {
     new IsAnyPlacementFeasible(); // Chapter 19.6
     new TransformString(); // Chapter 19.7
     new FindLargestNumberTeams(); // Chapter 19.8
+    new DijkstraShortestPath(); // Chapter 19.9
 }
 
 int main(int argc, char** argv)
