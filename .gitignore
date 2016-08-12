@@ -78,6 +78,9 @@ $RECYCLE.BIN/
 *.lnk
 /Debug/
 
+# ZhenyingZhu
+# =========================
+
 # Eclipse project files
 .cproject
 .project
