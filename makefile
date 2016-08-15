@@ -198,6 +198,7 @@ SOURCES =			\
 	src/epi/chapter19/TransformString.cpp			\
 	src/epi/chapter19/FindLargestNumberTeams.cpp			\
 	src/epi/chapter19/DijkstraShortestPath.cpp			\
+	src/epi/chapter22/PassByValue.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp

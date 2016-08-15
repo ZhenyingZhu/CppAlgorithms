@@ -180,6 +180,7 @@
 #include "epi/chapter19/TransformString.hpp"
 #include "epi/chapter19/FindLargestNumberTeams.hpp"
 #include "epi/chapter19/DijkstraShortestPath.hpp"
+#include "epi/chapter22/PassByValue.hpp"
 
 using std::cout;
 using std::endl;
@@ -202,6 +203,7 @@ using namespace chapter16;
 using namespace chapter17;
 using namespace chapter18;
 using namespace chapter19;
+using namespace chapter22;
 
 void prepareSolutions() {
     new Parity(); // Chapter 5.1
@@ -393,6 +395,8 @@ void prepareSolutions() {
     new TransformString(); // Chapter 19.7
     new FindLargestNumberTeams(); // Chapter 19.8
     new DijkstraShortestPath(); // Chapter 19.9
+
+    new PassByValue(); // Chapter 22.2
 }
 
 int main(int argc, char** argv)
