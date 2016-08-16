@@ -181,6 +181,7 @@
 #include "epi/chapter19/FindLargestNumberTeams.hpp"
 #include "epi/chapter19/DijkstraShortestPath.hpp"
 #include "epi/chapter22/PassByValue.hpp"
+#include "epi/chapter22/WeakPtrUsage.hpp"
 
 using std::cout;
 using std::endl;
@@ -397,6 +398,7 @@ void prepareSolutions() {
     new DijkstraShortestPath(); // Chapter 19.9
 
     new PassByValue(); // Chapter 22.2
+    new WeakPtrUsage(); //Chapter 22.3
 }
 
 int main(int argc, char** argv)
