@@ -200,6 +200,7 @@ SOURCES =			\
 	src/epi/chapter19/DijkstraShortestPath.cpp			\
 	src/epi/chapter22/PassByValue.cpp			\
 	src/epi/chapter22/WeakPtrUsage.cpp			\
+	src/epi/chapter22/MacroUsage.cpp			\
 	src/main.cpp
 
 SOURCES_MAIN = src/main.cpp
