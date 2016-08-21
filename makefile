@@ -1,7 +1,7 @@
 CC = g++
 DEBUG = -g
-CFLAGS = -Wall -std=c++11 -c $(DEBUG)
-LFLAGS = -Wall -std=c++11 $(DEBUG)
+CFLAGS = -Wall -std=c++11 -c -pthread $(DEBUG)
+LFLAGS = -Wall -std=c++11 -pthread $(DEBUG)
 
 SOURCES =			\
 	src/SolutionCollection.cpp			\
