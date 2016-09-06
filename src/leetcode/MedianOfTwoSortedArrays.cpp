@@ -1,7 +1,9 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/median-of-two-sorted-arrays/
+ * [Difficulty]: Hard
+ * [Tag]: Binary Search
+ * [Tag]: Array
+ * [Tag]: Divide and Conquer
  */
 
 #include <iostream>
