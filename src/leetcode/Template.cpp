@@ -9,6 +9,7 @@
 using namespace std;
 
 // [Solution]:
+// [Corner Case]:
 class Solution {
 };
 
