@@ -1,18 +1,18 @@
 /*
- * Source: https://leetcode.com/problems/
- * Difficulty: 
- * Tags: , 
+ * [Source] https://leetcode.com/problems/
+ * [Difficulty]: 
+ * [Tag]: 
  */
 
 #include <iostream>
 
 using namespace std;
 
-// Solution:
+// [Solution]:
 class Solution {
 };
 
-// Solution:
+// [Solution]:
 /* Java solution
 
  */

@@ -1,19 +1,20 @@
 /*
- * Source: https://leetcode.com/problems/add-two-numbers/
- * Source: CTCI chapter 2 question 5
- * Difficulty: Medium
- * Tags: Linked list, Math
+ * [Source]: https://leetcode.com/problems/add-two-numbers/
+ * [Source]: CTCI chapter 2 question 5
+ * [Difficulty]: Medium
+ * [Tag]: Linked list
+ * [Tag]: Math
  */
 
 #include <iostream>
 
 using namespace std;
 
-// Solution: First reverse two lists, then add them and reverse back.
+// [Solution]: First reverse two lists, then add them and reverse back.
 class Solution {
 };
 
-// Solution: Add zeros to the shorter one, then sum them together
+// [Solution]: Add zeros to the shorter one, then sum them together
 /* Java solution
 import lib.LinkedNode; 
 

@@ -1,7 +1,8 @@
 /*
- * Source: https://leetcode.com/problems/two-sum/
- * Difficulty: Easy
- * Tags: Array, Hash Table
+ * [Source]: https://leetcode.com/problems/two-sum/
+ * [Difficulty]: Easy
+ * [Tag]: Array
+ * [Tag]: Hash Table
  */
 
 #include <iostream>
@@ -9,7 +10,7 @@
 
 using namespace std;
 
-// Solution: Brute force
+// [Solution]: Brute force
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -24,7 +25,7 @@ public:
     }
 };
 
-// Solution: Sort
+// [Solution]: Sort
 /* Java solution
 public class Solution {
     public int[] twoSum(int[] numbers, int target) {
@@ -88,7 +89,7 @@ public class Solution {
 }
  */
 
-// Solution: Hash table
+// [Solution]: Hash table
 /* Java solution
  * https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/arrandstring/TwoSumHash.java
  */
