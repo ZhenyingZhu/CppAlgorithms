@@ -12,8 +12,8 @@
 using namespace std;
 
 // [Solution]: DP. B(i, j) indicates p[0, i] == s[0, j]. 
-// B(i, j) = B(i-1, j-1) && (p[i] == '.' || p[i] == s[j])
-//         = p[i] == '*' && {for x = 0..j, B(i-2, x) && s[x+1..j] == p[j-1]}
+// B(i, j) = B(i-1, j-1) && (p[i-1] == '.' || p[i-1] == s[j-1])
+//         = p[i-1] == '*' && {for x = 0..j-1, B(i-1, x) && s[x..j-1] == p[i-2]}
 // [Corner Case]: what if '**' shows up, or '*' at the beginning
 class Solution {
 public:
@@ -25,64 +25,90 @@ public:
         vector<vector<bool>> match(pLen + 1, vector<bool>(sLen + 1, false));
         match[0][0] = true;
 
-        for (int pIth = 1; pIth <= pLen; ++pIth) {
-            for (int sJth = 0; sJth <= sLen; ++sJth) {
-                if (p[pIth - 1] == '*') {
-                    // deal with wildcard
-
+        for (int pIdx = 0; pIdx < pLen; ++pIdx) {
+            for (int sIdx = -1; sIdx < sLen; ++sIdx) {
+                if (p[pIdx] == '*') {
                     // Error case: p[0] should not be '*', shouldn't has '**'
-                    if (pIth == 1 || p[pIth - 2] == '*')
+                    if (pIdx == 0 || p[pIdx - 1] == '*')
                         return false;
+                    
+                    match[pIdx + 1][sIdx + 1] = isMatchStar(s, p, pIdx, sIdx, match);
 
-                    if (sJth == 0) {
-                        match[pIth][0] = match[pIth - 2][0];
-                        continue; // sJth
-                    }
-
-                    for (int prevMatch = 0; prevMatch < sJth; ++prevMatch) {
-                        // start from 0, means s can has no char. end at sJth - 1, means the whole s
-                        if (pIth >= 2 && !match[pIth - 2][prevMatch])
-                            continue;
-
-                        // p[pIth - 1] is '*', check the char before '*'
-                        if (p[pIth - 2] == '.') {
-                            match[pIth][sJth] = true;
-                            break; // prevMatch
-                        }
-
-                        // check if all char in s is same as previous char
-                        bool allCharMatch = true;
-                        for (int c = prevMatch; c < sJth; ++c) {
-                            if (s[c] != p[pIth - 2]) {
-                                allCharMatch = false;
-                                break;
-                            }
-                        }
-                        if (allCharMatch) {
-                            match[pIth][sJth] = true;
-                            break; // prevMatch
-                        }
-                    }
                 } else {
-                    // normal case
-                    if (sJth == 0) {
-                        match[pIth][sJth] = false;
-                    } else if (p[pIth - 1] == '.' || p[pIth - 1] == s[sJth - 1]) {
-                        if (match[pIth - 1][sJth - 1]) {
-                            match[pIth][sJth] = true;
-                        }
+                    if (sIdx == -1) {
+                        match[pIdx + 1][0] = false;
+                    } else if (p[pIdx] == '.' || p[pIdx] == s[sIdx]) {
+                        match[pIdx + 1][sIdx + 1] = match[pIdx][sIdx];
                     }
-                } // if *
-            } // sJth
-        } // pIth
+
+                }
+            } // pIdx
+        } // sIdx
 
         return match[pLen][sLen];
     }
+
+private:
+    bool allSame(char prev, string& s, int st, int ed) {
+        if (prev == '.')
+            return true;
+
+        for (int idx = st; idx <= ed; ++idx) {
+            if (s[idx] != prev)
+                return false;
+        }
+        return true;
+    }
+
+    bool isMatchStar(string& s, string& p, int pIdx, int sIdx, vector<vector<bool>>& match) {
+        // pIdx >= 1, because first char cannot be '*'
+        if (sIdx == -1) {
+            return match[pIdx - 1][0];
+        }
+
+        for (int i = sIdx + 1; i >= 0; --i) {
+            if (match[pIdx - 1][i]) {
+                if (allSame(p[pIdx - 1], s, i, sIdx))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
 };
 
-// [Solution]:
+// [Solution]: Do the compare in forward direction. If p start with '[char]*', then try if for x = 0..ed, s[x..ed] match p[2..ed]
 /* Java solution
+https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/rcanddp/RegularExpressionMatching.java
+ */
 
+/* Java solution
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        if (p.length() == 0) {
+            return s.length() == 0; 
+        }
+        if (p.length() == 1) { // base case
+            return s.length() == 1 && (s.equals(p) || p.charAt(0) == '.'); 
+        }
+        if (p.charAt(1) != '*') {
+            if (s.length() == 0 || (p.charAt(0) != '.' && s.charAt(0) != p.charAt(0))) {
+                return false; 
+            } else {
+                return isMatch(s.substring(1), p.substring(1)); 
+            }
+        } else { // x*
+            while (s.length() > 0 && (s.charAt(0) == p.charAt(0) || p.charAt(0) == '.')) {
+                if (isMatch(s, p.substring(2))) {
+                    return true; 
+                }
+                s = s.substring(1); 
+            }
+        }
+        return isMatch(s, p.substring(2)); 
+    }
+}
  */
 
 int main() {
