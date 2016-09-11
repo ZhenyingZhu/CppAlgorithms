@@ -141,5 +141,6 @@ int main() {
    if (!sol.isMatch("aaa", "ab*ac*a"))
         cout << "12 fail" << endl;
 
-    return 0;
+   cout << "all passed" << endl;
+   return 0;
 }
