@@ -1,7 +1,8 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/3sum-closest/
+ * [Difficulty]: Medium
+ * [Tag]: Array
+ * [Tag]: Two Pointers
  */
 
 #include <iostream>
