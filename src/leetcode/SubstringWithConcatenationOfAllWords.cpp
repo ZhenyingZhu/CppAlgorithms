@@ -1,7 +1,9 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+ * [Difficulty]: Hard
+ * [Tag]: Hash Table
+ * [Tag]: Two Pointers
+ * [Tag]: String
  */
 
 #include <iostream>
@@ -11,7 +13,7 @@
 
 using namespace std;
 
-// [Solution]:
+// [Solution]: Moving window
 // [Corner Case]: words have dup. not start from s index 0.
 class Solution {
 private:
@@ -72,9 +74,66 @@ public:
 
 };
 
-// [Solution]:
 /* Java solution
+https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/arrandstring/SubstringWithConcatenationOfAllWords.java
+ */
 
+/* Java solution
+public class Solution {
+    public List<Integer> findSubstring(String S, String[] L) {
+        List<Integer> result = new ArrayList<Integer>(); 
+        if(L == null || L.length == 0) {
+            return result; 
+        }
+        int len = L[0].length(); 
+        int amt = L.length; 
+        if(S == null || S.length() < amt * len) {
+            return result; 
+        }
+        HashMap<String, Integer> words = new HashMap<String, Integer>(); 
+        for(String word : L) {
+            if(words.containsKey(word)) { // If repeat
+                words.put(word, words.get(word) + 1); 
+            } else {
+                words.put(word, 1); 
+            }
+        }
+        for(int start = 0; start < len; ++start) {
+            HashMap<String, Integer> map = new HashMap<String, Integer>(words); 
+            Queue<String> queue = new LinkedList<String>(); 
+            int idx = start; 
+            for(int i = start; i < S.length() - len + 1; i += len) { // last i should equal to s - len
+                String tempStr = S.substring(i, i + len); 
+                if(!map.containsKey(tempStr)) {
+                    idx = i + len; 
+                    map = new HashMap<String, Integer>(words); 
+                    queue = new LinkedList<String>(); 
+                    continue; 
+                }
+                queue.offer(tempStr);
+                if(map.get(tempStr) > 0) {
+                    map.put(tempStr, map.get(tempStr) - 1); 
+                    if(queue.size() == amt) { // Find one, but might be part of next
+                        result.add(idx); 
+                        idx += len; 
+                        String rm = queue.poll(); 
+                        map.put(rm, map.get(rm) + 1); 
+                    }
+                } else { // tempStr repeat
+                    String rm = queue.poll(); 
+                    idx += len; 
+                    while(!rm.equals(tempStr)) {
+                        map.put(rm, map.get(rm) + 1); 
+                        idx += len; 
+                        rm = queue.poll(); 
+                    }
+                    map.put(tempStr, 0); 
+                }
+            }
+        }
+        return result; 
+    }
+}
  */
 
 int main() {
