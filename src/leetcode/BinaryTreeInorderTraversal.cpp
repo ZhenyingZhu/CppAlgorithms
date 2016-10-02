@@ -20,7 +20,7 @@ class Solution {
 https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/treeandgraph/BinaryTreeInorderTraversal.java
  */
 
-// [Solution]: Use a tmp pointer to keep tacking previous node
+// [Solution]: Link parent to leaf right, so the running pointer actually goes back to its parent.
 /* Java solution
 public class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
