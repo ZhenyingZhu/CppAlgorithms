@@ -9,7 +9,7 @@
 using namespace std;
 
 // [Solution]: mode 26, then add a correspond letter until 0.
-// [Corner Case]: should first minus 1
+// [Corner Case]: should treat A as 1 since otherwise AA become 0.
 class Solution {
 };
 
