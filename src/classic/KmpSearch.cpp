@@ -14,13 +14,9 @@ public:
     vector<int> kmpSearch(string str, string pat) {
         int sLen = str.length(), pLen = pat.length();
         vector<int> lps = computeLPSArray(pat); // longest prefix suffix
-for (int& i : lps)
-    cout << i << " ";
-cout << endl;
         vector<int> poses;
         int sIdx = 0, pIdx = 0;
         while (sIdx < sLen) {
-cout << sIdx << endl;
             if (str[sIdx] == pat[pIdx]) {
                 ++sIdx; ++pIdx;
             }
@@ -36,7 +32,6 @@ cout << sIdx << endl;
                 }
             }
         }
-cout << endl;
         return poses;
     }
 
@@ -50,15 +45,11 @@ private:
         int len = 0;
         while (pIdx < (int)pat.length()) {
             if (pat[pIdx] == pat[len]) {
-                ++len;
-                lps[pIdx] = len;
-                ++pIdx;
-            } else if (len != 0) { // notice
+                lps[pIdx++] = ++len;
+            } else if (len != 0) { // notice case like AAACAAAA
                 len = lps[len - 1];
-cout << len << " " << pIdx << " " << lps[len-1] << endl;
             } else {
-                lps[pIdx] = 0;
-                pIdx++;
+                lps[pIdx++] = 0;
             }
         }
         return lps;
