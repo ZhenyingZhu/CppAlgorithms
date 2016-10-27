@@ -28,7 +28,7 @@ public:
                 if (pIdx == 0) {
                     ++sIdx;
                 } else {
-                    pIdx = lps[pIdx - 1]; // go back to the last position of previous match?
+                    pIdx = lps[pIdx - 1]; // go back to the last position of previous match
                 }
             }
         }
@@ -37,6 +37,7 @@ public:
 
 private:
     // in pattern, if a substring is same as prefix, it means the correlate part in search string matches both the prefix and the substring. So if the next char of this substring is not match, only need to move the pointer to the end of prefix.
+    // See https://github.com/ZhenyingZhu/CppAlgorithms/blob/master/src/leetcode/ShortestPalindrome.cpp for a better solution
     vector<int> computeLPSArray(string& pat) {
         vector<int> lps(pat.length());
 
