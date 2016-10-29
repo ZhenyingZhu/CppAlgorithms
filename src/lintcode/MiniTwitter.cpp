@@ -118,7 +118,9 @@ private:
 
     size_t LISTLEN;
 };
-// [Solution]:
+
+// [Solution]: Use tweet node to simulate DB. 
+// http://www.jiuzhang.com/solutions/mini-twitter/
 
 int main() {
 
