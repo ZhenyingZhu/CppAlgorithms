@@ -1,5 +1,6 @@
 /*
  * [Source] https://leetcode.com/problems/implement-trie-prefix-tree/
+ * [Source] http://www.lintcode.com/en/problem/implement-trie/
  * [Difficulty]: Medium
  * [Tag]: Design
  * [Tag]: Trie
