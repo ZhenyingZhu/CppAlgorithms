@@ -30,10 +30,13 @@ public:
             q1.pop();
         }
         q1.pop();
-        while (!q2.empty()) {
+        swap(q1, q2);
+        /*
+        while (!q2.empty()) { // no need, can just swap q1 with q2
             q1.push(q2.front());
             q2.pop();
         }
+        */
     }
 
     // Get the top element.
