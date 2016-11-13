@@ -11,7 +11,7 @@
 
 using namespace std;
 
-// [Corner Case]:
+// [Corner Case]: When customer created key is already in exist in normal map, or in custom created may, or the long url already map to any string, should return error
 // [Solution]: Use id-longURL pair to store mapping. id use 62 base to convert to short URL. Use customer map to store customer specified short url.
 class TinyUrl2 {
 public:
@@ -24,22 +24,30 @@ public:
         long long existId = findLongURLId_(long_url);
         long long id = shortKeyToId_(short_key);
 
-        // long_url already exist but map to another short_key
+        // long_url already exist in urlMap_ but map to another short_key
         if (existId != -1 && existId != id)
             return "error";
 
-        /* I think this check is necessary
+        // the short_key exist in urlMap_
         if (urlMap_.find(id) != urlMap_.end()) {
             if (urlMap_[id] == long_url)
                 return prefix + short_key;
             else
                 return "error";
         }
-        */
 
-        // short_key already exist but map to another long_url
+        // short_key already exist in customMap_ but map to another long_url
         if (customMap_.find(short_key) != customMap_.end() && customMap_[short_key] != long_url)
             return "error";
+
+        // long_url already exist in customMap but map to another custom key
+        unordered_map<string, string>::iterator it = findLongURLCustomerKey_(long_url);
+        if ( it != customMap_.end() ) {
+            if (it->first != short_key)
+                return "error";
+            else
+                return prefix + short_key;
+        }
 
         customMap_[short_key] = long_url;
         return prefix + short_key;
@@ -50,13 +58,15 @@ public:
      * @return a short url starts with http://tiny.url/
      */
     string longToShort(string long_url) {
-        // find long_url in the customMap
-        // __________________IMCOMPLETE_______________________
+        // find long_url in the customMap first
+        unordered_map<string, string>::iterator it = findLongURLCustomerKey_(long_url);
+        if (it != customMap_.end())
+            return prefix + it->first;
 
-        // find long_url in the normal map
+        // find long_url in the urlMap
         long long id = findLongURLId_(long_url);
 
-        if (id == -1) { // not exist
+        if (id == -1) { // not exist. find next available id
             while (urlMap_.find(lastId_) != urlMap_.end())
                 ++lastId_;
 
@@ -64,7 +74,7 @@ public:
             urlMap_[lastId_++] = long_url;
         }
 
-        return prefix + idToShortURL_(id);
+        return prefix + idToShortKey_(id);
     }
 
     /**
@@ -72,8 +82,15 @@ public:
      * @return a long long url
      */
     string shortToLong(string short_url) {
-        string shortURL = short_url.substr(offset);
-        long long id = shortURLToId_(shortURL);
+        string shortKey = short_url.substr(offset);
+
+        // search customMap first
+        if (customMap_.find(shortKey) != customMap_.end()) {
+            return customMap_[shortKey];
+        }
+
+        // search urlMap
+        long long id = shortKeyToId_(shortKey);
         if (urlMap_.find(id) == urlMap_.end())
             return "";
         return urlMap_[id];
@@ -113,14 +130,23 @@ private:
         return id;
     }
 
+    unordered_map<string, string>::iterator findLongURLCustomerKey_(const string& longUrl) {
+        for (auto it = customMap_.begin(); it != customMap_.end(); ++it) {
+            if (it->second == longUrl) {
+                return it;
+            }
+        }
+        return customMap_.end();
+    }
+
 private:
     long long lastId_ = 1000;
-    unordered_map<long, string> urlMap_;
+    unordered_map<long long, string> urlMap_;
     unordered_map<string, string> customMap_;
 
-    const string serials("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    const string serials = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const int base = serials.size();
-    const string prefix("http://tiny.url/");
+    const string prefix = "http://tiny.url/";
     const int offset = prefix.length();
 };
 
