@@ -12,9 +12,6 @@ using namespace std;
 // [Corner Case]:
 class Solution {
 public:
-    void hello() {
-        cout << "Hello World" << endl;
-    }
 };
 
 // [Solution]:
@@ -24,8 +21,6 @@ public:
 
 int main() {
     Solution sol;
-
-    sol.hello();
 
     return 0;
 }
