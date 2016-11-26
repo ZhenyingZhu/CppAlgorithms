@@ -1,7 +1,8 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/reverse-string/
+ * [Difficulty]: Easy
+ * [Tag]: Two Pointers
+ * [Tag]: String
  */
 
 #include <iostream>
