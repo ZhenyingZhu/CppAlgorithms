@@ -1,6 +1,6 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
+ * [Source] https://leetcode.com/problems/find-k-pairs-with-smallest-sums/
+ * [Difficulty]: Medium
  * [Tag]: 
  */
 
@@ -13,8 +13,8 @@
 
 using namespace std;
 
-// [Solution]:
-// [Corner Case]:
+// [Solution]: Each time push a pair to result, get 1. the number from nums1 and the next number from nums2, and 2. the next number from nums1, and its unpushed pair in nums2. Push them to a priority queue.
+// [Corner Case]: Cannot use two hash maps to store the next idx for nums1 and nums2, because we are only traverse nums1.
 class Solution {
 public:
     struct PairIdx {
@@ -34,47 +34,37 @@ public:
 
         vector<pair<int, int>> res;
         priority_queue<PairIdx, vector<PairIdx>, cmp> pq;
-        unordered_map<int, int> nums1Idx, nums2Idx;
+        vector<int> nextIdx(nums1.size(), 0); // For each number in nums1, which number in nums2 is the next to valuate, which means hasn't pushed into priority_queue
 
         pq.push({0, 0, nums1[0] + nums2[0]});
-        nums1Idx[0] = 1;
-        nums2Idx[0] = 1;
+        nextIdx[0] = 1;
         while ( !pq.empty() && k > (int)res.size() ) {
-cout << "before" << endl;
-for (auto it = nums1Idx.begin(); it != nums1Idx.end(); ++it)
-    cout << it->first << "-" << it->second << endl;
-cout << endl;
-for (auto it = nums2Idx.begin(); it != nums2Idx.end(); ++it)
-    cout << it->first << "-" << it->second << endl;
-
             PairIdx cur = pq.top();
             pq.pop();
             res.push_back({nums1[cur.idx1], nums2[cur.idx2]});
 
-cout << "(" << cur.idx1 << "," << cur.idx2 << ") = ";
-
-            int nextIdx1 = nums1Idx[cur.idx2];
-            if ( nextIdx1 < (int)nums1.size() ) {
-                // add next number from nums1
-                pq.push( {nextIdx1, cur.idx2, nums1[nextIdx1] + nums2[cur.idx2]} );
-                nums1Idx[cur.idx2] = nextIdx1 + 1; // the number nums2[idx2] has sum up to idx1
-                nums2Idx[nextIdx1 + 1] = cur.idx2;
-                nums2Idx[nextIdx1] = cur.idx2 + 1;
-                nums1Idx[cur.idx2 + 1] = nextIdx1;
-cout << "(" << nextIdx1 << "," << cur.idx2 << ") ";
+cout << "(" << cur.idx1 << "," << cur.idx2 << ")=";
+            // add next number from nums1, and its next nums2
+            int nextIdx1 = cur.idx1 + 1;
+            if ( nextIdx1 < (int)nums1.size() && nextIdx[nextIdx1] < (int)nums2.size() ) {
+                int idx2 = nextIdx[nextIdx1];
+                pq.push( {nextIdx1, idx2, nums1[nextIdx1] + nums2[idx2]} );
+                ++nextIdx[nextIdx1];
+cout << "(" << nextIdx1 << "," << idx2 << ") ";
             }
 
-            // add next number from nums2
-            int nextIdx2 = nums2Idx[cur.idx1];
+            // add current number and its next number from nums2
+            int nextIdx2 = nextIdx[cur.idx1];
             if ( nextIdx2 < (int)nums2.size() ) {
                 pq.push( {cur.idx1, nextIdx2, nums1[cur.idx1] + nums2[nextIdx2]} );
-                nums1Idx[nextIdx2] = cur.idx1 + 1;
-                nums2Idx[cur.idx1 + 1] = nextIdx2;
-                nums2Idx[cur.idx1] = nextIdx2 + 1;
-                nums1Idx[nextIdx2 + 1] = cur.idx1;
+                ++nextIdx[cur.idx1];
 cout << "(" << cur.idx1 << "," << nextIdx2 << ")";
             }
 cout << endl;
+for (int num : nextIdx)
+    cout << num << " ";
+cout << endl;
+        }
 
         return res;
     }
@@ -88,12 +78,9 @@ cout << endl;
 int main() {
     Solution sol;
 
-    //vector<int> nums1 = {3, 22, 35, 56, 76};
-    //vector<int> nums2 = {3, 22, 35, 56, 76};
     vector<int> nums1 = {1, 1, 2};
     vector<int> nums2 = {1, 2, 3};
 
-    //for (pair<int, int> &p : sol.kSmallestPairs(nums1, nums2, 25)) {
     for (pair<int, int> &p : sol.kSmallestPairs(nums1, nums2, 10)) {
         cout << "(" << p.first << "," << p.second << ") ";
     }
