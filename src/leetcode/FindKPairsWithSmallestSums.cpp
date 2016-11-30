@@ -1,7 +1,7 @@
 /*
  * [Source] https://leetcode.com/problems/find-k-pairs-with-smallest-sums/
  * [Difficulty]: Medium
- * [Tag]: 
+ * [Tag]: Heap
  */
 
 #include <iostream>
