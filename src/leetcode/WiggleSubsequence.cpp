@@ -44,11 +44,23 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: Notice if consective numbers are not increasing/decreasing, neither of them can be used as next wiggled elements until there is a turn. So only need to compare with the previous number.
 class Solution {
 public:
     int wiggleMaxLength(vector<int>& nums) {
-        return 0;
+        if (nums.size() <= 1)
+            return nums.size();
+
+        int incLen = 1, decLen = 1;
+        for (int i = 1; i < (int)nums.size(); ++i) {
+            if (nums[i] > nums[i - 1]) {
+                incLen = decLen + 1;
+            } else if (nums[i] < nums[i - 1]) {
+                decLen = incLen + 1;
+            }
+        }
+
+        return max(incLen, decLen);
     }
 };
 
