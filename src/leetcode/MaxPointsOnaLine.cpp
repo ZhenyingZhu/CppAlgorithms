@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <cmath>
 #include <unordered_map>
+#include <climits>
 
 using namespace std;
 
@@ -80,6 +81,81 @@ private:
         if (p1.x == p2.x)
             return DBL_MAX;
         return double(p2.y - p1.y) / double(p2.x - p1.x);
+    }
+};
+
+// Wrong
+// [Solution]: This design has a big mistake that where previous same nodes of the start node will not show on later slope checks.
+// [Corner Case]: if two pointers are at same location, they count as two nodes
+class SolutionWrong {
+public:
+    int maxPoints(vector<Point>& points) {
+        int len = points.size();
+        if (len <= 1)
+            return len;
+
+        int maxNum = 2;
+        for (int i = 0; i < len - 2; ++i) {
+if (i != 4)
+    continue;
+            for (int j = i + 1; j < len - 1; ++j) {
+cout << "j" << j << endl;
+                vector<int> nodesOnLine = {i};
+                int tmp = j;
+                while (tmp < len - 1 && samePoints(points[i], points[tmp])) {
+cout << tmp << "(" << points[tmp].x << "," << points[tmp].y << ")" << endl;
+                    nodesOnLine.push_back(tmp++);
+                }
+
+                Slope slope = getSlope(points[i], points[tmp]);
+                nodesOnLine.push_back(tmp); // here deal with if all nodes are same nodes
+
+                for (int k = tmp + 1; k < len; ++k) {
+                    if (samePoints(points[i], points[k]) || slope == getSlope(points[i], points[k])) {
+                        nodesOnLine.push_back(k);
+                    }
+                }
+                maxNum = max((int)nodesOnLine.size(), maxNum);
+// helper st
+if (nodesOnLine.size() == 24) {
+    for (int idx : nodesOnLine)
+        cout << idx << "(" << points[idx].x << "," << points[idx].y << "),";
+    cout << endl;
+}
+// helper ed
+            }
+        }
+
+        return maxNum;
+    }
+
+private:
+    struct Slope {
+        Slope(bool v, double s):
+            isVertical(v), slopeRate(s) { }
+
+        bool operator==(const Slope& other) const {
+            if (isVertical) {
+                if (other.isVertical)
+                    return true;
+                return false;
+            }
+            return abs(slopeRate - other.slopeRate) <= 0.01;
+        }
+
+        bool isVertical;
+        double slopeRate;
+    };
+
+    Slope getSlope(const Point& p1, const Point& p2) {
+        if (p2.x == p1.x)
+            return Slope(true, 0.0);
+        double s = double(p2.y - p1.y) / double(p2.x - p1.x);
+        return Slope(false, s);
+    }
+
+    bool samePoints(const Point& p1, const Point& p2) {
+        return (p1.x == p2.x && p1.y == p2.y);
     }
 };
 

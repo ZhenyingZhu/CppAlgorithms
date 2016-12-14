@@ -1,7 +1,10 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/the-skyline-problem/
+ * [Difficulty]: Hard
+ * [Tag]: Binary Indexed Tree
+ * [Tag]: Segment Tree
+ * [Tag]: Heap
+ * [Tag]: Divide and Conquer
  */
 
 #include <iostream>

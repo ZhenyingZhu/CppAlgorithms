@@ -1,5 +1,5 @@
 /*
- * [Source]: https://leetcode.com/problems/two-sum/
+ * [Source] https://leetcode.com/problems/two-sum/
  * [Difficulty]: Easy
  * [Tag]: Array
  * [Tag]: Hash Table

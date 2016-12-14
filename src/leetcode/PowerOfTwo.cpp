@@ -1,5 +1,5 @@
 /*
- * [Source] https://leetcode.com/problems/problems/power-of-two/
+ * [Source] https://leetcode.com/problems/power-of-two/
  * [Difficulty]: Easy
  * [Tag]: Math
  * [Tag]: Bit Manipulation

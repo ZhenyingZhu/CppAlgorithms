@@ -1,5 +1,5 @@
 /*
- * [Source]: https://leetcode.com/problems/add-two-numbers/
+ * [Source] https://leetcode.com/problems/add-two-numbers/
  * [Difficulty]: Medium
  * [Tag]: Linked list
  * [Tag]: Math

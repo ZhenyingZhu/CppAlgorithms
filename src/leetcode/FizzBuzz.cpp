@@ -1,6 +1,6 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
+ * [Source] https://leetcode.com/problems/fizz-buzz/
+ * [Difficulty]: Easy
  * [Tag]: 
  */
 
