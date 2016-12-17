@@ -5,19 +5,20 @@
  */
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-vector<char> buff;
+char stream[] = "abcdef";
+char *pos = stream;
 
 int read4(char *buf) {
     int cnt = 0;
     for (; cnt < 4; ++cnt) {
-        if (buf[cnt] == '\0')
+        if (*pos == '\0')
             break; // Mock an EOF
 
-        buff.push_back(buf[cnt]);
+        buf[cnt] = *pos;
+        ++pos;
     }
     return cnt;
 }
@@ -47,9 +48,9 @@ public:
 int main() {
     Solution sol;
 
-    char stream[] = "abcdef";
-    int len = sol.read(stream, 5);
-    cout << string(buff.begin(), buff.begin() + len) << endl;
+    char buf1[10];
+    int len = sol.read(buf1, 5);
+    cout << string(buf1, buf1 + len) << endl;
 
     return 0;
 }
