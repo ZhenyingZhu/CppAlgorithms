@@ -6,14 +6,49 @@
  */
 
 #include <iostream>
+#include <vector>
+#include <climits>
 
 using namespace std;
 
-// [Solution]: Maintain both positive and negative max. Since negative * negative is positive.
+// [Solution]: The condition is very complicate. So negative multiply come from positive * num when num is smaller than 0, or negative * num when num is larger than 0, and negative is smaller than 0. Positive multiply comes from positive * num when num is larger than 0, or negative * num when num is smaller than 0, or reset if negative is not intialized yet.
 // [Corner Case]:
 class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        if (nums.empty())
+            return 0;
+
+        int res = INT_MIN;
+        int positive = 1, negative = 1;
+        for (int &num : nums) {
+            if (num == 0) {
+                res = max(res, 0);
+                positive = 1;
+                negative = 1;
+            } else if (num < 0) {
+                if (negative < 0) {
+                    int prePos = positive;
+                    positive = negative * num;
+                    negative = prePos * num;
+                    res = max(positive, res);
+                } else {
+                    res = max(num, res);
+                    negative = positive * num;
+                    positive = 1;
+                }
+            } else {
+                positive *= num;
+                if (negative < 0) // otherwise negative is 1
+                    negative *= num;
+                res = max(positive, res);
+            }
+        }
+        return res;
+    }
 };
 
+// [Solution]: Maintain both positive and negative max. Since negative * negative is positive.
 /* Java solution
 https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/arrandstring/MaximumProductSubarray.java
  */
@@ -58,6 +93,12 @@ public class MaximumProductSubarray {
 
 int main() {
     Solution sol;
+
+    //vector<int> nums = {2, 3, -2, 4, -2};
+    //vector<int> nums = {-2};
+    //vector<int> nums = {2,-5,-2,-4,3};
+    vector<int> nums = {-1, -2, -9, -6};
+    cout << sol.maxProduct(nums) << endl;
 
     return 0;
 }
