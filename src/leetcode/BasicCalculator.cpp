@@ -78,7 +78,7 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: Not compute until reach the end or ')'
 /* Java solution
 
  */
