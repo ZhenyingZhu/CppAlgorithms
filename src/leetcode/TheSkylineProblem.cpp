@@ -17,7 +17,7 @@
 
 using namespace std;
 
-// [Solution]: Basically make end columns sort as high to low, first to last. When hit a start point, print all previous end columns. Print start column if it should prin
+// [Solution]: Basically make end columns sort as high to low, first to last. When hit a start point, print all previous end columns. Print start column if it should print
 // [Corner Case]:
 class Solution {
 public:
@@ -33,29 +33,27 @@ public:
             ( [](const EndHeight& h1, const EndHeight& h2) -> bool {return h1.height < h2.height;} );
         for (vector<int>& cur : buildings) {
             int st = cur[0], ed = cur[1], h = cur[2];
-cout << "Dealing with " << st << endl;
 
-            while (!heights.empty() && heights.top().end < st) { // end == st shouldnot pop, otherwise leads to an unexpected {end, 0}
+            // print dots that go down before the new start
+            while (!heights.empty() && heights.top().end < st) { // end == st should not pop, otherwise leads to an unexpected {end, 0}
                 int end = heights.top().end;
-cout << "poping " << heights.top().end << "+" << heights.top().height << endl;
                 heights.pop();
                 int secondHeight = heights.empty() ? 0 : heights.top().height;
-cout << "here1 " << endl;
-                // if two blocks should not have same heights
                 pushRes(end, secondHeight, res, false);
             }
 
+            // print the dot that goes up if necessary
             if (heights.empty() || heights.top().height < h) {
-cout << "here2 " << endl;
                 pushRes(st, h, res, true);
             }
 
+            // before insert the new building, clean up buildings that will not be print. Keeps the pq has buildings from tall to short, ends from eariler to later
             while (!heights.empty() && heights.top().height <= h && heights.top().end <= ed) {
-cout << "poping " << heights.top().end << "+" << heights.top().height << endl;
                 heights.pop();
             }
+
+            // insert the new building end
             if (heights.empty() || heights.top().end < ed || heights.top().height < h) {
-cout << "heights add " << ed << "+" << h << endl;
                 heights.push({ed, h});
             }
         }
@@ -64,7 +62,6 @@ cout << "heights add " << ed << "+" << h << endl;
             int end = heights.top().end;
             heights.pop();
             int secondHeight = heights.empty() ? 0 : heights.top().height;
-cout << "here3 " << endl;
             pushRes(end, secondHeight, res, false);
         }
 
@@ -72,7 +69,9 @@ cout << "here3 " << endl;
     }
 
     void pushRes(int coordinate, int height, vector<pair<int, int>>& res, bool isUp) {
-cout << "print " << coordinate << " " << height << endl;
+        // 1. new up dot must after previous down dot
+        // 2. in the last while loop, when printing remaining dots, since there is no start dot to clean those lower buildings end before, the res.back() should be keep
+        // 3. while going up, if two dots has same coordinate, need print one
         if (!res.empty() && res.back().first >= coordinate) {
             if (isUp) {
                 res.back().second = max(res.back().second, height);
