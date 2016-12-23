@@ -25,6 +25,7 @@ public:
 
     void helper(string num, long target, long carry, string formular, long mulTemp, vector<string>& res) {
         // mulTemp is used to compute multiple. 1+2*3 = (1+2) - 2 + 2*3; 1*2*3 = (1*2) - (1*2) + 1*2*3
+        // Actually carry here is useless, can removed
         if (num.size() == 0 && target == 0) {
             res.push_back(formular);
             return;
@@ -39,14 +40,14 @@ public:
 
             string left = num.substr(i);
             if (formular.size() == 0) {
-                helper(left, target - operand, operand, operandStr, operand, res); // the first number
+                helper(left, target - operand, operand, operandStr, operand, res); // the first number always add to the formular
             } else {
                 helper(left, target - operand, carry + operand, formular + "+" + operandStr, operand, res);
                 helper(left, target + operand, carry - operand, formular + "-" + operandStr, -operand, res);
 
-                int newMulTemp = mulTemp * operand;
-                int mulCarry = carry - mulTemp + newMulTemp;
-                int mulTarget = target + mulTemp - newMulTemp;
+                int newMulTemp = mulTemp * operand; // mulTemp is the value of previous continus multiple
+                int mulCarry = carry - mulTemp + newMulTemp; // carry is the value of the whole previous fumular
+                int mulTarget = target + mulTemp - newMulTemp; // notice mulCarry first minus mulTmp, which means target needs add it back
                 helper(left, mulTarget, mulCarry, formular + "*" + operandStr, newMulTemp, res);
             }
         }
