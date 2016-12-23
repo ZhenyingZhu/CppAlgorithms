@@ -91,16 +91,16 @@ cout << nxt << op << val << endl;
     }
 };
 
-// [Solution]:
+// [Solution]: Always use two stacks. When find a op with lower priority then previous os, use another stack to get all ops that are higher than the up comming one, and compute.
 /* Java solution
 
  */
 
 int main() {
     Solution sol;
-    //cout << sol.calculate(" 13+5 / 2 ") << endl;
+    cout << sol.calculate(" 13+5 / 2*3 ") << endl;
     //cout << sol.calculate(" 1-1+1 ") << endl;
-    cout << sol.calculate("0-2147483647") << endl;
+    //cout << sol.calculate("0-2147483647") << endl;
 
     return 0;
 }
