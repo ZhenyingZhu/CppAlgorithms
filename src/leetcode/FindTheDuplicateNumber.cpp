@@ -39,7 +39,7 @@ public:
     }
 };
 
-// [Solution]: Well, sort and count
+// [Solution]: Well, sort and count. But it modify the array so not okay.
 class SolutionSoEasy {
 public:
     int findDuplicate(vector<int>& nums) {
