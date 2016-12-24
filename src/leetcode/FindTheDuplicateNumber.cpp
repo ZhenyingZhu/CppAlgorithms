@@ -39,6 +39,19 @@ public:
     }
 };
 
+// [Solution]: Well, sort and count
+class SolutionSoEasy {
+public:
+    int findDuplicate(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        for (int i = 1; i < (int)nums.size(); ++i) {
+            if (nums[i] == nums[i - 1])
+                return nums[i];
+        }
+        return INT_MAX;
+    }
+};
+
 // [Solution]: Take it as linked list, which link each number from nums[number]. Since range is 1 to n, it means nums[0] never link to itself. Also the duplicate element must create a cycle
 class Solution {
 public:
