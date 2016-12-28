@@ -12,7 +12,7 @@
 
 using namespace std;
 
-// [Solution]: sum[ed]-sum[st] equals to sum of st+1 to ed. Now need lower<=sum[ed]-sum[st]<=upper, needs sum[ed]-upper<=sum[st]<=sum[ed]-lower. Put sum[st] in an sorted array and find for every sum[ed], how many st<ed fit the condition.
+// [Solution]: sum[ed]-sum[st] equals to sum of st+1 to ed. Now need lower<=sum[ed]-sum[st]<=upper, needs sum[ed]-upper<=sum[st]<=sum[ed]-lower. Put sum[st] in an sorted array and find for every sum[ed], how many st<ed fit the condition. Use multiset because multiset can have equal values
 // [Corner Case]:
 class SolutionMultiset {
 public:
