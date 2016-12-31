@@ -100,6 +100,8 @@ printVec(heap);
     }
 };
 
+// [Solution]: Use a pivot and part array into two. Count the number before pivot and divide and conquer
+
 int main() {
     Solution sol;
 
