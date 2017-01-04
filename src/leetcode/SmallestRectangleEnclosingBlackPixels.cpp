@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// [Solution]: What?! 
+// [Solution]: Use binary search to find the furthest pixels
 // [Corner Case]:
 class Solution {
 public:
