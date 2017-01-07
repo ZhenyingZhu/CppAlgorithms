@@ -26,7 +26,23 @@ public:
             graph[divisor][dividend] = 1.0 / quotient;
         }
 
+for (auto it = graph.begin(); it != graph.end(); ++it) {
+    cout << it->first << ": ";
+    for (auto i = it->second.begin(); i != it->second.end(); ++i) {
+        cout << i->first << "=" << i->second << " ";
+    }
+    cout << endl;
+}
+
         updateGraph(graph);
+
+for (auto it = graph.begin(); it != graph.end(); ++it) {
+    cout << it->first << ": ";
+    for (auto i = it->second.begin(); i != it->second.end(); ++i) {
+        cout << i->first << "=" << i->second << " ";
+    }
+    cout << endl;
+}
 
         vector<double> res;
         for (pair<string, string> &query : queries) {
@@ -41,13 +57,14 @@ public:
     }
 
     void updateGraph(unordered_map<string, unordered_map<string, double>> &graph) {
+        // why str/str=1 is computed is because str/tmp * tmp/str
         for (auto verticalIt = graph.begin(); verticalIt != graph.end(); ++verticalIt) {
             string vertical = verticalIt->first;
             for (auto stIt = graph.begin(); stIt != graph.end(); ++stIt) {
                 string st = stIt->first;
                 for (auto edIt = graph.begin(); edIt != graph.end(); ++edIt) {
                     string ed = edIt->first;
-                    // already computed
+                    // already computed. since there is no contradiction, there won't be a shorter path
                     if (graph[st].find(ed) != graph[st].end())
                         continue;
 
@@ -64,7 +81,7 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: Union find
 /* Java solution
 
  */
