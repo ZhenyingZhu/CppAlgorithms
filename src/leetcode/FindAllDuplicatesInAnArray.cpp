@@ -38,6 +38,8 @@ for (int &n : nums) cout << n << " "; cout << endl;
     }
 };
 
+// [Solution]: No need to bucket sort. Just tag that cell. The easist way is to set the cell number to be negative
+
 int main() {
     Solution sol;
     vector<int> nums = {4,3,2,7,8,2,3,1};
