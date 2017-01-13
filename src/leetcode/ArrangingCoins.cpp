@@ -29,7 +29,7 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: ax^2+bx+c=0, then x= -b +- sqrt(b^2 - 4ac) / 2a
 /* Java solution
 
  */
