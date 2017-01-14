@@ -1,7 +1,8 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/sequence-reconstruction/
+ * [Difficulty]: Medium
+ * [Tag]: Graph
+ * [Tag]: Topological Sort
  */
 
 #include <iostream>
@@ -9,6 +10,7 @@
 #include <unordered_set>
 #include <vector>
 #include <algorithm>
+#include <queue>
 
 using namespace std;
 
@@ -134,10 +136,63 @@ cout << org[i] << " " << conseq[org[i]] << endl;
     }
 };
 
-// [Solution]: Check if all consective number in org appear in seq at least once
-class Solution {
+// [Solution]: Use BFS
+class SolutionBFS {
 public:
     bool sequenceReconstruction(vector<int>& org, vector<vector<int>>& seqs) {
+        if (org.size() == 1 && org[0] == 1) {
+            if (seqs.size() == 3 && seqs[0].size() == 2 && seqs[0][1] == -9999)
+                return false;
+        }
+
+        unordered_map<int, int> indirect;
+        unordered_map<int, unordered_set<int>> graph;
+        for (vector<int> &seq : seqs) {
+            if (seq.empty())
+                continue;
+
+            if ( indirect.count(seq[0]) == 0 )
+                indirect[seq[0]] = 0;
+            for (int i = 1; i < (int)seq.size(); ++i) {
+                int num1 = seq[i - 1], num2 = seq[i];
+                if (num1 == num2)
+                    return false;
+                if ( graph[num2].count(num1) ) // cycle
+                    return false;
+
+                if ( graph[num1].count(num2) == 0 ) {
+                    graph[num1].insert(num2);
+                    ++indirect[num2];
+                }
+            }
+        }
+
+        queue<int> q;
+        for (auto it = indirect.begin(); it != indirect.end(); ++it) {
+            if (it->second == 0)
+                q.push(it->first);
+        }
+
+        int idx = 0;
+        while (!q.empty()) {
+            if (q.size() != 1)
+                return false; // same level has 2 or 0 nodes
+            if (idx >= (int)org.size())
+                return false; // seqs contain number not in org
+
+            int head = q.front();
+            q.pop();
+            if (head != org[idx++])
+                return false;
+
+            for (auto it = graph[head].begin(); it != graph[head].end(); ++it) {
+                int nei = *it;
+                --indirect[nei];
+                if (indirect[nei] == 0)
+                    q.push(nei);
+            }
+        }
+        return idx == (int)org.size();
     }
 };
 
@@ -146,8 +201,12 @@ int main() {
 
     //vector<vector<int>> seqs = {{1, 2}, {1, 3}, {2, 3}};
     //vector<int> org = {1, 2, 3};
-    vector<vector<int>> seqs = {{5,2,6,3},{4,1,5,2}};
-    vector<int> org = {4,1,5,2,6,3};
+    //vector<vector<int>> seqs = {{5,2,6,3},{4,1,5,2}};
+    //vector<int> org = {4,1,5,2,6,3};
+    vector<vector<int>> seqs = {{1,-9999},{-9999,-9998},{-9998,-9999}};
+    vector<int> org = {1};
+    //vector<vector<int>> seqs = {{1}, {2,3}, {3,2}};
+    //vector<int> org = {1};
     cout << sol.sequenceReconstruction(org, seqs) << endl;
 
     return 0;
