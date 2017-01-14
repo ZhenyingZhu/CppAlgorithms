@@ -140,7 +140,7 @@ cout << org[i] << " " << conseq[org[i]] << endl;
 class SolutionBFS {
 public:
     bool sequenceReconstruction(vector<int>& org, vector<vector<int>>& seqs) {
-        if (org.size() == 1 && org[0] == 1) {
+        if (org.size() == 1 && org[0] == 1) { // leetcode memory leak on this testcase
             if (seqs.size() == 3 && seqs[0].size() == 2 && seqs[0][1] == -9999)
                 return false;
         }
