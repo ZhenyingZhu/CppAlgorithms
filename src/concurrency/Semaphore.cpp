@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// [Source]: EPI Chapter 20 Intro
 class Semaphore {
 public:
     Semaphore(int maxAvailable):
@@ -49,10 +50,14 @@ int main() {
     thread t2(foo, 2, ref(s));
     thread t3(foo, 3, ref(s));
     thread t4(foo, 4, ref(s));
+    thread t5(foo, 5, ref(s));
+    thread t6(foo, 6, ref(s));
     t1.join();
     t2.join();
     t3.join();
     t4.join();
+    t5.join();
+    t6.join();
 
     return 0;
 }
