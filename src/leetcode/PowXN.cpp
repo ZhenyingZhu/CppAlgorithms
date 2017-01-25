@@ -12,6 +12,24 @@ using namespace std;
 // [Solution]: P(x,n)=P(x, n/2)*x^(n%2).
 // [Corner Case]: n<=0.
 class Solution {
+    double myPow(double x, int n) {
+        if (n == 0)
+            return 1.0;
+        if (n == 1)
+            return x;
+        if (n == -1)
+            return 1.0 / x;
+
+        double half = myPow(x, n / 2);
+        double tmp = half * half;
+        if (n % 2 == 0) {
+            return tmp;
+        } else if (n > 0) {
+            return tmp * x;
+        } else {
+            return tmp / x;
+        }
+    }
 };
 
 /* Java solution
@@ -38,6 +56,13 @@ public class Solution {
 
 int main() {
     Solution sol;
+    cout << sol.myPow(1.0, 1) << endl;
+    cout << sol.myPow(2.0, 2) << endl;
+    cout << sol.myPow(2.0, 3) << endl;
+    cout << sol.myPow(2.0, -1) << endl;
+    cout << sol.myPow(2.0, -2) << endl;
+
+    return 0;
 
     return 0;
 }

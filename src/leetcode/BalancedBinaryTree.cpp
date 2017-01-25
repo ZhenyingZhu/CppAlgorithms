@@ -12,6 +12,33 @@ using namespace std;
 // [Solution]: Count the height of left and right subtree, and compare.
 // [Corner Case]:
 class Solution {
+    struct HeightBalance {
+        int height;
+        bool balance;
+    };
+
+    bool isBalance(TreeNode *root) {
+        if (root == NULL)
+            return true;
+
+        return helper(root).balance;
+    }
+
+    HeightBalance helper(TreeNode *node) {
+        if (node == NULL)
+            return {0, true};
+
+        HeightBalance hbLeft = helper(node->left);
+        HeightBalance hbRight = helper(node->right);
+
+        if (!hbLeft.balance || !hbRight.balance)
+            return {0, false};
+
+        if ( abs(hbLeft.height - hbRight.height) > 1 )
+            return {0, false};
+
+        return { 1 + max(hbLeft.height, hbRight.height), true };
+    }
 };
 
 /* Java solution
