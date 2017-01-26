@@ -80,7 +80,7 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: DP, D[i][j] is the max money first player can get. If pick i, next player's can pick i+1 or j. Since he is play wisely, we can only pick the min value. So D[i][j]= 1. num[i] + min(D[i+1][j-1], D[i+2][j]), or 2. num[j] + min(D[i+1][j-1], D[i][j-2]). Find the max.
 /* Java solution
 
  */
