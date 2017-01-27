@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// [Solution]: Do it in reverse order. Use a stack.
+// [Solution]: Do it in reverse order. Use a stack. The idea is that we need find a2>a3>a1, so each time when check a1, we need make sure there is already a pair of a2>a3. Since a3 should after a2, so do it in reverse order. Each number as a1 first compare to a3, if it is not larger than a3, it cannot use as a1, so compare it to a2. If it is smaller than current a2, it can be a2, and in the future can be a3. If the number is larger than current a2, then current a2 can be a3, and this number replace a2. Notice we want a largest a3, so use a stack to store a2(a3 candidate)
 // [Corner Case]:
 class Solution {
 public:
