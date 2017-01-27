@@ -12,6 +12,25 @@ using namespace std;
 // [Solution]: From 1, to x/2, find if i*i <= x, and (i+1)*(i+1) > x.
 // [Corner Case]: x=0 ~ x=4. 
 class Solution {
+public:
+    int mySqrt(int x) {
+        if (x == 0 || x == 1)
+            return x;
+
+        int left = 1, right = x / 2;
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if (mid < x / mid) {
+                left = mid;
+            } else {
+                right = mid;
+            }
+        }
+
+        if (right <= x / right)
+            return right;
+        return left;
+    }
 };
 
 /* Java solution
