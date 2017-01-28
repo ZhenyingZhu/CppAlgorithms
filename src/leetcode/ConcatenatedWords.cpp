@@ -59,6 +59,7 @@ public:
     }
 };
 
+// [Solution]: use trie tree to store previous words. now check current string is first part of it is in the trie. if so, from next char, search from the root again
 class Solution {
 public:
     vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {
@@ -67,6 +68,9 @@ public:
         vector<string> res;
         root = new TrieNode();
         for (string &str : words) {
+            if (str.empty())
+                continue;
+
             if ( dfs(root, str, 0, 0) ) {
                 res.push_back(str);
             } else {
@@ -136,7 +140,8 @@ int main() {
     Solution sol;
 
     //vector<string> words = {"cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"};
-    vector<string> words = {"cat","dog","catdog"};
+    //vector<string> words = {"cat","dog","catdog"};
+    vector<string> words = {"","a","a","ab"};
     for (string &str : sol.findAllConcatenatedWordsInADict(words))
         cout << str << " ";
     cout << endl;
