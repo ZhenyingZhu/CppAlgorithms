@@ -31,7 +31,7 @@ public:
     }
 };
 
-// [Solution]: Not complete. I think a trie tree might helpful?
+// [Solution]: Use a map to store all indexes of each char. So when a new s comes, check each char to find the smallest idx after previous char use binary search.
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
