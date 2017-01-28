@@ -9,13 +9,14 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <unordered_map>
 #include <algorithm>
 
 using namespace std;
 
 // [Solution]: Sort the string from short to long. Then try break current string with previous strings
 // [Corner Case]:
-class Solution {
+class SolutionSet {
 public:
     static bool compare(const string &s1, const string &s2) {
         return s1.length() < s2.length();
@@ -34,7 +35,7 @@ public:
         for (int i = 1; i < (int)words.size(); ++i) {
             string &str = words[i];
             if (canConstruct(str, minLen, wordSet)) {
-                res.push_back(str);
+                res.push_back(str); // no need to insert this word into wordset
             }
             wordSet.insert(str);
         }
@@ -58,10 +59,84 @@ public:
     }
 };
 
+class Solution {
+public:
+    vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {
+        sort(words.begin(), words.end(), compare);
+
+        vector<string> res;
+        root = new TrieNode();
+        for (string &str : words) {
+            if ( dfs(root, str, 0, 0) ) {
+                res.push_back(str);
+            } else {
+                insert(str);
+            }
+        }
+
+        delete root;
+        return res;
+    }
+
+private:
+    struct TrieNode {
+        unordered_map<char, TrieNode*> children;
+        bool isWord;
+
+        TrieNode(): isWord(false) { }
+
+        ~TrieNode() {
+            for (auto it = children.begin(); it != children.end(); ++it)
+                delete it->second;
+        }
+    };
+
+private:
+    static bool compare(const string &s1, const string &s2) {
+        return s1.length() < s2.length();
+    }
+
+    void insert(string &word) {
+        TrieNode *run = root;
+        for (char &c : word) {
+            if ( run->children.count(c) == 0 )
+                run->children[c] = new TrieNode();
+            run = run->children[c];
+        }
+        run->isWord = true;
+    }
+
+    bool dfs(TrieNode *node, string &word, int pos, int wordNum) {
+        if (pos == (int)word.length()) {
+            if (node->isWord && wordNum >= 1)
+                return true;
+            return false;
+        }
+
+        char c = word[pos];
+        if (node->children.count(c) == 0)
+            return false;
+
+        TrieNode *run = node->children[c];
+        if (run->isWord) {
+            if (dfs(root, word, pos + 1, wordNum + 1)) // start a new word
+                return true;
+        }
+
+        if (dfs(run, word, pos + 1, wordNum))
+            return true;
+        return false;
+    }
+
+private:
+    TrieNode *root;
+};
+
 int main() {
     Solution sol;
 
-    vector<string> words = {"cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"};
+    //vector<string> words = {"cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"};
+    vector<string> words = {"cat","dog","catdog"};
     for (string &str : sol.findAllConcatenatedWordsInADict(words))
         cout << str << " ";
     cout << endl;
