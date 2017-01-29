@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// [Source]: http://www.meetqun.net/thread-43863-1-1.html
 class Solution {
 public:
     vector<vector<int>> findTriangle(vector<int> &edges) {

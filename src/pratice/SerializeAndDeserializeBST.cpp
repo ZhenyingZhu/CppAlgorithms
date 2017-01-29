@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// [Source]: http://www.meetqun.net/thread-44981-1-1.html
 struct TreeNode {
     int val;
     TreeNode *left, *right;
