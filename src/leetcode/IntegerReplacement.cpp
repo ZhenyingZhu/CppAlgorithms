@@ -72,7 +72,7 @@ public:
     }
 };
 
-// [Solution]: If an odd number + 1 equals to multiple of 4, then add 1, otherwise minus one
+// [Solution]: If an odd number + 1 equals to multiple of 4, then add 1, otherwise minus one. It is because divide 2 equals shift right. If an odd number becomes multiple of 4, it can shift twice. After 3 it is always no expensiver than minus 1.
 
 int main() {
     Solution sol;
