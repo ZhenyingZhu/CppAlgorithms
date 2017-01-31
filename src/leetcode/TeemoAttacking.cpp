@@ -1,7 +1,7 @@
 /*
  * [Source] https://leetcode.com/problems/teemo-attacking/
  * [Difficulty]: Medium
- * [Tag]: 
+ * [Tag]: Array
  */
 
 #include <iostream>
