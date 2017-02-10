@@ -74,6 +74,7 @@ public:
         for (int i = 0; i < n; ++i) {
             if (i == left)
                 continue;
+            // Need two check. First check is that a personal can be known by others but he also know one before him.
             if (!knows(i, left) || knows(left, i))
                 return -1;
         }
