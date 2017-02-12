@@ -5,6 +5,7 @@ using namespace std;
 
 // [Source]: http://www.1point3acres.com/bbs/thread-225497-1-1.html
 // http://www.1point3acres.com/bbs/thread-203816-1-1.html
+// http://www.1point3acres.com/bbs/thread-222643-1-1.html
 
 struct Node {
     Node(int x): val(x), up(NULL), down(NULL), left(NULL), right(NULL) { }
