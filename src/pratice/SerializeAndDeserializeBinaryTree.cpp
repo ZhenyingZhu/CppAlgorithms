@@ -5,6 +5,8 @@
 using namespace std;
 
 // [Source]: http://www.meetqun.net/thread-44981-1-1.html
+// https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+// http://www.1point3acres.com/bbs/thread-223433-1-1.html
 
 struct TreeNode {
     int val;
