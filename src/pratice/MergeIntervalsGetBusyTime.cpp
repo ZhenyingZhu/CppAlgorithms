@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <map>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ struct Interval {
 
 class MergedIntervalsLinkedList {
 public:
-    MergedIntervals(): totalTime(0) {
+    MergedIntervalsLinkedList(): totalTime(0) {
     }
 
     void addInterval(Interval interval) {
@@ -63,10 +64,49 @@ private:
     int totalTime;
 };
 
+class MergedIntervals {
+public:
+    void addInterval(Interval interval) {
+        int end = interval.end;
+        if (stEdMap.count(interval.start)) {
+            end = max(stEdMap[interval.start], end);
+        }
+        stEdMap[interval.start] = end;
+    }
+
+    int getTotalBusyTime() {
+        if (stEdMap.empty())
+            return 0;
+
+        int totalTime = 0;
+        int st = stEdMap.begin()->first, ed = stEdMap.begin()->second;
+        for (auto it = stEdMap.begin(); it != stEdMap.end(); ++it) {
+            if (it->first > ed) {
+                totalTime += ed - st;
+                st = it->first;
+                ed = it->second;
+            } else {
+                ed = max(ed, it->second);
+            }
+        }
+        totalTime += ed - st;
+        return totalTime;
+    }
+
+    void printIntervals() {
+        for (auto it = stEdMap.begin(); it != stEdMap.end(); ++it) {
+            cout << "[" << it->first << "," << it->second << "] " << endl;
+        }
+    }
+
+private:
+    map<int, int> stEdMap;
+};
+
 int main() {
     MergedIntervals mi;
 
-    vector<Interval> input = { {1,3}, {5,6}, {2,5} };
+    vector<Interval> input = { {1,3}, {4,6}, {2,5}, {4,7} };
     for (Interval &i : input) {
         mi.addInterval(i);
         mi.printIntervals();
