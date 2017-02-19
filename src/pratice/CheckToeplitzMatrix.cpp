@@ -27,8 +27,10 @@ public:
         bool res = true;
         while (st < h) {
             int ed = min(h, st + h / n);
+            // put into a thread
             res &= helper(matrix, st, ed);
             if (ed < h) {
+                // put into a thread
                 res &= helper(matrix, ed - 1, ed + 1);
             }
             st = ed;
@@ -38,6 +40,7 @@ public:
 
 private:
     bool helper(vector<vector<int>> &matrix, int st, int ed) {
+        // pass in bool res, and lock it when trying to modify it
         int w = matrix[0].size();
         for (int i = st + 1; i < ed; ++i) {
             for (int j = 1; j < w; ++j) {
