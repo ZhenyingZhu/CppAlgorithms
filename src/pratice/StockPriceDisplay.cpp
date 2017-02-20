@@ -6,6 +6,7 @@
 using namespace std;
 
 // [Source]: http://www.1point3acres.com/bbs/thread-225703-1-1.html
+// http://www.1point3acres.com/bbs/thread-229745-1-1.html
 
 class PriceSystem {
 public:
