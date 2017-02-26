@@ -5,6 +5,7 @@
 using namespace std;
 
 // [Source]: https://leetcode.com/problems/basic-calculator/?tab=Description
+// https://leetcode.com/problems/basic-calculator-ii/?tab=Description
 // http://www.1point3acres.com/bbs/thread-229660-1-1.html
 
 class Solution {
@@ -49,7 +50,7 @@ public:
                 vals.push(val);
             } else {
                 char op = s[i++];
-                if (!ops.empty() && priority[op] <= priority[ops.top()]) {
+                while (!ops.empty() && priority[op] <= priority[ops.top()]) {
                     compute(ops, vals);
                 }
                 ops.push(op);
@@ -69,6 +70,7 @@ public:
         vals.pop();
         int val1 = vals.top();
         vals.pop();
+        cout << val1 << op << val2 << endl;
 
         int val;
         switch(op) {
@@ -91,7 +93,8 @@ public:
 int main() {
     Solution sol;
 
-    cout << sol.calculate("1 + 3*(2+3*2)") << endl;
+    //cout << sol.calculate("1 + 3*(2+3*2)") << endl;
+    cout << sol.calculate("1*2-3/4+5*6-7*8+9/10") << endl;
 
     return 0;
 }
