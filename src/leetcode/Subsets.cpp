@@ -50,6 +50,8 @@ public class Solution {
 }
  */
 
+// [Solution]: DP, same as change coins, inner loop traverse all coins, outer loop traver from 1 to target
+
 int main() {
     Solution sol;
 
