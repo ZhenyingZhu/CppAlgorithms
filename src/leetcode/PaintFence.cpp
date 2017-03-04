@@ -19,7 +19,9 @@ public:
         vector<int> same(n, 0), diff(n, 0);
         diff[0] = k;
         for (int i = 1; i < n; ++i) {
+            // current fence and previous fence paint differently
             diff[i] = diff[i - 1] * (k - 1) + same[i - 1] * (k - 1);
+            // current fence and previous fence paint same
             same[i] = diff[i - 1];
         }
         return diff.back() + same.back();

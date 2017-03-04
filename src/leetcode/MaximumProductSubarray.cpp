@@ -15,6 +15,45 @@ using namespace std;
 // [Corner Case]:
 class Solution {
 public:
+    int maxProduct(vector<int> &nums) {
+        int localMin = 1, localMax = 1;
+        int globalMax = INT_MIN;
+        for (int &num : nums) {
+cout << num << endl;
+            if (num > 0) {
+                localMax = localMax * num;
+                localMin = min(localMin * num, 1);
+            } else if (num < 0) {
+                int tmp = localMin;
+                localMin = localMax * num;
+                if (tmp < 0) {
+                    // this leads to localMax can still be the result
+                    // need to exit earlier, otherwise use the globalMax check at the end will conduct wrong answer
+                    localMax = tmp * num;
+                    globalMax = max(globalMax, localMax);
+cout << localMax << " " << localMin << " " << globalMax << endl;
+                    continue;
+                } else {
+                    localMax = 1;
+                }
+            } else {
+                localMin = 1;
+                localMax = 1;
+            }
+
+            if (num <= 0) {
+                globalMax = max(globalMax, num);
+            } else {
+                globalMax = max(globalMax, localMax);
+            }
+cout << localMax << " " << localMin << " " << globalMax << endl;
+        }
+        return globalMax;
+    }
+};
+
+class SolutionChaos {
+    public:
     int maxProduct(vector<int>& nums) {
         if (nums.empty())
             return 0;
@@ -94,10 +133,10 @@ public class MaximumProductSubarray {
 int main() {
     Solution sol;
 
-    //vector<int> nums = {2, 3, -2, 4, -2};
-    //vector<int> nums = {-2};
-    //vector<int> nums = {2,-5,-2,-4,3};
-    vector<int> nums = {-1, -2, -9, -6};
+    //vector<int> nums = {2, 3, -2, 4, -2}; // 96
+    //vector<int> nums = {-2}; // -2
+    //vector<int> nums = {2,-5,-2,-4,3}; // 24
+    vector<int> nums = {-1, -2, -9, -6}; // 108
     cout << sol.maxProduct(nums) << endl;
 
     return 0;

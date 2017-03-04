@@ -10,7 +10,7 @@
 
 using namespace std;
 
-// [Solution]: Use a three demension DP
+// [Solution]: Use a two demension DP. D[i][j]=min(D[i-1][x])+cost[i][j], where (x!=j)
 // [Corner Case]:
 class Solution {
 public:

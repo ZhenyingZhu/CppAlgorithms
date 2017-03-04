@@ -41,12 +41,12 @@ public:
 
         int pathLen = 0;
         int curVal = matrix[x][y];
-        matrix[x][y] = INT_MIN; // avoid cycle
+        //matrix[x][y] = INT_MIN; // avoid cycle is that necessary?
         pathLen = max(dfs(matrix, longestPath, x - 1, y, curVal, maxLen), pathLen);
         pathLen = max(dfs(matrix, longestPath, x + 1, y, curVal, maxLen), pathLen);
         pathLen = max(dfs(matrix, longestPath, x, y - 1, curVal, maxLen), pathLen);
         pathLen = max(dfs(matrix, longestPath, x, y + 1, curVal, maxLen), pathLen);
-        matrix[x][y] = curVal;
+        //matrix[x][y] = curVal;
 
         maxLen = max(pathLen + 1, maxLen);
         longestPath[x][y] = pathLen + 1;

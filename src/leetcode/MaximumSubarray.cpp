@@ -7,12 +7,23 @@
  */
 
 #include <iostream>
+#include <vector>
+#include <climits>
 
 using namespace std;
 
 // [Solution]: Keep add to sum. If smaller than 0, reset sum to be 0.
 // [Corner Case]: If all cells are negative. If first cell is negative.
 class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int local = 0, global = INT_MIN;
+        for (int & num : nums) {
+            local = max(num, local + num);
+            global = max(global, local);
+        }
+        return global;
+    }
 };
 
 /* Java solution
@@ -51,6 +62,9 @@ public class Solution {
 
 int main() {
     Solution sol;
+
+    vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
+    cout << sol.maxSubArray(nums) << endl;
 
     return 0;
 }
