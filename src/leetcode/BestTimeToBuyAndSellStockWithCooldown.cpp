@@ -15,6 +15,23 @@ using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
+        int size = prices.size();
+        if (size <= 1)
+            return 0;
+
+        vector<int> sell(size, 0), notsell(size, 0);
+        sell[1] = prices[1] - prices[0];
+        for (int i = 2; i < size; ++i) {
+            notsell[i] = max(sell[i - 1], notsell[i - 1]);
+            sell[i] = prices[i] - prices[i - 1] + max(sell[i - 1], notsell[i - 2]); // i-2 because i-1 is the start day of this sell
+        }
+        return max(sell.back(), notsell.back());
+    }
+};
+
+class SolutionOneArray {
+public:
+    int maxProfit(vector<int>& prices) {
         int maxProfit = 0;
         vector<int> dp(prices.size() + 2, 0);
         for (size_t ed = 1; ed < prices.size(); ++ed) {
@@ -38,8 +55,8 @@ int main() {
     Solution sol;
 
     //vector<int> prices = {1, 2, 3, 0, 2};
-    //vector<int> prices = {1, 7, 2, 4};
-    vector<int> prices = {6, 1, 6, 4, 3, 0, 2};
+    vector<int> prices = {1, 7, 2, 4}; // 6
+    //vector<int> prices = {6, 1, 6, 4, 3, 0, 2}; // 7
     cout << sol.maxProfit(prices) << endl;
 
     return 0;
