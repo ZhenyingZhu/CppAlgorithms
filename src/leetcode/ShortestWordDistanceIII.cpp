@@ -6,12 +6,37 @@
 
 #include <iostream>
 #include <vector>
+#include <climits>
 
 using namespace std;
 
+// [Solution]: One pass
+class Solution {
+public:
+    int shortestDistance(vector<string>& words, string word1, string word2) {
+        int pt1 = -1, pt2 = -1;
+
+        int minDis = INT_MAX;
+        for (int i = 0; i < (int)words.size(); ++i) {
+            if (words[i] == word1) {
+                if (pt2 != -1)
+                    minDis = min(minDis, i - pt2);
+                pt1 = i;
+            }
+            
+            if (words[i] == word2) {
+                if (pt1 != -1 && pt1 != i)
+                    minDis = min(minDis, i - pt1);
+                pt2 = i;
+            }
+        }
+        return minDis;
+    }
+};
+
 // [Solution]: Compare between indexes. No need to do it in O(n^2). Always move the smaller index ahead. When two words are same, they have same indexes. Use move one to the next
 // [Corner Case]:
-class Solution {
+class SolutionStoreFirst {
 public:
     int shortestDistance(vector<string>& words, string word1, string word2) {
         vector<int> word1Idx, word2Idx;
