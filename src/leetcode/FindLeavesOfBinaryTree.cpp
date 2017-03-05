@@ -17,9 +17,41 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+// [Solution]: Actually remove leaves
+class Solution {
+public:
+    vector<vector<int>> findLeaves(TreeNode* root) {
+        vector<vector<int>> res;
+        while (root != NULL) {
+            vector<int> leaves;
+            if (dfs(root, leaves)) {
+                root = NULL;
+            }
+            res.push_back(leaves);
+        }
+        return res;
+    }
+
+    bool dfs(TreeNode *node, vector<int> &leaves) {
+        if (node == NULL)
+            return true;
+
+        if (node->left == NULL && node->right == NULL) {
+            leaves.push_back(node->val);
+            return true;
+        }
+
+        if (dfs(node->left, leaves))
+            node->left = NULL;
+        if (dfs(node->right, leaves))
+            node->right = NULL;
+        return false;
+    }
+};
+
 // [Solution]:
 // [Corner Case]:
-class Solution {
+class SolutionNotRemove {
 public:
     vector<vector<int>> findLeaves(TreeNode* root) {
         vector<vector<int>> res;
