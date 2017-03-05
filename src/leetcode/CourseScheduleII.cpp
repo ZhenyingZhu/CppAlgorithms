@@ -13,12 +13,53 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <climits>
+#include <algorithm>
 
 using namespace std;
 
 // [Solution]: Use a hash map to indicate depth. When depth is INT_MAX, means visiting; when it is another int, means visited. So when found a child is visiting, cycle detected. Otherwise the depth of current node is the max depth of all children + 1.
 // [Corner Case]:
 class Solution {
+public:
+    vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites) {
+        unordered_map<int, vector<int>> graph;
+        for (int i = 0; i < numCourses; ++i)
+            graph[i];
+        for (pair<int, int> &edge : prerequisites) {
+            graph[edge.first].push_back(edge.second);
+        }
+
+        vector<int> res;
+        unordered_set<int> visiting, visited;
+        for (auto it = graph.begin(); it != graph.end(); ++it) {
+            if (!dfs(it->first, graph, visiting, visited, res))
+                return {};
+        }
+
+        //reverse(res.begin(), res.end()); // The dependency relation is different
+        return res;
+    }
+
+    bool dfs(int node, unordered_map<int, vector<int>> &graph, unordered_set<int> &visiting, unordered_set<int> &visited, vector<int> &res) {
+        if (visiting.count(node))
+            return false;
+
+        visiting.insert(node);
+        for (int &neighbor : graph[node]) {
+            if (!dfs(neighbor, graph, visiting, visited, res))
+                return false;
+        }
+
+        visiting.erase(node);
+        if (!visited.count(node)) {
+            res.push_back(node);
+            visited.insert(node);
+        }
+        return true;
+    }
+};
+
+class SolutionChaos {
 public:
     vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites) {
         unordered_map<int, unordered_set<int>> graph;
