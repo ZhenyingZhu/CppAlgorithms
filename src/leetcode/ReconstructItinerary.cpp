@@ -11,12 +11,38 @@
 #include <utility>
 #include <vector>
 #include <string>
+#include <queue>
 
 using namespace std;
 
+// [Solution]: https://en.wikipedia.org/wiki/Eulerian_path
+class Solution {
+public:
+    vector<string> findItinerary(vector<pair<string, string>> tickets) {
+        unordered_map<string, priority_queue<string, vector<string>, greater<string>>> graph;
+        for (pair<string, string> &edge : tickets) {
+            graph[edge.first].push(edge.second);
+        }
+
+        vector<string> res;
+        dfs("JFK", graph, res);
+        reverse(res.begin(), res.end());
+        return res;
+    }
+
+    void dfs(string node, unordered_map<string, priority_queue<string, vector<string>, greater<string>>> &graph, vector<string> &res) {
+        while (!graph[node].empty()) {
+            string neighbor = graph[node].top();
+            graph[node].pop();
+            dfs(neighbor, graph, res);
+        }
+        res.push_back(node);
+    }
+};
+
 // [Solution]: Use dfs. Need to notice need to visit all pathes, so can reach a node more than twice, but every path only once.
 // [Corner Case]:
-class Solution {
+class SolutionSelf {
 public:
     struct VecWithIter {
         VecWithIter() {}
@@ -93,7 +119,8 @@ int main() {
     Solution sol;
 
     //vector<pair<string, string>> tickets = {{"MUC", "LHR"}, {"JFK", "MUC"}, {"SFO", "SJC"}, {"LHR", "SFO"}};
-    vector<pair<string, string>> tickets = {{"JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"}};
+    //vector<pair<string, string>> tickets = {{"JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"}};
+    vector<pair<string, string>> tickets = {{"JFK", "AAA"}, {"JFK", "BBB"}, {"BBB", "JFK"}, {"BBB", "AAA"}, {"AAA", "BBB"}};
 
     vector<string> res = sol.findItinerary(tickets);
     for (string &str : res)
