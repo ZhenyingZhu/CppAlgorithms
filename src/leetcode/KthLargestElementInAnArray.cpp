@@ -41,7 +41,7 @@ cout << endl;
 };
 
 // [Solution]: Use a k size min heap to insert the candidates. O(logkN)
-class Solution {
+class SolutionHeap {
 public:
     int findKthLargest(vector<int>& nums, int k) {
         vector<int> heap = {INT_MIN};
@@ -101,12 +101,54 @@ printVec(heap);
 };
 
 // [Solution]: Use a pivot and part array into two. Count the number before pivot and divide and conquer
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        int len = nums.size();
+        if (k <= 0)
+            k = 0;
+        else if (k >= len)
+            k = len - 1;
+        else
+            k = k - 1;
+
+        return helper(k, nums, 0, len - 1);
+    }
+
+    int helper(int k, vector<int> &nums, int st, int ed) {
+//cout << "k: " << k << " st: " << st << " ed: " << ed << endl;
+
+        // three way partition
+        int pivot = nums[ed];
+        int larger = st, smaller = ed;
+        int cur = st;
+        while (cur <= smaller) {
+            if (nums[cur] < pivot) {
+                swap(nums[cur], nums[smaller--]);
+            } else if (nums[cur] > pivot) {
+                swap(nums[cur++], nums[larger++]);
+            } else {
+                ++cur;
+            }
+        }
+
+//for (int i = st; i <= ed; ++i) cout << nums[i] << " "; cout << endl;
+//cout << "st: " << st << " pivot: " << pivot << ": " << larger << ", " << smaller << endl;
+
+        if (k >= larger && k <= smaller)
+            return nums[k];
+        if (k < larger)
+            return helper(k, nums, st, larger - 1);
+        return helper(k, nums, smaller + 1, ed);
+    }
+};
 
 int main() {
     Solution sol;
 
     vector<int> nums = {3,2,1,5,6,4};
-    cout << sol.findKthLargest(nums, 2) << endl;
+    for (int i = 1; i <= nums.size(); ++i)
+        cout << sol.findKthLargest(nums, i) << endl;
 
     return 0;
 }
