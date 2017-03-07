@@ -10,9 +10,21 @@
 
 using namespace std;
 
+class Solution {
+public:
+    vector<int> countBits(int num) {
+        vector<int> res(num + 1);
+        res[0] = 0;
+        for (int i = 1; i <= num; ++i) {
+            res[i] = res[i & (i - 1)] + 1; // like 110 has 2 bits which is res[100] + 1 bit.
+        }
+        return res;
+    }
+};
+
 // [Solution]: Each number after a 2^n is 1 + num - 2^n.
 // [Corner Case]:
-class Solution {
+class SolutionSelf {
 public:
     vector<int> countBits(int num) {
         vector<int> res(num + 1, 0);
