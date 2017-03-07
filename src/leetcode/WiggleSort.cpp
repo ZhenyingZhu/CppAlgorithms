@@ -23,7 +23,7 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: As swap numbers does change previous order
 class Solution {
 public:
     void wiggleSort(vector<int>& nums) {
