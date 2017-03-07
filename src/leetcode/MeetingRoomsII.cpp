@@ -52,7 +52,7 @@ private:
 
     static bool smaller(const Point &p1, const Point &p2) {
         if (p1.val == p2.val)
-            return !p1.isStart;
+            return !p1.isStart && p2.isStart;
         return p1.val < p2.val;
     }
 };
