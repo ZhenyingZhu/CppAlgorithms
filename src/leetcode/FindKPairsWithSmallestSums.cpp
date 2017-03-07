@@ -70,7 +70,7 @@ cout << endl;
     }
 };
 
-// [Solution]:
+// [Solution]: First push k elements from nums1 + nums2[0] to the pq, then just move nums2 pt ahead
 /* Java solution
 
  */
