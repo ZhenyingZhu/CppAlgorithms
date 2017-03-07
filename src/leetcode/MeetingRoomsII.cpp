@@ -21,9 +21,45 @@ struct Interval {
     Interval(int s, int e) : start(s), end(e) {}
 };
 
+// [Solution]: Scan line algorithm
+class Solution {
+public:
+    int minMeetingRooms(vector<Interval>& intervals) {
+        vector<Point> points;
+        for (Interval &interval : intervals) {
+            points.push_back( {interval.start, true} );
+            points.push_back( {interval.end, false} );
+        }
+        sort(points.begin(), points.end(), smaller);
+
+        int maxOverlap = 0, cnt = 0;
+        for (Point &point : points) {
+            if (point.isStart) {
+                ++cnt;
+                maxOverlap = max(cnt, maxOverlap);
+            } else {
+                --cnt;
+            }
+        }
+        return maxOverlap;
+    };
+
+private:
+    struct Point {
+        int val;
+        bool isStart;
+    };
+
+    static bool smaller(const Point &p1, const Point &p2) {
+        if (p1.val == p2.val)
+            return !p1.isStart;
+        return p1.val < p2.val;
+    }
+};
+
 // [Solution]: Use a priority queue to store ends. Every time pick the smallest end and see if the new interval and fit into this room. Otherwise increase the room number
 // [Corner Case]:
-class Solution {
+class SolutionQueue {
 public:
     static bool smaller(const Interval &int1, const Interval &int2) {
         return int1.start < int2.start;
