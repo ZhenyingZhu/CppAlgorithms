@@ -62,7 +62,8 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: Use BFS where squares are elements and level is the step
+// [Solution]: Backpack
 /* Java solution
 
  */
