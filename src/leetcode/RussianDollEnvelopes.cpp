@@ -14,7 +14,7 @@ using namespace std;
 
 // [Solution]: Sort the array by first, then use 2D DP.
 // [Corner Case]:
-class Solution {
+class Solution2D {
 public:
     static bool smaller(const pair<int, int> &p1, const pair<int, int> &p2) {
         if (p1.first < p2.first) {
@@ -50,49 +50,57 @@ public:
 
         return res;
     }
+};
 
-/* Trying to use O(nlogn) DP but too complicate. Can sort with second desc
-    int maxEnvelopesNotFinish(vector<pair<int, int>>& envelopes) {
+// [Solution]: LIS
+class Solution {
+public:
+    int maxEnvelopes(vector<pair<int, int>>& envelopes) {
         sort(envelopes.begin(), envelopes.end(), smaller);
-
-for (pair<int, int> &p : envelopes)
-    cout << p.first << "," << p.second << " ";
-cout << endl;
-
-        vector<pair<int, int>> lastOfLen;
+        
+        vector<int> heightLIS;
         for (pair<int, int> &envelope : envelopes) {
-            int lastSmaller = binarySearch(lastOfLen, envelope);
+            int lastSmaller = binarySearch(heightLIS, envelope.second);
 
-            if (lastSmaller == (int)lastOfLen.size()) {
-                lastOfLen.push_back(envelope);
+            if (lastSmaller + 1 == (int)heightLIS.size()) {
+                heightLIS.push_back(envelope.second);
             } else {
-                pair<int, int> &small = lastOfLen[lastSmaller];
-                // lastSmaller cannot be same as envelope
-                // 1. lastSmaller has same first
-                if (small.first == envelope.first) {
-                    // envelope cannot be the next one, and lastSmaller has smaller second
-                    continue;
-                }
-
-                // 2. lastSmaller has same second
-                if (small.second == envelope.second) {
-                    // envelope cannot be the next one, and lastSmaller has smaller first
-                    continue;
-                }
-
-                // 3. Too complicate.
+                heightLIS[lastSmaller + 1] = envelope.second;
             }
         }
 
-        return 0;
+        return heightLIS.size();
     }
-*/
+
+private:
+    static bool smaller(const pair<int, int> &p1, const pair<int, int> &p2) {
+        if (p1.first < p2.first)
+            return true;
+        if (p1.first == p2.first && p1.second > p2.second)
+            return true;
+        return false;
+    }
+
+    int binarySearch(vector<int> &nums, int target) {
+        if (nums.empty())
+            return -1;
+
+        int left = 0, right = nums.size() - 1;
+        // the last smaller than target
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] >= target)
+                right = mid;
+            else
+                left = mid;
+        }
+        if (nums[right] < target)
+            return right;
+        if (nums[left] < target)
+            return left;
+        return -1;
+    }
 };
-
-// [Solution]:
-/* Java solution
-
- */
 
 int main() {
     Solution sol;
