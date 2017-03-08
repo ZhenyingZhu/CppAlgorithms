@@ -14,12 +14,13 @@
 #include <functional>
 #include <algorithm>
 #include <list>
+#include <map>
 
 using namespace std;
 
 // [Solution]: Basically make end columns sort as high to low, first to last. When hit a start point, print all previous end columns. Print start column if it should print
 // [Corner Case]:
-class Solution {
+class SolutionPriorityQueue {
 public:
     struct EndHeight {
         int end;
@@ -84,7 +85,57 @@ public:
     }
 };
 
-// [Solution]:
+// [Solution]: Scan line
+class Solution {
+public:
+    vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
+        vector<Point> points;
+        for (vector<int> &building : buildings) {
+            points.push_back( {building[0], -building[2]} );
+            points.push_back( {building[1], building[2]} );
+        }
+        sort(points.begin(), points.end());
+
+        map<int, int, greater<int>> heightCnt;
+        heightCnt[0] = 1;
+
+        vector<pair<int, int>> res;
+        int preHeight = 0;
+        for (Point &point : points) {
+cout << point.x << "," << point.y << endl;
+            if (point.y > 0) {
+                heightCnt[point.y]--;
+                if (heightCnt[point.y] == 0)
+                    heightCnt.erase(point.y);
+            } else {
+                heightCnt[-point.y]++;
+            }
+
+            int curHeight = heightCnt.begin()->first;
+            if (curHeight != preHeight) {
+                res.push_back( {point.x, curHeight} );
+                preHeight = curHeight;
+            }
+        }
+        return res;
+    }
+
+private:
+    struct Point {
+        int x, y;
+        bool operator<(const Point &other) const {
+            // 1. if two points are all start, larger one should come first to cover the second one
+            // 2. if two points are all end, smaller one should come first so that the larger one will deleted after it, and not create a dot of the smaller one
+            // 3. if one start one end, start should come first, so that not goes to lower
+            if (x < other.x)
+                return true;
+            if (x == other.x && y < other.y)
+                return true;
+            return false;
+        }
+    };
+};
+
 /* Java solution
 
  */
@@ -93,8 +144,9 @@ int main() {
     Solution sol;
 
     //vector<vector<int>> buildings = {{2, 9, 10}, {3, 7, 15}, {5, 12, 12}, {15, 20, 10}, {19, 24, 8}};
+    vector<vector<int>> buildings = {{2, 9, 10}, {2, 7, 15}};
     //vector<vector<int>> buildings = {{3,10,20},{3,9,19},{3,8,18},{3,7,17},{3,6,16},{3,5,15},{3,4,14}};
-    vector<vector<int>> buildings = {{2,4,70},{3,8,30},{6,100,41},{7,15,70},{10,30,102},{15,25,76},{60,80,91},{70,90,72},{85,120,59}};
+    //vector<vector<int>> buildings = {{2,4,70},{3,8,30},{6,100,41},{7,15,70},{10,30,102},{15,25,76},{60,80,91},{70,90,72},{85,120,59}};
     vector<pair<int, int>> res = sol.getSkyline(buildings);
     for (pair<int, int>& p : res) {
         cout << "(" << p.first << "," << p.second << ") ";
