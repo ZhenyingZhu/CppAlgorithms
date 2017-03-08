@@ -95,7 +95,7 @@ cout << first << " " << second << " " << third << endl;
     }
 };
 
-// [Solution]: 
+// [Solution]: Acually it is LIS 
 class Solution {
 public:
     bool increasingTriplet(vector<int>& nums) {
