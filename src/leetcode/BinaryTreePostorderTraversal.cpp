@@ -53,6 +53,40 @@ public:
     }
 };
 
+// [Solution]:
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        if (root == NULL)
+            return {};
+
+        vector<int> res;
+        stack<TreeNode*> stack;
+        TreeNode *run = root;
+        while (!stack.empty() || run != NULL) {
+            while (run != NULL) {
+                stack.push(run);
+                run = run->left;
+            }
+
+            TreeNode *prev = NULL;
+            while (!stack.empty()) {
+                run = stack.top();
+                if (run->right == prev) {
+                    res.push_back(run->val);
+                    prev = run;
+                    stack.pop();
+                    run = NULL;
+                } else {
+                    run = run->right;
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+};
+
 // [Solution]: Push root into stack twice. First push all left. Then get the last one, and check if its right is NULL. Then in a loop get all printable nodes. Push the right child of last node and continue.
 /* Java solution
 https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/treeandgraph/BinaryTreePostorderTraversal.java
