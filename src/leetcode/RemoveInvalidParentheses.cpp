@@ -9,12 +9,13 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <unordered_set>
 
 using namespace std;
 
 // [Solution]: Brute force DFS, iterate through all possible value, and then pick those longest results.
 // [Corner Case]: Since there are other chars, need to make sure 1. not out of length, 2. those chars need to be removed for each try
-class Solution {
+class SolutionSelf {
 public:
     vector<string> removeInvalidParentheses(string s) {
         vector<string> valid;
@@ -71,11 +72,65 @@ public:
     }
 };
 
+// [Solution]: DFS
+class Solution {
+public:
+    vector<string> removeInvalidParentheses(string s) {
+        int leftCnt = 0, rightCnt = 0; // invalid Parentheses that need to remove
+        for (char &c : s) {
+            if (c == '(') {
+                ++leftCnt;
+            } else if (c == ')') {
+                if (leftCnt > 0)
+                    --leftCnt;
+                else
+                    ++rightCnt;
+            }
+        }
+        
+        unordered_set<string> res;
+        string prev;
+        dfs(s, 0, prev, leftCnt, rightCnt, 0, res);
+        return vector<string>(res.begin(), res.end());
+    }
+
+private:
+    void dfs(string &s, int idx, string &prev, int leftCnt, int rightCnt, int openCnt, unordered_set<string> &res) {
+        if (idx == (int)s.length()) {
+            if (leftCnt == 0 && rightCnt == 0 && openCnt == 0)
+                res.insert(prev);
+            return;
+        }
+
+        // leftCnt is the left parenthese that should remove, openCnt is the number of ( that have not paired
+        if (leftCnt < 0 || rightCnt < 0 || openCnt < 0)
+            return;
+
+        if (s[idx] == '(') {
+            // not add (
+            dfs(s, idx + 1, prev, leftCnt - 1, rightCnt, openCnt, res);
+            // add
+            prev.push_back('(');
+            dfs(s, idx + 1, prev, leftCnt, rightCnt, openCnt + 1, res);
+            prev.pop_back();
+        } else if (s[idx] == ')') {
+            dfs(s, idx + 1, prev, leftCnt, rightCnt - 1, openCnt, res);
+            prev.push_back(')');
+            dfs(s, idx + 1, prev, leftCnt, rightCnt, openCnt - 1, res);
+            prev.pop_back();
+        } else {
+            prev.push_back(s[idx]);
+            dfs(s, idx + 1, prev, leftCnt, rightCnt, openCnt, res);
+            prev.pop_back();
+        }
+    }
+};
+
 int main() {
     Solution sol;
 
-    //vector<string> res = sol.removeInvalidParentheses("()())()");
-    vector<string> res = sol.removeInvalidParentheses("n");
+    vector<string> res = sol.removeInvalidParentheses("()())()");
+    //vector<string> res = sol.removeInvalidParentheses("n");
     for (string& str : res)
         cout << str << endl;
 
