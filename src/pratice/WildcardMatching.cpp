@@ -6,7 +6,7 @@ using namespace std;
 // [Source]: https://leetcode.com/problems/wildcard-matching/
 // http://www.1point3acres.com/bbs/thread-220333-1-1.html
 
-// [Solution]: DP
+// [Solution]: if p[j] == '*', D[i][j] = D[x][j-1] where x from 0 to i. if D[i-1][x] is true
 class SolutionDP {
 public:
     bool isMatch(string s, string p) {
