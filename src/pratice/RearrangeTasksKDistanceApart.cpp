@@ -7,6 +7,8 @@ using namespace std;
 // [Source]: http://www.1point3acres.com/bbs/thread-257097-1-1.html
 
 class Solution {
+// This solution is wrong. Error case: "aabbcc", 1. return is a,b,a,b,c,*,c, but can be a,b,c,a,b,c
+// The solution in https://leetcode.com/problems/rearrange-string-k-distance-apart/ is to fix the size as the old string, and append to the end, like 1. a*a***, 2. aba*b*, 3. abacbc
 public:
     string rearrangeTask(string tasks, int k) {
         if (tasks.empty() || k == 0)
@@ -41,6 +43,8 @@ public:
 
         // remove place holders
         res.erase(res.find_last_not_of("*") + 1);
+        if (res.find("*") != string::npos)
+            return "";
         return res;
     }
 
