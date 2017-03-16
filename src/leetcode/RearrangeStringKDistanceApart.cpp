@@ -81,7 +81,7 @@ int main() {
 
     //cout << sol.rearrangeString("abacabcd", 2) << endl;
     //cout << sol.rearrangeString("aaabc", 3) << endl;
-    cout << sol.rearrangeString("aabbcc", 3) << endl;
+    cout << sol.rearrangeString("aabbcc", 2) << endl;
 
     return 0;
 }
