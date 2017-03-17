@@ -5,12 +5,45 @@
  */
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-// [Solution]: Mark the visited cells. If touch a marked cell or board, turn right. Use a direction vector to indicate which direction.
+// [Solution]: Use two pointers for row, and two points for col
 class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>> &matrix) {
+        vector<int> res;
+        if (matrix.empty() || matrix[0].empty())
+            return res;
+
+        int rowSt = 0, rowEd = matrix.size() - 1, colSt = 0, colEd = matrix[0].size() - 1;
+        while (rowSt <= rowEd && colSt <= colEd) {
+            for (int i = colSt; i <= colEd; i++)
+                res.push_back(matrix[rowSt][i]);
+            rowSt++;
+
+            for (int j = rowSt; j <= rowEd; j++)
+                res.push_back(matrix[j][colEd]);
+            colEd--;
+
+            if (rowSt <= rowEd) {
+                for (int i = colEd; i >= colSt; i--)
+                    res.push_back(matrix[rowEd][i]);
+                rowEd--;
+            }
+
+            if (colSt <= colEd) {
+                for (int j = rowEd; j >= rowSt; j--)
+                    res.push_back(matrix[j][colSt]);
+                colSt++;
+            }
+        }
+        return res;
+    }
 };
+
+// [Solution]: Mark the visited cells. If touch a marked cell or board, turn right. Use a direction vector to indicate which direction.
 
 /* Java solution
 public class Solution {
@@ -61,6 +94,12 @@ https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/arra
 
 int main() {
     Solution sol;
+
+    //vector<vector<int>> matrix = {{1,2,3}};
+    vector<vector<int>> matrix = {{1,2,3,4},{10,11,12,5},{9,8,7,6}};
+    for (int &num : sol.spiralOrder(matrix))
+        cout << num << ", ";
+    cout << endl;
 
     return 0;
 }
