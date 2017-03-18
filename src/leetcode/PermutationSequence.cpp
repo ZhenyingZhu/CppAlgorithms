@@ -6,12 +6,54 @@
  */
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 // [Solution]: Use a vector indicate candidates. With n digits, if k/(2^(n-2)) = i, then add vec[i] to the begining
 // [Corner Case]: only 1 number.
 class Solution {
+public:
+    string getPermutation(int n, int k) {
+        vector<int> pos;
+        int prod = 1;
+        for (int i = 1; i < n; i++) {
+            prod *= i;
+            pos.push_back(prod);
+        }
+        reverse(pos.begin(), pos.end());
+
+        vector<int> nums;
+        for (int i = 1; i <= n; i++)
+            nums.push_back(i);
+
+        k--;
+        string res;
+        for (int i = 0; i < (int)pos.size(); i++) {
+            int p = k / pos[i];
+            k %= pos[i];
+
+            res.push_back('0' + get(nums, p));
+        }
+        res.push_back('0' + get(nums, 0));
+        return res;
+    }
+
+    int get(vector<int> &nums, int idx) {
+        for (int i = 0; i < (int)nums.size(); i++) {
+            if (nums[i] != 0) {
+                if (idx == 0) {
+                    int tmp = nums[i];
+                    nums[i] = 0;
+                    return tmp;
+                }
+                idx--;
+            }
+        }
+        return -1;
+    }
 };
 
 /* Java solution
@@ -55,6 +97,9 @@ public class Solution {
 
 int main() {
     Solution sol;
+
+    for (int i = 1; i <= 6; i++)
+        cout << sol.getPermutation(3, i) << endl;
 
     return 0;
 }
