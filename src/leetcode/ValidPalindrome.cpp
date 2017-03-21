@@ -12,6 +12,28 @@ using namespace std;
 // [Solution]: One pointer from begin, one from end. Skip non-alpha chars. Stop when they meet.
 // [Corner Case]: 
 class Solution {
+public:
+    bool isPalindrome(string s) {
+        int st = 0, ed = s.length() - 1;
+        while (st < ed) {
+            if (!isalnum(s[st])) {
+                st++;
+            } else if (!isalnum(s[ed])) {
+                ed--;
+            } else {
+                char a = s[st], b = s[ed];
+                if (a >= 'A' && a <= 'Z')
+                    a -= 'A' - 'a';
+                if (b >= 'A' && b <= 'Z')
+                    b -= 'A' - 'a';
+                if (a != b)
+                    return false;
+                st++;
+                ed--;
+            }
+        }
+        return true;
+    }
 };
 
 /* Java solution
@@ -51,6 +73,8 @@ public class Solution {
 
 int main() {
     Solution sol;
+
+    cout << sol.isPalindrome("aA") << endl;
 
     return 0;
 }
