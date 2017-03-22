@@ -24,7 +24,7 @@ public:
         if (root == NULL)
             return 0;
 
-        unordered_map<TreeNode*, int> lens;
+        unordered_map<TreeNode*, int> lens; // no need to use hash map. Just pass in a number is enough
         int maxLen = 1;
         lens[root] = 1;
         if (root->left != NULL)
