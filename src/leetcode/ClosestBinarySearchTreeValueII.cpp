@@ -109,6 +109,8 @@ public:
     }
 };
 
+// [Solution]: Use a k size list to store the result. If the list is full and the head is not closer than the tail, replace head, otherwise return.
+
 int main() {
     Solution sol;
 
