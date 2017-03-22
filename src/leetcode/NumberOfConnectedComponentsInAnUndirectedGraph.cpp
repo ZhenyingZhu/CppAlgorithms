@@ -42,6 +42,8 @@ for (int &i : unionSet) cout << i << " "; cout << endl;
     }
 };
 
+// [Solution]: DFS on each node if not visited. If not visited before DFS, cnt++
+
 int main() {
     Solution sol;
 
