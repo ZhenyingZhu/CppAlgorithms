@@ -1,27 +1,68 @@
 /*
- * [Source] https://leetcode.com/problems/
- * [Difficulty]: 
- * [Tag]: 
+ * [Source] https://leetcode.com/problems/the-maze-ii
+ * [Difficulty]: Medium
+ * [Tag]: Depth-first Search
+ * [Tag]: Breadth-first Search
  */
 
 #include <iostream>
 #include <climits>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
-// [Solution]:
 // [Corner Case]:
 class Solution {
 public:
-    int shortestDistance(vector<vector<int>>& maze, vector<int>& start, vector<int>& destination) {
+    // [Solution]: TLE
+    int shortestDistanceDFS(vector<vector<int>>& maze, vector<int>& start, vector<int>& destination) {
         if (maze.empty() || maze[0].empty())
             return 0;
         initStopPos(maze);
 
         vector<vector<int>> dp(maze.size(), vector<int>(maze[0].size(), INT_MAX)); // INT_MAX indicate not visited
         int res = dfs(start[0], start[1], dp, maze, destination);
-/* 
+
+        return res;
+    }
+
+    // Dijkstra
+    int shortestDistance(vector<vector<int>> &maze, vector<int> &start, vector<int> &destination) {
+        if (maze.empty() || maze[0].empty())
+            return 0;
+        initStopPos(maze);
+
+        vector<vector<int>> dp(maze.size(), vector<int>(maze[0].size(), INT_MAX)); // INT_MAX indicate not visited
+        priority_queue<Point> pq;
+        pq.push( { start[0], start[1], 0, {0,1,2,3} } );
+        int res = INT_MAX;
+        while (!pq.empty()) {
+            Point cur = pq.top();
+cout << "checking " << cur.x << "," << cur.y << "=" << cur.path << endl;
+            pq.pop();
+            if (cur.x == destination[0] && cur.y == destination[1]) {
+                res = cur.path;
+                break;
+            }
+
+            if (dp[cur.x][cur.y] <= cur.path)
+                continue;
+            dp[cur.x][cur.y] = cur.path;
+
+            for (int dir : cur.nextDir) {
+                vector<int> next = getNext(cur.x, cur.y, dir);
+                vector<int> nextDir;
+                if (dir % 2 == 0) {
+                    nextDir = {1, 3};
+                } else {
+                    nextDir = {0, 2};
+                }
+cout << nextDir[0] << nextDir[1] << next[0] << next[1] << next[2] << endl;
+                pq.push( {next[0], next[1], cur.path + next[2], nextDir} );
+            }
+        }
+
         for (int i = 0; i < maze.size(); i++) {
             for (int j = 0; j < maze[0].size(); j++) {
                 if (dp[i][j] == INT_MAX)
@@ -31,11 +72,23 @@ public:
             }
             cout << endl;
         }
-*/        
-        return res;
+
+
+        return res == INT_MAX ? -1 : res;
     }
 
 private:
+    struct Point {
+        int x, y;
+        int path;
+        vector<int> nextDir;
+        bool operator<(const Point &other) const {
+            return path > other.path;
+        }
+    };
+
+private:
+    // dir: 0 left, 1 down, 2 right, 3 up
     vector<vector<int>> up, down, left, right; // from a cell, where can it stop
 
     void initStopPos(vector<vector<int>> &maze) {
@@ -91,20 +144,22 @@ private:
     }
 
     vector<int> getNext(int x, int y, int dir) {
+        // return: {nextX, nextY, steps}
         // dir: 0 left, 1 down, 2 right, 3 up
         switch(dir) {
-            case 0: return {x, left[x][y]};
-            case 1: return {down[x][y], y};
-            case 2: return {x, right[x][y]};
-            case 3: return {up[x][y], y};
-            default: return {};
+            case 0: return {x, left[x][y], y - left[x][y]};
+            case 1: return {down[x][y], y, down[x][y] - x};
+            case 2: return {x, right[x][y], right[x][y] - y};
+            case 3: return {up[x][y], y, x - up[x][y]};
+            default: cout << "Wrong dir: " << dir << endl;return {};
         }
     }
 
-private:
+private: // For DFS solution
     int dfs(int x, int y, vector<vector<int>> &dp, vector<vector<int>> &maze, vector<int> &dest) {
-        if (dp[x][y] != INT_MAX)
-            return dp[x][y];
+        // The problem is here. Since DFS can reach a point without pick the shortest path, cannot use DP here
+        //if (dp[x][y] != INT_MAX)
+        //    return dp[x][y];
 
         if (x == dest[0] && y == dest[1]) {
             dp[x][y] = 0;
@@ -120,15 +175,7 @@ private:
             int totalDis = dfs(next[0], next[1], dp, maze, dest);
             if (totalDis == -1)
                 continue;
-
-            if (dir == 0)
-                totalDis += y - next[1];
-            else if (dir == 1)
-                totalDis += next[0] - x;
-            else if (dir == 2)
-                totalDis += next[1] - y;
-            else
-                totalDis += x - next[0];
+            totalDis += next[2];
 
             dp[x][y] = min(dp[x][y], totalDis);
         }
