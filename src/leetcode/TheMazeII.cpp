@@ -21,7 +21,7 @@ public:
 
         vector<vector<int>> dp(maze.size(), vector<int>(maze[0].size(), INT_MAX)); // INT_MAX indicate not visited
         int res = dfs(start[0], start[1], dp, maze, destination);
- 
+/* 
         for (int i = 0; i < maze.size(); i++) {
             for (int j = 0; j < maze[0].size(); j++) {
                 if (dp[i][j] == INT_MAX)
@@ -31,7 +31,7 @@ public:
             }
             cout << endl;
         }
-        
+*/        
         return res;
     }
 
@@ -101,13 +101,14 @@ private:
         }
     }
 
+private:
     int dfs(int x, int y, vector<vector<int>> &dp, vector<vector<int>> &maze, vector<int> &dest) {
         if (dp[x][y] != INT_MAX)
             return dp[x][y];
 
         if (x == dest[0] && y == dest[1]) {
-            dp[x][y] = 1;
-            return 1;
+            dp[x][y] = 0;
+            return 0;
         }
 
         maze[x][y] = 2;
