@@ -23,6 +23,37 @@ public:
         
         return {-1, -1};
     }
+    
+    vector<int> twoSumSort(vector<int>& nums, int target) {
+        // use a hash map to record indexes
+        unordered_map<int, vector<int>> map;
+        for (int i = 0; i < nums.size(); i++) {
+            map[nums[i]].push_back(i);
+        }
+
+        // sort the vector so that only needs to move indexes to one direction
+        sort(nums.begin(), nums.end());
+
+        int st = 0, ed = nums.size() - 1;
+        while (st < ed) {
+            if (nums[st] + nums[ed] == target) {
+                // If there are dup value
+                if (nums[st] != nums[ed]) {
+                    return {map[nums[st]][0], map[nums[ed]][0]};
+                } else {
+                    return {map[nums[st]][0], map[nums[st]][1]};
+                }
+            } else if (nums[st] + nums[ed] < target) {
+                st++;
+            } else {
+                ed--;
+            }
+        }
+
+        return {-1, -1};
+    }
+};
+
 };
 
 // [Solution]: Sort
