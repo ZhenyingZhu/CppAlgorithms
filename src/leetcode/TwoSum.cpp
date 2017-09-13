@@ -20,10 +20,10 @@ public:
                     return {i, j};
             }
         }
-        
+
         return {-1, -1};
     }
-    
+
     vector<int> twoSumSort(vector<int>& nums, int target) {
         // use a hash map to record indexes
         unordered_map<int, vector<int>> map;
@@ -52,8 +52,39 @@ public:
 
         return {-1, -1};
     }
-};
 
+    struct IdxNum {
+        int idx;
+        int num;
+    };
+
+    bool compare(const IdxNum& a, const IdxNum& b) const {
+        return a.num < b.num;
+    }
+
+    vector<int> twoSumStruct(vector<int>& nums, int target) {
+        vector<IdxNum> v;
+        for (int i = 0; i != nums.size(); i++) {
+            v.push_back({i, nums[i]});
+        }
+        sort(v.begin(), v.end(), compare);
+
+        int st = 0;
+
+        int ed = nums.size() - 1;
+        while (st < ed) {
+            int sum = v[st].num + v[ed].num;
+            if (sum == target) {
+                return {v[st].idx, v[ed].idx};
+            } else if (sum < target) {
+                st++;
+            } else {
+                ed--;
+            }
+        }
+
+        return {-1, -1};
+    }
 };
 
 // [Solution]: Sort
