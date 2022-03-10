@@ -8,7 +8,7 @@
 
 // [Solution]: Add zeros to the shorter one, then sum them together
 /* Java solution
-import lib.LinkedNode; 
+import lib.LinkedNode;
 
 class AddHelper{
 	public int cum;
