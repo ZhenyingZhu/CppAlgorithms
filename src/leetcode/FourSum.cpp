@@ -22,60 +22,60 @@ https://github.com/ZhenyingZhu/ClassicAlgorithms/blob/master/src/algorithms/arra
 /* Java solution
 public class Solution {
     public List<List<Integer>> fourSum(int[] num, int target) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>(); 
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (num == null || num.length < 4) {
-            return result; 
+            return result;
         }
-        Arrays.sort(num); 
+        Arrays.sort(num);
         for (int i = 0; i < num.length - 3; ++i) {
             if (i != 0 && num[i] == num[i-1]) {
-                continue; 
+                continue;
             }
-            List<Integer> list = new ArrayList<Integer>(); 
-            list.add(num[i]); 
-            threeSum(num, target - num[i], i + 1, list, result); 
+            List<Integer> list = new ArrayList<Integer>();
+            list.add(num[i]);
+            threeSum(num, target - num[i], i + 1, list, result);
         }
-        return result; 
+        return result;
     }
-    
+
     private void threeSum(int[] num, int target, int start, List<Integer> prev, List<List<Integer>> result) {
         for (int i = start; i < num.length - 2; ++i) {
             if (i != start && num[i] == num[i-1]) {
-                continue; 
+                continue;
             }
-            List<Integer> list = new ArrayList<Integer>(prev); 
-            list.add(num[i]); 
-            twoSum(num, target - num[i], i + 1, list, result); 
+            List<Integer> list = new ArrayList<Integer>(prev);
+            list.add(num[i]);
+            twoSum(num, target - num[i], i + 1, list, result);
         }
     }
-    
+
     private void twoSum(int[] num, int target, int start, List<Integer> prev, List<List<Integer>> result) {
-        int head = start; 
-        int tail = num.length - 1; 
-        int tmp; 
+        int head = start;
+        int tail = num.length - 1;
+        int tmp;
         while (head < tail) {
             if (num[head] + num[tail] == target) {
-                List<Integer> list = new ArrayList<Integer>(prev); 
-                list.add(num[head]); 
-                list.add(num[tail]); 
-                result.add(list); 
-                tmp = num[head]; 
+                List<Integer> list = new ArrayList<Integer>(prev);
+                list.add(num[head]);
+                list.add(num[tail]);
+                result.add(list);
+                tmp = num[head];
                 while (num[head] == tmp && head < tail) {
-                    ++head; 
+                    ++head;
                 }
-                tmp = num[tail]; 
+                tmp = num[tail];
                 while (num[tail] == tmp && tail > head) {
-                    --tail; 
+                    --tail;
                 }
             } else if (num[head] + num[tail] > target) {
-                tmp = num[tail]; 
+                tmp = num[tail];
                 while (num[tail] == tmp && tail > head) {
-                    --tail; 
+                    --tail;
                 }
             } else { // < num[head] + num[tail] < target
-                tmp = num[head]; 
+                tmp = num[head];
                 while (num[head] == tmp && head < tail) {
-                    ++head; 
+                    ++head;
                 }
             }
         }
